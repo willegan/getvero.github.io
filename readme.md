@@ -9,58 +9,73 @@ All submissions are welcome. To submit a change, fork this repo, commit your cha
 Ruby 1.9.3 or above is required to build the site.
 
 
-```sh
-$ gem install jekyll
-```
+  sh
+  $ gem install jekyll
 
 Clone this project and start the jekyll server
 
-```sh
-$ jekyll serve
-```
+  sh
+  $ jekyll serve
 
 Jekyll has [some nice documentation](http://jekyllrb.com/docs/usage/) to get you started.
 
-## Styleguide
+## Testing locally
 
-As our docs are using markdown, there is no much styling to do. Most of it is already done.:
+To get started, run `jekyll serve`, and you should see the following in your console:
 
-    ---
-    layout: articles
-    title:  "Page title"
-    categories: "categories goes here"
-    ---
-    # Page title
-
-    Content
-
-    ## Subtitle
-
-    {% include highlighted.html content="This content will be inserted in a highlighted section" %}
-
-
-**Note**: Find all the [markdown syntax here](http://daringfireball.net/projects/markdown/syntax)
-
-## Development
-
-When you are adding a new articles, create a file under the _articles folder with the following format: **file-name.md**.
-
-```sh
-$ jekyll serve
-Configuration file: /projects/vero-docs/_config.yml
-            Source: /projects/vero-docs
-       Destination: /projects/vero-docs/_site
-      Generating...
-                    done.
- Auto-regeneration: enabled for '/projects/vero-docs'
-Configuration file: /projects/vero-docs/_config.yml
-    Server address: http://127.0.0.1:4000/help/
-  Server running... press ctrl-c to stop.
-```
+    sh
+    $ jekyll serve
+    Configuration file: /projects/vero-docs/_config.yml
+                Source: /projects/vero-docs
+           Destination: /projects/vero-docs/_site
+          Generating...
+                        done.
+     Auto-regeneration: enabled for '/projects/vero-docs'
+    Configuration file: /projects/vero-docs/_config.yml
+        Server address: http://127.0.0.1:4000/help/
+      Server running... press ctrl-c to stop.
 
 Open **http://127.0.0.1:4000/help/** in your favourite browser.
 
 This command starts a web server as well as watching your files being edited, so there's no need to stop and restart jekyll.
+
+## Adding articles
+
+When creating a new article, add a file under the `/_articles` folder with the following format: **file-name.md**.
+
+This file needs a manifest at the top that follows the format below:
+
+    ---
+    layout: articles
+    title:  "Page title"
+    categories: "getting-started 'some other category'"
+    ---
+
+You should put the article in a primary category. Add the category `getting-started` where an article also relates to getting new users started. Add the category `common-issue` where an article is a question raised by customers regularly.
+
+Handling images, links and code snippets are typically done using `yml` files, located in `/_data`. For example, when referencing the Vero homepage, you should use the merge tag `{{link.vero.home}}`. In this way we can easily change links across our entire help documentation.
+
+Images are stored in the folders `/assets/screenshots` (for Vero application screenshots) or `/assets/images` for other images. You should reference the location of these files in the `screenshots.yml` or `images.yml` files in `/_data`. Here's an example of an image loading the ALT tag and file from the `screenshots.yml` file:
+
+    ![{{site.data.screenshots.unbounce.script['title']}}]({{site.data.screenshots.unbounce.script.image}})
+
+From here, your article will be added to the index upon refresh.
+
+## Styleguide and rules
+
+The docs use Markdown, allowing easy handling of most styles. You can find a copy of all the available [Markdown syntax here](http://daringfireball.net/projects/markdown/syntax)
+
+For clarity, we ask you to observe a few rules:
+
+- **Don't use How To**. You should not use 'How to' in the title of an article. For example, *"How to create a segment"* can be better written *"Create a segment"*. This is for clarity.
+- **Use code blocks appropriately**. Code blocks should be used for all large snippets of code. 
+- **Show inline code for data attributes**. Use the \` character to create inline code snippets. For example, when talking about a user property *first_name*, you should use `first_name`, as this is a data property.
+
+We have created a few custom snippets. The primary snippet is the `highlighted.html` snippet. You can insert a block of highlighted text like so:
+
+    {% include highlighted.html content="This content will be inserted in a highlighted section" %}
+
+Happy help docs!
 
 ## Deploy
 
