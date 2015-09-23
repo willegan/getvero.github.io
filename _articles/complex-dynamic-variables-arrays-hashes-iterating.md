@@ -1,5 +1,3 @@
-
-  
 ##Complex dynamic variables (arrays, hashes, iterating)
     
 There are many cases where you will want to use complex data, such as an array of products, in your outgoing emails.
