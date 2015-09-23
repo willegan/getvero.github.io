@@ -1,0 +1,10 @@
+*[Help](/help)
+
+      ❯
+      
+*Adding data to Vero
+  
+#Adding data to Vero
+
+  
+[Creating and matching Vero user IDs](https://www.getvero.com/help/adding-data-to-vero/creating-and-matching-vero-user-ids/)[How to ‘re-identify’ users to merge duplicate profiles](https://www.getvero.com/help/adding-data-to-vero/how-to-re-identify-users-to-merge-duplicate-profiles/)[Using Zapier and Vero](https://www.getvero.com/help/adding-data-to-vero/using-zapier-and-vero/)[How do I integrate with Segment.com (formerly Segment.io)?](https://www.getvero.com/help/adding-data-to-vero/2184/)[How to change the email or ID of a customer using ‘alias’](https://www.getvero.com/help/adding-data-to-vero/change-the-email-or-id-of-a-customer-using-alias/)[Tracking contacts across subdomains](https://www.getvero.com/help/adding-data-to-vero/tracking-contacts-across-subdomains/)[How Vero cookies contacts on your website using Javascript](https://www.getvero.com/help/adding-data-to-vero/how-vero-cookies-contacts-on-your-website-using-javascript/)[How to track pageviews with Vero’s API](https://www.getvero.com/help/adding-data-to-vero/how-to-track-pageviews-with-veros-api/)[Can I integrate Vero with KISSmetrics or Mixpanel](https://www.getvero.com/help/adding-data-to-vero/integrate-vero-with-kissmetrics-or-mixpanel/)[Create a HTML email subscribe form](https://www.getvero.com/help/adding-data-to-vero/create-a-html-email-subscribe-form/)[Import a list of unsubscribed contacts via CSV](https://www.getvero.com/help/adding-data-to-vero/import-a-list-of-unsubscribed-contacts-via-csv/)[Import a list of the past events contacts’ have triggered via CSV](https://www.getvero.com/help/adding-data-to-vero/import-a-list-of-contacts-actions-via-csv/)[Import a list of contacts via CSV](https://www.getvero.com/help/adding-data-to-vero/import-a-list-of-contacts-via-csv/)
