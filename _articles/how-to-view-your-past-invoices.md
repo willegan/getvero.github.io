@@ -1,14 +1,6 @@
-*[Help](/help)
+#How to view your past invoices
 
-        ❯
-        
-*[Accounts and Billing](/help/accounts-and-billing)
-
-        ❯
-        
-*How to view your past invoices
-    
-#How to view your past invoicesTo view a copy of your monthly invoices, select `Configuration > Account > Invoices.`
+To view a copy of your monthly invoices, select `Configuration > Account > Invoices.`
 
 Each of our invoices can be printed as a PDF document.
 

@@ -1,14 +1,5 @@
-*[Help](/help)
+#How to cancel a Vero account
 
-        ❯
-        
-*[Accounts and Billing](/help/accounts-and-billing)
+To cancel your Vero account, email [support@getvero.com](mailto:support@getvero.com).
 
-        ❯
-        
-*How to cancel a Vero account
-    
-#How to cancel a Vero accountTo cancel your Vero account, email 
-[support@getvero.com](mailto:support@getvero.com).
-
-We will cancel no questions asked – if you’re not happy, we’re not happy.
+We will cancel no questions asked – if you're not happy, we're not happy.

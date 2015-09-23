@@ -15,7 +15,7 @@ There are two key steps to getting setup with Vero:
 
 Two ways you can quickly get data into Vero include [Segment]({{site.data.links['segment']}}) and [Zapier]({{site.data.links['zapier']}}) (in beta, please [email us]({{site.data.links['email_us']}}) for instant access).
 
-If you’re already setup on these platforms you’ll find them a quick way to get going, without installing Vero’s API directly (see below).
+If you're already setup on these platforms you'll find them a quick way to get going, without installing Vero's API directly (see below).
 
 ## Installing Vero on your site or in your app
 
@@ -34,7 +34,7 @@ Installing our API is most easily done using our [Javascript library]({{site.dat
 
 ## Supported libraries
 
-You can use Vero’s API with any coding language, but we currently have wrappers for these languages:
+You can use Vero's API with any coding language, but we currently have wrappers for these languages:
 
 - Ruby
 - Python
@@ -57,4 +57,4 @@ This video shows you how to setup your first Vero campaign in a few short steps:
 
 This video uses an older version of the Vero UI. We're working on updating it as quickly as possible!
 
-{% include highlighted.html content="Hello" %}
+    {% include highlighted.html content="Hello" %}
