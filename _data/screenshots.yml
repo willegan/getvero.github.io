@@ -74,3 +74,6 @@ vero:
   segments-export-users:
     image: /help/assets/screenshots/vero.segments-export-users.png
     title: Export Users in segments
+  email-logs-bounce:
+    image: /help/assets/screenshots/vero.email-logs-bounce.png
+    title: Bounced email logs 
