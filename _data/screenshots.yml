@@ -65,3 +65,12 @@ vero:
   esp-credentials:
     image: /help/assets/screenshots/vero.esp-credentials.png
     title: Mandril credentials
+  segments-mainpage-edit:
+    image: /help/assets/screenshots/vero.segments-mainpage-edit.png
+    title: Editing segments
+  segments-view-users:
+    image: /help/assets/screenshots/vero.segments-view-users.png
+    title: View Users in segments
+  segments-export-users:
+    image: /help/assets/screenshots/vero.segments-export-users.png
+    title: Export Users in segments
