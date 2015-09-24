@@ -56,3 +56,6 @@ vero:
   advanced-scope-by-triggered-email:
     image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
     title: Scoped conditions triggered abandonment campaign
+  clone-email:
+    image: /help/assets/screenshots/vero.clone-email.png
+    title: Cloning an email
