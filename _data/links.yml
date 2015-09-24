@@ -1,6 +1,10 @@
 segment: http://segment.com/
 zapier: http://zapier.com/
+gtm: https://tagmanager.google.com/
+liquid_docs: https://docs.shopify.com/themes/liquid-documentation/basics
 email_us: mailto:support@getvero.com
 vero_api: https://www.getvero.com/api
 developers: https://www.getvero.com/developers
 getvero: https://www.getvero.com/
+app_settings_projects: https://app.getvero.com/settings/project
+app_logs: https://app.getvero.com/logs

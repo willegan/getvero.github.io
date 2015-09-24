@@ -1,11 +1,23 @@
-#What are tags?
+---
+layout: articles
+title:  "What are tags?"
+categories: "data"
+---
 
-Tags are a power way to enhance segmentation.
+# What are tags?
 
-Most customers do not use tags regularly, but they can be used in a range of different situations.
+*Note: If you've used other email marketing tools, note that Vero's tags typically hold a different meaning.*
 
-If you've used other email marketing tools, note that Vero's tags typically hold a different meaning.
+Tags can be use in different situations.
 
-The power of tags is that you can manually add tags to individuals via the Vero UI, automatically add tags via our API or add tags in bulk using a CSV upload.
+## With campaigns and templates
 
-When you create segments, you can filter users based on which tags they have and which they don't. This can let you create preference lists, emulate static lists or use Vero as a lightweight CRM.
+Vero allows you to tag campaigns and templates to easily sort and find one or multiple object. For example, at Vero, we tagged some campaigns with "Onboarding" and others with "Retention".
+
+## With customers
+
+The main reason for tagging customers is when you want to import a **static list** from another email provider into Vero.
+
+There are multiple way to tag customers: manually, via CSV or via the API
+
+Tags are a power way to enhance segmentation. When you create segments, you can filter customers based on which tags they have and which they don't. This can let you create preference lists, emulate static lists or use Vero as a lightweight CRM.

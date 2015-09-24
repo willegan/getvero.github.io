@@ -1,4 +1,58 @@
 unbounce:
-  script: 
+  script:
     image: /help/assets/screenshots/unbounce.scripts.png
     title: Unbounce Script
+gtm:
+  configure:
+    image: /help/assets/screenshots/gtm.configure.png
+    title: GTM Configure
+  macro:
+    image: /help/assets/screenshots/gtm.macro.png
+    title: GTM Macro
+  final-script:
+    image: /help/assets/screenshots/gtm.final-script.png
+    title: GTM Review
+  event:
+    image: /help/assets/screenshots/gtm.event.png
+    title: GTM Event
+zapier:
+  trigger-action:
+    image: /help/assets/screenshots/zapier.trigger-action.png
+    title: Pipedrive to Vero
+  add-customer:
+    image: /help/assets/screenshots/zapier.add-customer.png
+    title: Add a customer
+  customer-properties:
+    image: /help/assets/screenshots/zapier.customer-properties.png
+    title: Customer properties in Zapier
+  event-name:
+    image: /help/assets/screenshots/zapier.event-name.png
+    title: Event name in Zapier
+  event-properties:
+    image: /help/assets/screenshots/zapier.event-properties.png
+    title: Event properties in Zapier
+  tags:
+    image: /help/assets/screenshots/zapier.tags.png
+    title: Tags in Zapier
+vero:
+  customer-properties:
+    image: /help/assets/screenshots/vero.customer-properties.png
+    title: Customer properties in Vero
+  fetch-html:
+    image: /help/assets/screenshots/vero.fetch-html.png
+    title: Fetch HTML in Vero
+  external-attributes:
+    image: /help/assets/screenshots/vero.external-attributes.png
+    title: External attributes in Vero
+  json-data:
+    image: /help/assets/screenshots/vero.json-data.png
+    title: JSON response
+  external-attributes-preview:
+    image: /help/assets/screenshots/vero.external-attributes-preview.png
+    title: External attributes preview
+  triggered-abandonment-campaign:
+    image: /help/assets/screenshots/vero.triggered-abandonment-campaign.png
+    title: Triggered abandonment campaign
+  advanced-scope-by-triggered-email:
+    image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
+    title: Scoped conditions triggered abandonment campaign
