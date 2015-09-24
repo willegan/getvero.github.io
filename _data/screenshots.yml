@@ -59,3 +59,9 @@ vero:
   clone-email:
     image: /help/assets/screenshots/vero.clone-email.png
     title: Cloning an email
+  esp-integrations:
+    image: /help/assets/screenshots/vero.esp-integrations.png
+    title: Email Service Provider integrations 
+  esp-credentials:
+    image: /help/assets/screenshots/vero.esp-credentials.png
+    title: Mandril credentials
