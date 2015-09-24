@@ -1,9 +1,15 @@
-#How to view your past invoices
+---
+layout: articles
+title: How to view your past invoices?
+categories: "billing"
+---
 
-To view a copy of your monthly invoices, select `Configuration > Account > Invoices.`
+# How to view your past invoices?
 
-Each of our invoices can be printed as a PDF document.
+To view a copy of your monthly invoices, select **Account > Invoices**.
+
+Each of our invoices can be saved as a PDF document.
 
 You can also add your physical address and Vero will render this on all past and future invoices.
 
-Under the Invoices menu you can also toggle monthly billing emails to your email address.
+**Note:** to receive the invoice by email monthly, set the billing email address in your invoice section.

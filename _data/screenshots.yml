@@ -56,3 +56,30 @@ vero:
   advanced-scope-by-triggered-email:
     image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
     title: Scoped conditions triggered abandonment campaign
+  segments:
+    paying-customers:
+      image: /help/assets/screenshots/vero.segments.paying-customers.png
+      title: Paying customers segment
+  campaign:
+    use-segment:
+      image: /help/assets/screenshots/vero.campaign.use-segment.png
+      title: Campaign using paying customers
+  user-profile:
+    image: /help/assets/screenshots/vero.user-profile.png
+    title: User profile
+  conditions:
+    options:
+      image: /help/assets/screenshots/vero.conditions.options.png
+      title: Condition options
+    triggered_event:
+      image: /help/assets/screenshots/vero.conditions.triggered_event.png
+      title: Condition triggered_event
+    has_triggered_event_with_property:
+      image: /help/assets/screenshots/vero.conditions.has_triggered_event_with_property.png
+      title: Condition has_triggered_event_with_property
+    has_tag:
+      image: /help/assets/screenshots/vero.conditions.has_tag.png
+      title: Condition has_tag
+    has_property:
+      image: /help/assets/screenshots/vero.conditions.has_property.png
+      title: Condition has_property
