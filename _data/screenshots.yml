@@ -38,6 +38,10 @@ vero:
   customer-properties:
     image: /help/assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
+  customer:
+    unsubscribed:
+      image: /help/assets/screenshots/vero.customer.unsubscribed.png
+      title: Unsubscribed customer
   fetch-html:
     image: /help/assets/screenshots/vero.fetch-html.png
     title: Fetch HTML in Vero
@@ -83,3 +87,10 @@ vero:
     has_property:
       image: /help/assets/screenshots/vero.conditions.has_property.png
       title: Condition has_property
+  export:
+    segment:
+      image: /help/assets/screenshots/vero.export.segment.png
+      title: Export customer properties
+    reports:
+      image: /help/assets/screenshots/vero.export.reports.png
+      title: Export reports

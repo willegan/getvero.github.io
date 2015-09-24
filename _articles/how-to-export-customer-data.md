@@ -1,15 +1,23 @@
-#How to export customer data
+---
+layout: articles
+title:  "How to export customer data?"
+categories: "import-export"
+---
 
-You can only export files up to 50,000 rows from the Vero UI. If you want to export more data, or data that you can't see how to export in the UI, please email support@getvero.com and we'll do our best to do it for you as quickly as possible.
+# How to export customer data ?
 
-There are two ways to export data from Vero:
+You can only export files up to 50,000 rows from the Vero UI. If you want to export more data, or data that you can't see how to export in the UI, please email [our support](support@getvero.com) and we'll do our best to do it for you as quickly as possible.
 
-1. You can export a list of contacts (and their properties) that belong to any segment. To do this, select a segment and then hit `Export` in the top right of the screen. The output file includes the email address, ID and all other properties of each contact in CSV format.
+## Export customers
 
-![](http://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-26-at-3.39.39-PM.png)
+You can export a list of customers and their properties that belong to any segment. To do this, select a segment and then click **Export** in the top right of the screen. The output file includes the ID, email address and all other properties of each customer in CSV format.
 
-2. You can export the results of an email campaign. To do this, visit the `Reports` menu and filter down to the campaign data you want to export. Select `Export` in the top right of the screen.
+![{{ site.data.screenshots.vero.export.segment.title }}]({{ site.data.screenshots.vero.export.segment.image }})
 
-![Screen Shot 2015-02-26 at 6.10.44 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-26-at-6.10.44-PM.png)
+## Export reports
 
-In both cases, a CSV file will be generated that you can download.
+You can export the results of an email campaign. To do this, visit the **Reports** menu and filter down to the campaign data you want to export. Select **Export** in the top right of the screen.
+
+![{{ site.data.screenshots.vero.export.reports.title }}]({{ site.data.screenshots.vero.export.reports.image }})
+
+In both cases, a CSV file will be generated that you can download from the menu **Import/Export** menu of the sidebar.
