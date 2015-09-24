@@ -6,7 +6,7 @@ categories: "integrations"
 
 #Can I view the list of customers in a segment?
 
-You can individual the list of customers in a given segment by going to the Segments page and selecting `Edit > View Users` next to any of your segments.
+You can view your list of customers in a given segment by going to the Segments page and selecting `Edit > View Users` next to any of your segments.
 
 `Edit` appears in the drop down associated with each segment, as below:
 
