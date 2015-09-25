@@ -1,4 +1,99 @@
+unbounce:
+  script:
+    image: /help/assets/screenshots/unbounce.scripts.png
+    title: Unbounce Script
+gtm:
+  configure:
+    image: /help/assets/screenshots/gtm.configure.png
+    title: GTM Configure
+  macro:
+    image: /help/assets/screenshots/gtm.macro.png
+    title: GTM Macro
+  final-script:
+    image: /help/assets/screenshots/gtm.final-script.png
+    title: GTM Review
+  event:
+    image: /help/assets/screenshots/gtm.event.png
+    title: GTM Event
+zapier:
+  trigger-action:
+    image: /help/assets/screenshots/zapier.trigger-action.png
+    title: Pipedrive to Vero
+  add-customer:
+    image: /help/assets/screenshots/zapier.add-customer.png
+    title: Add a customer
+  customer-properties:
+    image: /help/assets/screenshots/zapier.customer-properties.png
+    title: Customer properties in Zapier
+  event-name:
+    image: /help/assets/screenshots/zapier.event-name.png
+    title: Event name in Zapier
+  event-properties:
+    image: /help/assets/screenshots/zapier.event-properties.png
+    title: Event properties in Zapier
+  tags:
+    image: /help/assets/screenshots/zapier.tags.png
+    title: Tags in Zapier
 vero:
+  customer-properties:
+    image: /help/assets/screenshots/vero.customer-properties.png
+    title: Customer properties in Vero
+  customer:
+    unsubscribed:
+      image: /help/assets/screenshots/vero.customer.unsubscribed.png
+      title: Unsubscribed customer
+  fetch-html:
+    image: /help/assets/screenshots/vero.fetch-html.png
+    title: Fetch HTML in Vero
+  external-attributes:
+    image: /help/assets/screenshots/vero.external-attributes.png
+    title: External attributes in Vero
+  json-data:
+    image: /help/assets/screenshots/vero.json-data.png
+    title: JSON response
+  external-attributes-preview:
+    image: /help/assets/screenshots/vero.external-attributes-preview.png
+    title: External attributes preview
+  triggered-abandonment-campaign:
+    image: /help/assets/screenshots/vero.triggered-abandonment-campaign.png
+    title: Triggered abandonment campaign
+  advanced-scope-by-triggered-email:
+    image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
+    title: Scoped conditions triggered abandonment campaign
+  segments:
+    paying-customers:
+      image: /help/assets/screenshots/vero.segments.paying-customers.png
+      title: Paying customers segment
+  campaign:
+    use-segment:
+      image: /help/assets/screenshots/vero.campaign.use-segment.png
+      title: Campaign using paying customers
+  user-profile:
+    image: /help/assets/screenshots/vero.user-profile.png
+    title: User profile
+  conditions:
+    options:
+      image: /help/assets/screenshots/vero.conditions.options.png
+      title: Condition options
+    triggered_event:
+      image: /help/assets/screenshots/vero.conditions.triggered_event.png
+      title: Condition triggered_event
+    has_triggered_event_with_property:
+      image: /help/assets/screenshots/vero.conditions.has_triggered_event_with_property.png
+      title: Condition has_triggered_event_with_property
+    has_tag:
+      image: /help/assets/screenshots/vero.conditions.has_tag.png
+      title: Condition has_tag
+    has_property:
+      image: /help/assets/screenshots/vero.conditions.has_property.png
+      title: Condition has_property
+  export:
+    segment:
+      image: /help/assets/screenshots/vero.export.segment.png
+      title: Export customer properties
+    reports:
+      image: /help/assets/screenshots/vero.export.reports.png
+      title: Export reports
   html-vs-plain:
     image: /help/assets/screenshots/vero.html_vs_plain_text.png
     title: HTML vs Plain Text
@@ -26,4 +121,3 @@ vero:
   newsletter-email-campaigns:
     image: /help/assets/screenshots/vero.segment_conditions.png
     title: Segment Conditions
-  

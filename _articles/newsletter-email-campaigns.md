@@ -12,8 +12,7 @@ Newsletters are different to triggered emails because they are manually schedule
 
 They are considered one-to-many emails, as you are emailing a number of people at once.
 
-In Vero, you define who receives your newsletter using the customer 
-Segments you create.
+In Vero, you define who receives your newsletter using the customer Segments you create.
 
 You could, for example, send a weekly email newsletter to everyone **in the segment** *“Blog Subscribers”* AND who are **not in the segment** *“Paying Customers”* AND they triggered the event of **“has opened”** *any campaign in the last 15 days* OR they have also **"clicked"** *"any campaign in the last 30 days"*.
 
