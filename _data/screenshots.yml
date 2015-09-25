@@ -1,0 +1,29 @@
+vero:
+  html-vs-plain:
+    image: /help/assets/screenshots/vero.html_vs_plain_text.png
+    title: HTML vs Plain Text
+  event-import-button:
+    image: /help/assets/screenshots/vero.event_import_button.png
+    title: Event Import Button
+  sidebar:
+    image: /help/assets/screenshots/vero.import_export_sidebar.png
+    title: Import Export 
+  event-greybox:
+    image: /help/assets/screenshots/vero.track_trigger_csv.png
+    title: Track Trigger
+  profile:
+    image: /help/assets/screenshots/vero.profile_after_import.png
+    title: Profile After Import
+  csv-match:
+    image: /help/assets/screenshots/vero.csv_match_fields.png
+    title: CSV Match Fields
+  csv-import:
+    image: /help/assets/screenshots/vero.contacts_csv_import.png
+    title: Import CSV
+  csv-paste:
+    image: /help/assets/screenshots/vero.contacts_csv_paste.png
+    title: Import Paste
+  newsletter-email-campaigns:
+    image: /help/assets/screenshots/vero.segment_conditions.png
+    title: Segment Conditions
+  
