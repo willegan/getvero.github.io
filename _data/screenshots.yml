@@ -121,3 +121,11 @@ vero:
   newsletter-email-campaigns:
     image: /help/assets/screenshots/vero.segment_conditions.png
     title: Segment Conditions
+  integrations:
+    google_analytics: 
+      overview:
+        image: /help/assets/screenshots/vero.integrations.ga.png
+        title: Vero Google Analytics Integration Overview
+      detail:
+        image: /help/assets/screenshots/vero.integrations.ga.detail.png
+        title: Vero Google Analytics Integration Detail

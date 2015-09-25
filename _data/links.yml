@@ -1,4 +1,5 @@
 segment: http://segment.com/
+segment_vero_setup: https://segment.com/docs/integrations/vero/
 zapier: http://zapier.com/
 gtm: https://tagmanager.google.com/
 liquid_docs: https://docs.shopify.com/themes/liquid-documentation/basics
@@ -8,3 +9,5 @@ developers: https://www.getvero.com/developers
 getvero: https://www.getvero.com/
 app_settings_projects: https://app.getvero.com/settings/project
 app_logs: https://app.getvero.com/logs
+articles:
+  utm_tags: /help/articles/integrate-google-analytics-utm-tags.html
