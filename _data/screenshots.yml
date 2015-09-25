@@ -77,3 +77,16 @@ vero:
   email-logs-bounce:
     image: /help/assets/screenshots/vero.email-logs-bounce.png
     title: Bounced email logs 
+  subscribe-form-properties:
+    image: /help/assets/screenshots/vero.subscribe-form-properties.png
+    title: Subscribe form properties 
+  subscribe-form-event-trigger:
+    image: /help/assets/screenshots/vero.subscribe-form-event-trigger.png
+    title: Subcribe form event trigger 
+  subscribe-form-code:
+    image: /help/assets/screenshots/vero.subscribe-form-code.png
+    title: Subscribe form code 
+  subscribe-form-success:
+    image: /help/assets/screenshots/vero.subscribe-form-success.png
+    title: Subscribe form success 
+    
