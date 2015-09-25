@@ -121,6 +121,12 @@ vero:
   newsletter-email-campaigns:
     image: /help/assets/screenshots/vero.segment_conditions.png
     title: Segment Conditions
+  launch-newsletter:
+    image: /help/assets/screenshots/vero.launch-newsletter.png
+    title: Launch Newsletter
+  recurring-options:
+    image: /help/assets/screenshots/vero.recurring-options.png
+    title: Recurring Options
   integrations:
     google_analytics: 
       overview:
