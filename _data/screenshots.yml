@@ -38,6 +38,9 @@ vero:
   customer-properties:
     image: /help/assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
+  customer-properties-id:
+    image: /help/assets/screenshots/vero.customer-properties-id.png
+    title: ID in customer properties 
   fetch-html:
     image: /help/assets/screenshots/vero.fetch-html.png
     title: Fetch HTML in Vero
