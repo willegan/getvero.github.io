@@ -92,4 +92,9 @@ vero:
   subscribe-form-success:
     image: /help/assets/screenshots/vero.subscribe-form-success.png
     title: Subscribe form success 
-    
+  double-opt-in-email: 
+    image: /help/assets/screenshots/vero.double-opt-in-email.png
+    title: Double opt-in email
+  double-opt-in-frequency:
+    image: /help/assets/screenshots/vero.double-opt-in-frequency.png
+    title: Double opt-in frequency 

@@ -1,3 +1,9 @@
+---
+layout: articles
+title:  "Recurring newsletters"
+categories: ""
+---
+
 #Recurring newsletters
 
 A recurring newsletter is a newsletter that is sent to a certain segment of users on a specific schedule.
@@ -12,11 +18,11 @@ Campaigns dashboard.
 To launch your newsletter on a recurring schedule, select the 
 Launch option from the options menu for the draft newsletter you want to convert into a recurring newsletter:
 
-![launch-newsletter](https://www.getvero.com/wp-content/uploads/2015/08/launch-newsletter.png)
+![{{site.data.screenshots.vero.launch-newsletter['title']}}]({{site.data.screenshots.vero.launch-newsletter.image}})
 
 The launch modal will popup. If you have access to recurring newsletters you can select the option to schedule your newsletter on a recurring schedule, presenting you with the following options:
 
-![recurring-options](https://www.getvero.com/wp-content/uploads/2015/08/recurring-options-300x195.png)
+![{{site.data.screenshots.vero.recurring-options['title']}}]({{site.data.screenshots.vero.recurring-options.image}})
 
 You can elect to trigger your recurring newsletter on a daily, weekly or monthly schedule. At this time we do not support more or less frequent newsletters.
 

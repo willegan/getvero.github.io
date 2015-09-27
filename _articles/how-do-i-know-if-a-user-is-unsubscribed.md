@@ -1,7 +1,13 @@
-#How do I know if a user is unsubscribed
+---
+layout: articles
+title:  How do I know if a customer is unsubscribed?
+categories: "import-export"
+---
 
-When a user is unsubscribed their profile and history will remain stored in Vero, however they will no longer receive any Behavioral or Newsletter emails.
+# How do I know if a customer is unsubscribed?
 
-To check whether an individual contact is unsubscribed, view their profile. A yellow bar at the top of the profile page indicates that the contact is unsubscribed:
+When a customer is unsubscribed their profile and history will remain stored in Vero, however they will no longer receive any marketing emails.
 
-[![Screen Shot 2015-02-21 at 3.43.31 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-21-at-3.43.31-PM.png)](http://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-21-at-3.43.31-PM.png)
+To check whether a customer is unsubscribed, visit their profile page. A yellow bar at the top of the profile page indicates that the contact is unsubscribed:
+
+![{{ site.data.screenshots.vero.customer.unsubscribed.title }}]({{ site.data.screenshots.vero.customer.unsubscribed.image }})
