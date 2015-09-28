@@ -6,40 +6,41 @@ categories: "email design"
   
 ##Adding "To" and "From" email addresses?
     
-In your Vero [Account](https://app.getvero.com/account) settings you can manage the [email addresses](https://app.getvero.com/account/email_addresses) that your emails are sent TO or FROM.
+In Vero you can manage the email addresses that your emails are sent TO or FROM. You can add as many email addresses as you'd like by going to `Settings > Email Addresses`.
 
- 
 ##Adding an email address
    When adding an email address there are three fields:
  
-- Email: The email address. 
+1. Email: The email address. 
 e.g. chris@getvero.com
 	
-- From name: The name you want the email to come from. 
+2. From name: The name you want the email to come from. 
 e.g. Chris from Vero
 	
-- Reply-to (optional): The email address you want the replies to go to. 
+3. Reply-to (optional): The email address you want the replies to go to. 
 e.g. support@getvero.com
 
+![{{ site.data.screenshots.vero.email-addresses['title'] }}]({{ site.data.screenshots.vero.email-addresses['image'] }})
+
 ##Complex / dynamic addresses:
-You may want to email your customers based on other actions (events). To do this you could store a 'related_customer_email' property with an event or on a customer profile. 
-This would use the Liquid syntax language such as {{user.related_user_email}} or {{event.related_user_email}}.
+You may want to email your customers based on other actions. To do this you could store a 'related_customer_email' property with an event or on a customer profile. 
+
+This would use the Liquid templating language, for example `{% raw %}{{user.related_user_email}}{% endraw %}` or `{% raw %}{{event.related_user_email}}{% endraw %}`.
  
-You can create an email address using this data. You might set the **Email** field to be {{user.related_user_email}} and the 
-**From name** to be {{user.related_user_name}}. When the email goes out, Vero will pick up these values and use them.
+You can create an email address using this data. You might set the **Email** field to be {% raw%}{{user.related_user_email}}{% endraw %} and the 
+**From name** to be `{% raw %}{{user.related_user_name}}{% endraw %}`. When the email goes out, Vero will pick up these values and use them.
 
 ##Using an email address
 Once saved you can use an email address when creating a new campaign.
 
 Here's an example of a dynamic email address as setup in your `Settings`:
+![{{ site.data.screenshots.vero.dynamic-email-addresses['title'] }}]({{ site.data.screenshots.vero.dynamic-email-addresses['image'] }})
 
-![](https://s3.amazonaws.com/helpjuice_production/uploads/upload/image/742/3318/Screen_Shot_2014-01-28_at_12.42.21_pm.png)
-You can then select the email as a 'To' or 'From' address when creating an 
-**automated**
- campaign:
-![](https://s3.amazonaws.com/helpjuice_production/uploads/upload/image/742/3319/Screen_Shot_2014-01-28_at_12.45.56_pm.png)
-Ensure you track the required payload data with the base event:
-![](https://s3.amazonaws.com/helpjuice_production/uploads/upload/image/742/3320/Screen_Shot_2014-01-28_at_12.45.04_pm.png)
+You can then select the email as a 'To' or 'From' address when creating an **automated** campaign:
+![{{ site.data.screenshots.vero.email-addresses-campaign['title'] }}]({{ site.data.screenshots.vero.email-addresses-campaign['image'] }})
+
+NOTE: Ensure you track the required data with the base event.
+
  
 
                 

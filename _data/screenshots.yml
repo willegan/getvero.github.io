@@ -187,3 +187,12 @@ vero:
     invite-team-member:
       image: /help/assets/screenshots/vero.invite-team-member.png
       title: Invite Team Member
+  email-addresses:
+    image: /help/assets/screenshots/vero.email-addresses.png
+    title: Email Addresses 
+  email-addresses-campaign: 
+    image: /help/assets/screenshots/vero.email-addresses-campaign.png
+    title: Select email address in Campaign
+  dynamic-email-addresses: 
+    image: /help/assets/screenshots/vero.dynamic-email-addresses.png
+    title: Dynamic email addresses 
