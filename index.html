@@ -17,12 +17,24 @@ layout: default
     {% endfor %}
   </ul> -->
 
-  <ul class="article-list">
+<!--   <ul class="article-list">
     {% for article in site.articles %}
       <li>
         <a class="article-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
       </li>
     {% endfor %}
-  </ul>
+  </ul> -->
+
+  {% assign groups = site.articles | group_by: "categories" %}
+  {% for group in groups %}
+    <h2>{{ group.name }}</h2>
+    <ul class="article-list">
+      {% for item in group.items %}
+        <li>
+          <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+        </li>
+      {%endfor%}
+    </ul>
+  {%endfor%}
 
 </div>
