@@ -9,10 +9,8 @@ developers: https://www.getvero.com/developers
 getvero: https://www.getvero.com/
 app_settings_projects: https://app.getvero.com/settings/project
 app_logs: https://app.getvero.com/logs
-<<<<<<< HEAD
+app_account_email_addresses: 
 app_labs: https://app.getvero.com/settings/labs
-=======
 support: https://support.getvero.com/
 articles:
   utm_tags: /help/articles/integrate-google-analytics-utm-tags.html
->>>>>>> origin/feature/add-all-docs
