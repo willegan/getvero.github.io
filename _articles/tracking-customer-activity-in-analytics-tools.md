@@ -4,11 +4,11 @@ title:  "Tracking email activity from Vero in KISSmetrics, Mixpanel, Amplitude a
 categories: "integrations"
 ---
 
-#Tracking customer activity from Vero in KISSmetrics, Mixpanel, Amplitude and other analytics tools
+# Tracking customer activity from Vero in KISSmetrics, Mixpanel, Amplitude and other analytics tools
 
 There are three potential ways you can track the messaging activity in Vero in other analytics tools or databases.
 
-##UTM tags
+## UTM tags
 
 Most analytics tools, including Mixpanel and KISSmetrics, detect Google's UTM parameters. These are parameters that are appended to the links in your outgoing emails. When customer's click a link, analytics tools take these parameters and record the source of that session.
 
@@ -16,15 +16,22 @@ An example of a link with UTM parameters attached is `http://getvero.com?utm_sou
 
 You can automatically append UTM tags in Vero. [Learn how to integrate Google Analytics' UTM tags]({{site.data.links.articles.utm_tags}}).
 
-##Integrate using a Segment.com write key
+## Integrate using a Segment.com write key
 
-[Segment and Vero setup]({{site.data.links.segment_vero_setup}})
+Vero integrates cleanly with [Segment]({{site.links.segment}}). You can send data **to** Vero once you integrate on of Segment's tracking libraries. You can also **send email data** activity from Vero **back into Segment** using their email events integration.
 
-##Webhooks
+The [Segment and Vero integration guide]({{site.data.links.segment_vero_setup}}) details how to send email events from Vero to Segment. This then gives you the ability to pipe this data from Segment into other analytics and business intelligence tools such as Looker, KISSmetrics, Amplitude, and so on.
 
-Most analytics tools support UTM codes. 
+We send the same email events we support with our webhooks to Segment.
 
-At this time, this is the best way to integrate Vero with on-site analytics tools such as KISSmetrics or Mixpanel, and it should give you a complete picture of the success of your campaigns.
+## Webhooks
 
-To learn how to enable and customise UTM tags on links in your campaigns, refer to the article 
-[How to integrate Vero with Google Analytics for result tracking.](http://www.getvero.com/help/reporting/how-to-integrate-vero-with-google-analytics-for-result-tracking/)
+![{{site.data.screenshots.vero.integrations.webhooks.overview.title}}]({{site.data.screenshots.vero.integrations.webhooks.overview.image}}) 
+
+Vero can send all email events, including `sent`, `delivered`, `opened`, `clicked`, `bounced`, `unsubscribed` to a webhook you provide.
+
+This enables you to capture and save the data in your own data base or data warehouse. This is the most powerful way to collect data from Vero, enabling you to slice the data in any way that you please. Many customers use this data in combination with traditioanl databases such as PostgreSQL or more modern databases, such as Amazon AWS's Redshift.
+
+![{{site.data.screenshots.vero.integrations.webhooks.detail.title}}]({{site.data.screenshots.vero.integrations.webhooks.detail.image}}) 
+
+When configuring webhooks, selecting *Test URL* will send an example of each webhook to the URL you have specified.

@@ -1,48 +1,56 @@
-#How to setup my domain signing and remove 'via getveromail.com' from your emails
+---
+layout: articles
+title:  "Setup domain signing and remove 'via xyz.com' from your emails"
+categories: "deliverability"
+---
 
-By default, Vero will send your emails using our own IP addresses and domain configuration.
+# Setup domain signing and remove 'via xyz.com' from your emails
 
-For many customers, this is totally fine, but you may want to send emails from your own domain instead.
+By default, Vero will send your emails using a shared IP and domain configuration. We use a variety of domains and tiers to help ensure we get customers emails into inboxes. We work with [Mailgun]({{site.data.links.mailgun}}) to deliver your emails.
 
-The key benefits of this are: better deliverability, links and images are masked with your own domain and Vero is truly invisible to your customers.
+To improve your deliverability, we recommend setting up domain signing. This tells your recipients' mail servers that you are authenticated to send from your domain.
 
-###How your emails look by default
+This also means that Vero is truly invisible to your customers.
+
+## Sending without DNS verification
 
 When you first sign up to Vero, your emails will look something like this:
 
 ![via-getvero](https://www.getvero.com/wp-content/uploads/2014/08/via-getvero.png)
 
-Email clients will show this because the domain you send from (`test@chrishexton.com` in the example above) does not match the sending domain, getvero.com.
+Email clients will show this because the domain of the *From address* used to send the email, `test@chrishexton.com` in the example above, does not match the domain of the server that sent the email, `getvero.com` in the example above.
 
-###Multiple from domains
+By setting up your Vero DNS records your recipients will no longer see the `via xyz.com` message.
 
-You might see 'via getveromail.com' or another domain as we use multiple domains to ensure maximum deliverability for all our customers.
+Note that you might see `via getveromail.com`, `via veromailer.com` or some other domain as we send from multiple domains to ensure maximum deliverability for all our customers.
 
-By setting up your Vero DNS records your recipients will no longer see the 'via' message.
+## Add your DNS records
 
-###Request your DNS records by adding your Domain
+To sign your domain you will need to add two to three records to your domain's DNS configuration.
 
-To find the DNS records you need to confirm your domain at `Account > Configuration > Email delivery`.
+Add the domain you want to send from under *Settings > Project Details* in Vero. 
 
-![Screen Shot 2015-02-26 at 6.26.23 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-26-at-6.26.23-PM.png)
+Once this is done, visit *Settings > Email Delivery* and select *Request DNS records*. Vero will then generate the DKIM, CNAME and MX records you need to add to your domain to show that you are authenticated to use it for sending.)
 
-You will then need to set these DNS records up on your domain.Â To do this, you'll need to look at the how-to for your specific web host. Googling [Setup DNS records](https://www.google.com.au/search?q=how+to+configure+dns+records&oq=how+to+configure+dns+records) is the fastest way to find your providers instructions.
+![{{site.data.screenshots.vero.settings.email-delivery.unverified.title}}]({{site.data.screenshots.vero.settings.email-delivery.unverified.image}})
 
-###Custom CNAME
+To add the DNS records to your domain, you'll need to look at the how to for your specific domain host. Googling "Setup DNS records" is typically the fastest way to find your provider's specific instructions. If you need a hand, just [email us]({{site.data.links.email_us}}).
 
-By default we provide a CNAME record for email.yourdomain.com. This CNAME is used to track links. If you already have a CNAME setup on this subdomain, please email support@getvero.com and we can adjust the subdomain to something that works for you.
+### Settings up a custom CNAME
 
-###Verify your records
+By default, we provide a CNAME record for the subdomain `email.yourdomain.com`. This CNAME is used to track links. 
 
-Once you have added the DNS records to your domain, return to your Vero Account. You will see the 
+If you already have a CNAME setup on the `email` subdomain, please [email us]({{site.data.links.email_us}}) and we will update the subdomain to something else that works for you.
+
+## Verify your records
+
+Once you have added the DNS records to your domain, return to *Settings > Email Delivery* and select the *Verify DNS* link.the 
 Verify DNS Records button.
 
-![Screen Shot 2015-02-26 at 6.16.05 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-26-at-6.16.05-PM.png)
+![{{site.data.screenshots.vero.settings.email-delivery.verified.title}}]({{site.data.screenshots.vero.settings.email-delivery.verified.image}})
 
-When you click this button Vero will check to confirm that the DNS records are set up correctly and, if so, it will start sending your emails with this configuration going forward.
+Vero will check, in real time, that the DNS records are setup correctly on your domain. Once setup correctly, Vero will make your configuration as `Good` meaning everything is setup correctly. At this point, emails will begin going out from the domain you have elected.
 
-![Screen Shot 2015-03-05 at 2.14.40 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-03-05-at-2.14.40-PM.png)
+Note that it can take as many as 24 hours for your DNS records to propagate and for Vero to recognise the valid records.
 
-From now on you will no longer see the 'via' message in your outgoing emails!
-
- 
+From now on you will no longer see the `via xyz.com` message in your outgoing emails.

@@ -1,16 +1,58 @@
-#How Vero's conversion tracking works
+---
+layout: articles
+title:  "Conversion tracking"
+categories: "data"
+---
 
-Vero tracks what customers do on your website after opening or clicking one of your email campaigns.
+# Conversion tracking
 
-To define a conversion action, simply select one of the actions you are tracking on your website as part of the campaign creation process. For example, as part of creating a newsletter, you select the conversion action like so:
+## Defining a conversion event
 
-![](http://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-19-at-3.53.52-PM.png)
+Vero can track the conversions from an email campaign automatically.
 
-Once setup, Vero will start tracking your conversions. Vero tracks three different types of conversions:
+You can track conversions for ewsletters, behavioral emails and transactional emails. To do so, you must define which `event` will be considered a conversion when creating your campaign. 
 
-– Direct conversion: these are tracked when a contact clicks on one of your emails, returns to your site and takes an action in the same session. Right now this is only supported for customers using our Javascript snippet.
-– View-through conversions: these are tracked when a contact opens a campaign and ultimately returns to your site to complete the conversion action. In this instance, we track the conversion if it is within a conversion window, e.g. 30 days, and assign the conversion to the campaign most recently opened by the contact.
-– Indirect conversions: these are tracked when a contact receives a campaign and later takes the conversion action on your website. In this instance, we track the conversion if it is within a 
-conversion window, e.g. 30 days, and assign the conversion to the campaign most recently received by the contact. Indirect conversions are useful for use with our negative variations only, so Vero can track the actions of contacts that never even receive a particular campaign.
+![{{site.data.screenshots.vero.conversions.newsletter.title}}]({{site.data.screenshots.vero.conversions.newsletter.image}})
 
-You can customise the conversion window used to track view-through conversions under the `Account > Advanced` menu item. By default, this is set to 30.
+When creating a newsletter, you select the conversion action when editing the content of your newsletter.
+
+![{{site.data.screenshots.vero.conversions.behavioral.title}}]({{site.data.screenshots.vero.conversions.behavioral.image}})
+
+When creating a behavioral or transcational email, this is setup on the *Campaign snapshopt* screen.
+
+## Conversion types
+
+Once you have defined a conversion `event` Vero will start tracking conversions automatically. 
+
+Conversions are reported on the *Campaigns* screen and also on specific campaign reports. Vero tracks three different types of conversions.
+
+1. **Direct conversion** are tracked when a recipient clicks on a link in one of your emails, returns to your site and takes an action in the **same session**. Vero handles this using `conv_id` parameter attached to links in your emails.
+2. **View through conversions** are tracked when a user opens, does not click a link and returns to your site to complete the conversion event within a set time period. In this instance, we only track the conversion if it is within the conversion window and we assign it to the most recent campaign the user received **and** opened. 
+3. **Indirect conversions** are tracked when a user receives a campaign, does not open or click and later takes the conversion action on your website. The conversion is only tracked if it is within the conversion window and the conversion is assigned mampaign most recently received by the user. Indirect conversions are useful when running an A/B test with hold-out groups (negative variations), so Vero can track the actions of contacts that are part of a hold-out group and therefore do not even receive a particular campaign.
+
+You can customise the conversion window used to track view through and direct conversions by visiting *Settings > Advanced*. 
+
+By default, this window is set to `30 days`.
+
+## Setting up direct conversion tracking with the Vero API
+
+When using our Javascript library Vero will automatically handle direct conversion tracking. Our Javascript library will recognise the `conv_id` parameter and assign it to any events tracked during that session, allowing Vero to track the conversion against the correct user and campaign.
+
+If you are using one of Vero's backend libraries, you will need to manually store and refer to the `conv_id` parameter when tracking events.
+
+To do this, grab and store the `conv_id` parameter in a temporary session cookie (if the parameter is present with a request). 
+
+You should then append this value with any event `track` request that you make to Vero whilst this cookie is set. To learn how to `track` an event, refer to our [API reference]({{site.data.links.vero_api}}). 
+
+When tracking an event you can append an array called `extras`. To track conversions correctly, insert the stored value from `conv_id` using the variable `vero_conv`. 
+
+Here's a basic example request:
+
+    curl -X POST 'https://api.getvero.com/api/v2/events/track'
+    \ -d auth_token="your_auth_token"
+    \ -d identity='{"id": 1234, "email": "tyrion@lannister.com"}'
+    \ -d event_name="Viewed product"
+    \ -d data='{"product_name": "Red T-shirt", "product_url": "http://www.yourdomain.com/products/red-t-shirt"}'
+    \ -d extras='{"vero_conv": "1234"}'
+
+Once setup, you'll be successfully tracking conversions of all types.

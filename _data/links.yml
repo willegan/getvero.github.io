@@ -10,5 +10,9 @@ getvero: https://www.getvero.com/
 app_settings_projects: https://app.getvero.com/settings/project
 app_logs: https://app.getvero.com/logs
 support: https://support.getvero.com/
+terms-of-service: https://www.getvero.com/terms-of-service
+mailgun: https://www.mailgun.com
 articles:
   utm_tags: /help/articles/integrate-google-analytics-utm-tags.html
+  event_tracking: /help/articles/what-are-events.html
+  creating_and_matching_user_ids: /help/articles/create-and-matching-vero-user-ids.html

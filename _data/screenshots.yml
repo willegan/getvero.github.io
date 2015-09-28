@@ -68,6 +68,9 @@ vero:
     use-segment:
       image: /help/assets/screenshots/vero.campaign.use-segment.png
       title: Campaign using paying customers
+    triggered-email-example:
+      image: /help/assets/screenshots/vero.campaign.triggered-email-example.png
+      title: Triggered email campaign setup
   user-profile:
     image: /help/assets/screenshots/vero.user-profile.png
     title: User profile
@@ -121,6 +124,13 @@ vero:
   newsletter-email-campaigns:
     image: /help/assets/screenshots/vero.segment_conditions.png
     title: Segment Conditions
+  conversions:
+    newsletter:
+      title: Conversion tracking email newsletter
+      image: /help/assets/screenshots/vero.conversions.newsletter.png
+    behavioral:
+      title: Conversion tracking triggered email
+      image: /help/assets/screenshots/vero.conversions.behavioral.png
   integrations:
     google_analytics: 
       overview:
@@ -129,3 +139,51 @@ vero:
       detail:
         image: /help/assets/screenshots/vero.integrations.ga.detail.png
         title: Vero Google Analytics Integration Detail
+    webhooks:
+      overview:
+        image: /help/assets/screenshots/vero.integrations.webhooks.png
+        title: Vero Webhooks Overview
+      detail:
+        image: /help/assets/screenshots/vero.integrations.webhooks.detail.png
+        title: Vero Webhooks Detail
+  logs:
+    events:
+      view-event-data:
+        title: View event data Vero logs
+        image: /help/assets/screenshots/vero.logs.events.view-event-data.png
+      event-data-example:
+        title: Example event data Vero logs
+        image: /help/assets/screenshots/vero.logs.events.event-data-example.png
+      viewed-page:
+        title: Tracking pageviews Vero
+        image: /help/assets/screenshots/vero.logs.events.viewed-page.png
+  templates:
+    wysiwyg-editor:
+      title: Vero WYSIWYG Editor
+      image: /help/assets/screenshots/vero.templates.wysiwyg-editor.png
+    vero-editable-image:
+      title: Vero Editable Image
+      image: /help/assets/screenshots/vero.templates.vero-editable-image.png
+    template-library:
+      title: Vero Templates library
+      image: /help/assets/screenshots/vero.templates.template-library.png
+    unmerged-changes:
+      title: Vero Template Unmerged Changes
+      image: /help/assets/screenshots/vero.templates.template-unmerged-changes.png
+    errors:
+      title: Vero Template editing errors
+      image: /help/assets/screenshots/vero.templates.template-errors.png
+  settings:
+    project:
+      title: Vero Project delivery settings
+      image: /help/assets/screenshots/vero.settings.project-settings.png
+    opt-in:
+      title: Vero double opt in
+      image: /help/assets/screenshots/vero.settings.opt-in.png
+    email-delivery:
+      unverified:
+        title: Custom DNS Vero unverified
+        image: /help/assets/screenshots/vero.settings.email-delivery.unverified.png
+      verified:
+        title: Custom DNS Vero verified
+        image: /help/assets/screenshots/vero.settings.email-delivery.verified.png

@@ -1,19 +1,26 @@
-#How to track pageviews with Vero's API
+---
+layout: articles
+title:  "Track pageviews in Vero"
+categories: "'getting-started' data"
+---
 
-This only applies to customers using Vero's own Javascript API Library or Segment.com's Analytics.js Javascript library.
+# Track pageviews in Vero
 
-By default, Vero's Javascript wrapper does not track page views. Tracking pageviews can quickly become overwhelming, as most customers find they get better value when defining custom events in Vero.
+This article applies to users of Vero's Javascript library.
 
-It's easy to turn pageview tracking on, allowing you to use pageviews when defining your segments.
+By default, Vero does not track anonymous users or pageviews. Vero's customers find pageview tracking is typically overwhelming, as is tracking anonymous users. As such, a user is added to your Vero database once they have been `identified` with the Vero Javascript library. At this point the user's activity is tracked.
 
-Simply add the following line to the Vero Javascript library just before the `</head>` tag in your HTML template:
+If you would prefer to track pageviews, it is as simple as initializing Vero's Javascript library with this functionality enabled. Once enabled, Vero will track an event called `Viewed page` with a property `url` equal to the full path the user visited. This allows you to use pageviews for segmentation.
+
+To turn pageview tracking on, add the following line to the main Vero Javascript library snippet (typically inserted just before the `</head>` tag on your HTML pages).
 
     <script>
         _veroq.push(['trackPageview']);
     </script>
 
-Once installed correctly you will start seeing Viewed page in the Logs section of your Vero dashboard. Each pageview captures the URL of the page visited and you can use this to segment your contacts.
+Once installed correctly you will start seeing the `Viewed page` event in the *Logs* section of your Vero dashboard. 
 
-![Screen Shot 2015-03-05 at 4.13.59 PM](http://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-03-05-at-4.13.59-PM.png)
+![{{site.data.screenshots.vero.logs.events.viewed-page.title}}]({{site.data.screenshots.vero.logs.events.viewed-page.image}})
 
-This should go below the main Vero Javascript Library code: you can get a full copy of the Vero Javascript Library code from our [API Reference Documentation.](http://www.getvero.com/api)
+
+ou can get a full copy of the Vero Javascript Library code from our [API reference]({{site.data.links.vero_api}}).

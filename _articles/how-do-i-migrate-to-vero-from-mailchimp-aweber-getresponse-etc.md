@@ -1,6 +1,10 @@
-
+---
+layout: articles
+title:  "How do I migrate to Vero from Mailchimp, Campaign Monitor and other ESPs"
+categories: "'getting-started'"
+---
   
-##How do I migrate to Vero from Mailchimp/AWeber/GetResponse/etc.
+#How do I migrate to Vero from Mailchimp, Campaign Monitor and other ESPs
     
 In this article we will discuss how you can migrate from a more traditional email service provider (such as Mailchimp, which we'll use as an example throughout) to start sending 
 [email marketing newsletters with Vero](https://www.getvero.com/docs/newsletter-email-campaigns).
