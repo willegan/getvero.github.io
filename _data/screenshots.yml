@@ -38,16 +38,13 @@ vero:
   customer-properties:
     image: /help/assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
-<<<<<<< HEAD
   customer-properties-id:
     image: /help/assets/screenshots/vero.customer-properties-id.png
     title: ID in customer properties 
-=======
   customer:
     unsubscribed:
       image: /help/assets/screenshots/vero.customer.unsubscribed.png
       title: Unsubscribed customer
->>>>>>> origin/feature/add-all-docs
   fetch-html:
     image: /help/assets/screenshots/vero.fetch-html.png
     title: Fetch HTML in Vero
@@ -66,7 +63,6 @@ vero:
   advanced-scope-by-triggered-email:
     image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
     title: Scoped conditions triggered abandonment campaign
-<<<<<<< HEAD
   clone-email:
     image: /help/assets/screenshots/vero.clone-email.png
     title: Cloning an email
@@ -106,7 +102,6 @@ vero:
   double-opt-in-frequency:
     image: /help/assets/screenshots/vero.double-opt-in-frequency.png
     title: Double opt-in frequency 
-=======
   segments:
     paying-customers:
       image: /help/assets/screenshots/vero.segments.paying-customers.png
@@ -182,4 +177,13 @@ vero:
       detail:
         image: /help/assets/screenshots/vero.integrations.ga.detail.png
         title: Vero Google Analytics Integration Detail
->>>>>>> origin/feature/add-all-docs
+  add-team-members:
+    remove-team-member:
+      image: /help/assets/screenshots/vero.remove-team-member.png
+      title: Remove Team Member Button
+    account:
+      image: /help/assets/screenshots/vero.account.png
+      title: Account
+    invite-team-member:
+      image: /help/assets/screenshots/vero.invite-team-member.png
+      title: Invite Team Member
