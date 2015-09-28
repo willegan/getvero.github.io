@@ -1,8 +1,17 @@
+---
+layout: articles
+title:  "Automtically unsubscribing emails that have bounced"
+categories: "deliverability, 'data'"
+---
+
 #Does Vero automatically unsubscribe emails that have 'bounced'?
 
 Vero does automatically unsubscribe emails that return with a hard bounce.
 
+##A hard bounce##
 A hard bounce is an email message that is rejected by the recipient ISP/ESP because the recipient's email address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown.
+
+##A soft bounce##
 
 Vero does not automatically unsubscribe emails that return a soft bounce.
 
@@ -16,4 +25,4 @@ A soft bounce can occur for a number of reasons:
 - The recipient's settings do not allow for email from the sender
 - Suspicious or spammy content has been detected
 
-When an email address returns a soft bounce for five consecutive campaigns we do automatically convert this to a hard bounce and unsubscribe the contact.
+When an email address returns a `soft bounce` for **five consecutive campaigns** we do automatically convert this to a `hard bounce` and unsubscribe the contact.

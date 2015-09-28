@@ -38,6 +38,9 @@ vero:
   customer-properties:
     image: /help/assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
+  customer-properties-id:
+    image: /help/assets/screenshots/vero.customer-properties-id.png
+    title: ID in customer properties 
   customer:
     unsubscribed:
       image: /help/assets/screenshots/vero.customer.unsubscribed.png
@@ -60,6 +63,45 @@ vero:
   advanced-scope-by-triggered-email:
     image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
     title: Scoped conditions triggered abandonment campaign
+  clone-email:
+    image: /help/assets/screenshots/vero.clone-email.png
+    title: Cloning an email
+  esp-integrations:
+    image: /help/assets/screenshots/vero.esp-integrations.png
+    title: Email Service Provider integrations 
+  esp-credentials:
+    image: /help/assets/screenshots/vero.esp-credentials.png
+    title: Mandril credentials
+  segments-mainpage-edit:
+    image: /help/assets/screenshots/vero.segments-mainpage-edit.png
+    title: Editing segments
+  segments-view-users:
+    image: /help/assets/screenshots/vero.segments-view-users.png
+    title: View Users in segments
+  segments-export-users:
+    image: /help/assets/screenshots/vero.segments-export-users.png
+    title: Export Users in segments
+  email-logs-bounce:
+    image: /help/assets/screenshots/vero.email-logs-bounce.png
+    title: Bounced email logs 
+  subscribe-form-properties:
+    image: /help/assets/screenshots/vero.subscribe-form-properties.png
+    title: Subscribe form properties 
+  subscribe-form-event-trigger:
+    image: /help/assets/screenshots/vero.subscribe-form-event-trigger.png
+    title: Subcribe form event trigger 
+  subscribe-form-code:
+    image: /help/assets/screenshots/vero.subscribe-form-code.png
+    title: Subscribe form code 
+  subscribe-form-success:
+    image: /help/assets/screenshots/vero.subscribe-form-success.png
+    title: Subscribe form success 
+  double-opt-in-email: 
+    image: /help/assets/screenshots/vero.double-opt-in-email.png
+    title: Double opt-in email
+  double-opt-in-frequency:
+    image: /help/assets/screenshots/vero.double-opt-in-frequency.png
+    title: Double opt-in frequency 
   segments:
     paying-customers:
       image: /help/assets/screenshots/vero.segments.paying-customers.png
@@ -131,6 +173,12 @@ vero:
     behavioral:
       title: Conversion tracking triggered email
       image: /help/assets/screenshots/vero.conversions.behavioral.png
+  launch-newsletter:
+    image: /help/assets/screenshots/vero.launch-newsletter.png
+    title: Launch Newsletter
+  recurring-options:
+    image: /help/assets/screenshots/vero.recurring-options.png
+    title: Recurring Options
   integrations:
     google_analytics: 
       overview:
@@ -187,3 +235,22 @@ vero:
       verified:
         title: Custom DNS Vero verified
         image: /help/assets/screenshots/vero.settings.email-delivery.verified.png
+  add-team-members:
+    remove-team-member:
+      image: /help/assets/screenshots/vero.remove-team-member.png
+      title: Remove Team Member Button
+    account:
+      image: /help/assets/screenshots/vero.account.png
+      title: Account
+    invite-team-member:
+      image: /help/assets/screenshots/vero.invite-team-member.png
+      title: Invite Team Member
+  email-addresses:
+    image: /help/assets/screenshots/vero.email-addresses.png
+    title: Email Addresses 
+  email-addresses-campaign: 
+    image: /help/assets/screenshots/vero.email-addresses-campaign.png
+    title: Select email address in Campaign
+  dynamic-email-addresses: 
+    image: /help/assets/screenshots/vero.dynamic-email-addresses.png
+    title: Dynamic email addresses 

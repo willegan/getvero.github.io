@@ -15,12 +15,11 @@ Here is an example:
  
 ##Formatting
 You can provide a format filter when working with dynamic templating variables.
-
 *This works with ANY Liquid variable which are character, decimal (integer) number (base 10), exponential floating-point number, floating-point number, integer (base 10), octal number (base 8), a string of characters, unsigned decimal (integer) number, number in hexadecimal (base 16)
 	
-*It follows the basic printf formatting specifiers (
+*It follow the basic printf formatting specifiers (
 [Printf format cheat sheet](http://alvinalexander.com/programming/printf-format-cheat-sheet))
-
+ 
 Here is an example:
 
 event.invoice_ref = 12345
