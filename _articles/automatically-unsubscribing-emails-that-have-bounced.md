@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Automtically unsubscribing emails that have bounced"
-categories: "deliverability, 'data'"
+categories: deliverability
 ---
 
 #Does Vero automatically unsubscribe emails that have 'bounced'?

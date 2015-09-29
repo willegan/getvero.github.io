@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Identifying Users"
-categories: 
+categories: data
 ---
   
 ##Identifying Users

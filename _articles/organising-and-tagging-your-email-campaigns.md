@@ -1,4 +1,4 @@
-#Organising and filtering your email campaigns
+# Organising and tagging email campaigns
 
 Vero's [Campaigns](https://app.getvero.com/campaigns) menu allows you to manage the campaigns you are sending to your customers.
 

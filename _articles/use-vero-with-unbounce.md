@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: 'Unbounce and Vero'
-categories: "getting-started 'common issues'"
+categories: integrations
 ---
 
 # Unbounce and Vero

@@ -4,25 +4,32 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Docs</h1>
+  <div id="getting-started">
+    {% assign items = site.articles | where: "getting_started", true %}
+    <h2>Getting Started</h2>
+    <ul class="article-list">
+      {% for item in items %}
+        <li>
+          <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+        </li>
+      {%endfor%}
+    </ul>
+  </div>
 
-  <ul class="article-list">
-    {% for article in site.articles %}
-      <li>
-        <a class="article-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <hr> 
 
-  <!-- {% for category in site.categories %}
-  <h2>{{ category }}</h2>
-  <ul class="article-list">
-    {% for article in site.articles %}
-      <li>
-        <a class="article-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  {% endfor %} -->
+  <div id="all">
+    {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
+    {% for group in groups %}
+      <h2>{{ group.name | capitalize }}</h2>
+      <ul class="article-list">
+        {% for item in group.items %}
+          <li>
+            <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+          </li>
+        {%endfor%}
+      </ul>
+    {%endfor%}
+  </div>
 
 </div>

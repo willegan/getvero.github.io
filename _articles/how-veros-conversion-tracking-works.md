@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Conversion tracking"
-categories: "data"
+categories: data
 ---
 
 # Conversion tracking

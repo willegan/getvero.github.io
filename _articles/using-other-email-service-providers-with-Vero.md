@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Using other Email Service Providers"
-categories: "integrations"
+categories: deliverability
 ---
 
 #Can I use other Email Service Providers (ESP's) for delivery?

@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "What is a project?"
-categories: "getting_started"
+categories: configuration
+getting_started: true
 ---
 
 # What is a project?

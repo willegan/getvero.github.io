@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "Using HTML templates in Vero"
-categories: "'getting-started' 'email-design'"
+categories: email design
+getting_started: true
 ---
 
 # Using HTML templates in Vero

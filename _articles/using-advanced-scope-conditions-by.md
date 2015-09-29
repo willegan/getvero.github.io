@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Using advanced scope conditions"
-categories: "conditions"
+categories: email design
 ---
 
 # Using advanced 'scope conditions by'

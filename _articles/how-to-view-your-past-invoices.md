@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: How to view your past invoices?
-categories: "billing"
+categories: billing
 ---
 
 # How to view your past invoices?

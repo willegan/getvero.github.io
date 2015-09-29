@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "What are tags?"
-categories: "data"
+categories: data
 ---
 
 # What are tags?

@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  What is a segment?
-categories: "segments 'getting started'"
+categories: segments
+getting_started: true
 ---
 
 # What is a segment?

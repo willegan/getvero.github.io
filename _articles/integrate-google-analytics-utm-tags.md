@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  Integrate Google Analytics' UTM tags
-categories: "reporting"
+categories: reporting
 ---
 
 #Integrate Google Analytics' UTM tags

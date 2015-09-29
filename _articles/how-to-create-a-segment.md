@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  How to create a segment?
-categories: "segments"
+categories: segments
 ---
 
 # How to create a segment?

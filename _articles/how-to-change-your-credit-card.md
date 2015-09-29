@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: How to change your credit card?
-categories: "billing"
+categories: billing
 ---
 
 # How to change your credit card?

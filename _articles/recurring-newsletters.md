@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Recurring newsletters"
-categories: ""
+categories: email design
 ---
 
 #Recurring newsletters

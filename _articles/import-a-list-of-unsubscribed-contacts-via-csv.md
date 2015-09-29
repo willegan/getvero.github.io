@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Import a list of unsubscribed contacts via CSV"
-categories: ""
+categories: data
 ---
 
 

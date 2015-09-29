@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "Update a HTML Template"
-categories: "getting-started 'email design'"
+categories: email design
+getting_started: true
 ---
 
 #Update a HTML template

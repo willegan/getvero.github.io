@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "Testing emails in Vero"
-categories: "getting-started 'email design'"
+categories: email design
+getting_started: true
 ---
 
 # Testing emails in Vero

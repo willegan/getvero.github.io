@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Viewing your list of customers in a segment"
-categories: "data"
+categories: data
 ---
 
 #Can I view the list of customers in a segment?

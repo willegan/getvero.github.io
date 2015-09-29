@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "Import a list of contacts via CSV"
-categories: "'common issues', 'Data'"
+categories: data
+common_issues: true
 ---
 
 #Import a list of contacts via CSV

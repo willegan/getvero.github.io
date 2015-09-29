@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Install Vero with Google Tag Manager"
-categories: "integrations"
+categories: integrations
 ---
 
 # Install Vero with Google Tag Manager

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Dedicated IPs"
-categories: "deliverability"
+categories: deliverability
 ---
 
 #What is a Dedicated IP?

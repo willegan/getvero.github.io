@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: How Vero cookies contacts on your website using Javascript?
-categories: "data"
+categories: data
 ---
 
 # How Vero cookies contacts on your website using Javascript?

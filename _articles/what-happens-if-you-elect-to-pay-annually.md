@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "What happens if you elect to pay annually?"
-categories: "Billing"
+categories: billing
 ---
 
 # What happens if you elect to pay annually?

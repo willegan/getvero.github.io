@@ -1,10 +1,10 @@
 ---
 layout: articles
 title:  "What is a newsletter campaign?"
-categories: 
+categories: email design
 ---
 
-#What is a newsletter campaign?
+# What is a newsletter campaign?
 
 A Newsletter is a one-off email. Also known as a manual, email blast, ad-hoc, or promotional message.
 

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title: How to cancel a Vero account?
-categories: "billing"
+categories: billing
 ---
 
 # How to cancel a Vero account?

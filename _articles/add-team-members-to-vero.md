@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "Add team members to Vero"
-categories: "configuration"
+categories: configuration
+getting_started: true
 ---
 
 #Add team members to Vero

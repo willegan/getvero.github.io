@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "What are External Attributes?"
-categories: "data"
+categories: data
 ---
 
 # What are External Attributes?

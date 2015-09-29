@@ -1,7 +1,8 @@
 ---
 layout: articles
 title:  "How do I migrate to Vero from Mailchimp, Campaign Monitor and other ESPs"
-categories: "'getting-started'"
+categories: data
+getting_started: true
 ---
   
 #How do I migrate to Vero from Mailchimp, Campaign Monitor and other ESPs
