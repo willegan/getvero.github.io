@@ -6,30 +6,31 @@ layout: default
 
   <div id="getting-started">
     {% assign items = site.articles | where: "getting_started", true %}
-    <h2>Getting Started</h2>
-    <ul class="article-list">
-      {% for item in items %}
-        <li>
-          <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-        </li>
-      {%endfor%}
-    </ul>
+      <div class="group">
+        <h2>Getting Started</h2>
+        <ul class="article-list unstyled-list">
+          {% for item in items %}
+            <li>
+              <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+            </li>
+          {%endfor%}
+        </ul>
+      </div>
   </div>
-
-  <hr> 
 
   <div id="all">
     {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
     {% for group in groups %}
-      <h2>{{ group.name | capitalize }}</h2>
-      <ul class="article-list">
-        {% for item in group.items %}
-          <li>
-            <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-          </li>
-        {%endfor%}
-      </ul>
+      <div class="group">
+        <h2>{{ group.name | capitalize }}</h2>
+        <ul class="article-list unstyled-list">
+          {% for item in group.items %}
+            <li>
+              <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+            </li>
+          {%endfor%}
+        </ul>
+      </div>
     {%endfor%}
   </div>
-
 </div>
