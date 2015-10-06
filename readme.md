@@ -67,16 +67,17 @@ The docs use Markdown, allowing easy handling of most styles. You can find a cop
 
 For clarity, we ask you to observe a few rules:
 
-- **Don't use How To**. You should not use 'How to' in the title of an article. For example, *"How to create a segment"* can be better written *"Create a segment"*. This is for clarity.
-- **Use markdown code blocks appropriately**. Indent large snippets of code with four spaces.
-- **Show inline code for data attributes**. Use the \` character to create inline code snippets. For example, when talking about a user property *first_name*, you should use `first_name`, as this is a data property. 
-- **Use *italics* for the names of objects in the UI**. Such as segment or campaign names i.e. *Paying_Customers*
-- **Use bold styles when mentioning buttons or actions taken in the UI**. For example: Press the **Save** button.
-- **Use screenshots wisely**. If the help doc is mentioning a button to press for example, take a small screenshot of the button rather than the whole screen. Try to only show the relevant elements in larger screenshots. Its better to show more zoomed in image than the whole screen. See Examples Below:
-*Good/bad images here*
-- **Try to make sure the space around images is even**.
+-   **Don't use How To**. You should not use 'How to' in the title of an article. For example, *"How to create a segment"* can be better written *"Create a segment"*. This is for clarity.
+-   **Use markdown code blocks appropriately**. Indent large snippets of code with four spaces.
+-   **Show inline code for data attributes**. Use the \` character to create inline code snippets. For example, when talking about a user property *first_name*, you should use `first_name`, as this is a data property. 
+-   **Use *italics* for the names of objects in the UI**. Such as segment or campaign names i.e. *Paying_Customers*
+-   **Use bold styles when mentioning buttons or actions taken in the UI**. For example: Press the **Save** button.
+-   **Use screenshots wisely**. If the help doc is mentioning a button to press for example, take a small screenshot of the button rather than the whole screen. Try to only show the relevant elements in larger screenshots. Its better to show more zoomed in image than the whole screen. See the examples below:
+    ![Good image](/assets/readme/goodimage.png)
+    ![Bad image](/assets/readme/badimage.png)
+-   **Try to make sure the space around images is even**.
 
-We have created a few custom snippets. The primary snippet is the `highlighted.html` snippet. You can insert a block of highlighted text like so:
+We have also created a few custom snippets. The primary snippet is the `highlighted.html` snippet. You can insert a block of highlighted text like so:
 
     {% include highlighted.html content="This content will be inserted in a highlighted section" %}
 
