@@ -35,7 +35,7 @@ layout: default
 
     <div id="getting-started">
       {% assign items = site.articles | where: "getting_started", true %}
-      <h3>Getting Started</h2>
+      <h2>Frequently Asked Questions</h2>
       <p>Everything you need to get going with vero.</p>
       <ul class="article-list unstyled-list">
         {% for item in items %}
@@ -49,7 +49,7 @@ layout: default
     <div id="all">
       {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
       {% for group in groups %}
-        <h3 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
+        <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
         <ul class="article-list unstyled-list">
           {% for item in group.items %}
             <li>
