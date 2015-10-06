@@ -1,28 +1,35 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <div id="getting-started">
-    {% assign items = site.articles | where: "getting_started", true %}
-      <div class="group">
-        <h2>Getting Started</h2>
-        <ul class="article-list unstyled-list">
-          {% for item in items %}
-            <li>
-              <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-            </li>
-          {%endfor%}
-        </ul>
-      </div>
+<div id="help-header" class="full-width">
+  <div class="wrapper">
+    <h1>Help & Support</h1>
   </div>
+</div>
+<div class="home main-sidebar">
+  <div class="main-wrapper">
+    <div class="help-search">
+      <input type="search" placeholder="Search the help docs"/>
+      <span class="fa fa-search"></span>
+    </div>
 
-  <div id="all">
-    {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
-    {% for group in groups %}
-      <div class="group">
-        <h2>{{ group.name | capitalize }}</h2>
+    <div id="getting-started">
+      {% assign items = site.articles | where: "getting_started", true %}
+      <h3>Getting Started</h2>
+      <p>Everything you need to get going with vero.</p>
+      <ul class="article-list unstyled-list">
+        {% for item in items %}
+          <li>
+            <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+          </li>
+        {%endfor%}
+      </ul>
+    </div>
+
+    <div id="all">
+      {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
+      {% for group in groups %}
+        <h3 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
         <ul class="article-list unstyled-list">
           {% for item in group.items %}
             <li>
@@ -30,7 +37,24 @@ layout: default
             </li>
           {%endfor%}
         </ul>
-      </div>
-    {%endfor%}
+      {%endfor%}
+    </div>
+
+  </div>
+
+  <div class="sidebar-wrapper">
+    <div class="help-search">
+      <input type="search" placeholder="Search the help docs"/>
+      <span class="fa fa-search"></span>
+    </div>
+    <div class="white-block">
+      <h3 class="gray-block-title">Categories</h3>
+      <ul class="unstyled-list">
+        {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
+        {% for group in groups %}
+          <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+        {%endfor%}
+      </ul>
+    </div>
   </div>
 </div>
