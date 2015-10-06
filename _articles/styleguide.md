@@ -69,6 +69,32 @@ Press the **Save** button.
 
 ##Images
 
+Images make the help docs better but we should be mindful of the type of images we use. Try to show the most relevant part of the page with screenshots, try not to include content that does not relate to the help doc. It may be that you only need to show an image of a single button or of a small section of the page. 
+
+###Inline Images
+
+For images of buttons, icons or small elements, use the inline image snippet. For example.
+
+Click the **Remove** {% include inline-image.html key="site.data.screenshots.vero.add-team-members.remove-team-member" %} button.
+
+##Code
+
+When showing inline code snippets, variables, links or properties, use the code tag. For example.
+
+Set the condition `is_paying_customer`.
+
+When talking about multiple lines of code use the pre code tags. For Example:
+
+	<html>
+		<head>
+			<title>Vero</title>
+		</head>
+		<body>Is super awesome!</body>
+	</html>
+
+
+
+
 
 
 
