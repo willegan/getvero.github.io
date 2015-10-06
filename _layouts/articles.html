@@ -1,12 +1,36 @@
 ---
 layout: default
 ---
+<div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="#"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
 <div class="article single">
-  <div class="site-inner">
-    <div class="content-sidebar-wrap">
-      <article class="article-content entry-content">
-        {{ content }}
-      </article>
+  <div class="main-sidebar">
+    <article class="main-wrapper">
+      <div><span class="categories">Category</span></div>
+      {{ content }}
+      <div class="support-block white-block">
+        <h3>Get in touch</h3>
+        <p>Didn't find what you were looking for? Email our support team on <a href="#">support@getvero.com</a></p>
+      </div>
+    </article>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Help Articles</h3>
+        <ul class="unstyled-list">
+          <li><a href="#">Related topic</a></li>
+          <li><a href="#">Related topic</a></li>
+          <li><a href="#">Related topic</a></li>
+          <li><a href="#">Related topic</a></li>
+          <li><a href="#">Related topic</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
