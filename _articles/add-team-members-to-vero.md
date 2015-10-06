@@ -21,5 +21,5 @@ An invited user will receive an email from Vero referencing your account and ask
 
 ##Revoking Access
 
-Administrators can revoke access for any team member by hitting the **Remove** button <img class="inline-image" height="30px" src="{{ site.data.screenshots.vero.add-team-members.remove-team-member.image }}" title="{{ site.data.screenshots.vero.add-team-members.remove-team-member.title }}"/> on the Team management screen.
+Administrators can revoke access for any team member by hitting the **Remove** button {% include inline-image.html key="site.data.screenshots.vero.add-team-members.remove-team-member" %} on the Team management screen.
 
