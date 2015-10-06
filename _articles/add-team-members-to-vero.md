@@ -9,7 +9,7 @@ getting_started: true
 
 Administrator users can invite and remove team members to a Vero Account.
 
-By visiting **Account** > **Team** the administrator can invite team members by hitting the **Invite Team Member** <img class="inline-image" height="35px" src="{{ site.data.screenshots.vero.add-team-members.invite-team-member.image }}" title="{{ site.data.screenshots.vero.add-team-members.invite-team-member.title }}"/> button. 
+By visiting **Account** > **Team** the administrator can invite team members by hitting the **Invite Team Member** {% include inline-image.html key="site.data.screenshots.vero.add-team-members.invite-team-member" %} button. 
 
 Once invited, administrators can grant each team member access to each different project. There are three levels of access:
 

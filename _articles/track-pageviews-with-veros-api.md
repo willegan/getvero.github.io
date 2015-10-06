@@ -7,7 +7,7 @@ getting_started: true
 
 # Track pageviews in Vero
 
-This article applies to users of Vero's Javascript library.
+*This article applies to users of Vero's Javascript library.*
 
 By default, Vero does not track anonymous users or pageviews. Vero's customers find pageview tracking is typically overwhelming, as is tracking anonymous users. As such, a user is added to your Vero database once they have been `identified` with the Vero Javascript library. At this point the user's activity is tracked.
 
