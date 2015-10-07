@@ -3,22 +3,26 @@ layout: default
 ---
 <div class="help-semi-nav">
   <div class="content-wrapper">
-   <a class="back-link" href="#"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+   <a class="back-link" href="{{ site.baseurl }}/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
   </div>
 </div>
 <div class="article single">
   <div class="main-sidebar">
-    <article class="main-wrapper">
-      <div><span class="categories">Category</span></div>
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">{{ page.categories }}</span></div>
       {{ content }}
       <div class="support-block white-block">
         <h3>Get in touch</h3>
         <p>Didn't find what you were looking for? Email us at: <a href="#">support@getvero.com</a></p>
       </div>
     </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
     <div class="sidebar-wrapper">
       <div class="help-search">
-        <input type="search" placeholder="Search the help docs"/>
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
         <span class="fa fa-search"></span>
       </div>
       <div class="white-block">

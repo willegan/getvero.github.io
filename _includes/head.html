@@ -4,10 +4,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
   <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
   <link rel="stylesheet" href="http://0.0.0.0:9000/app.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
-  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script src="/help/assets/js/main.js"></script>
+  <script id="algolia__template" type="text/template">
+  {% raw %}
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  {% endraw %}
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
 </head>

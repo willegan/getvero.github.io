@@ -27,12 +27,7 @@ layout: default
   </div>
 </div>
 <div class="home main-sidebar">
-  <div class="main-wrapper">
-    <div class="help-search">
-      <input type="search" placeholder="Search the help docs"/>
-      <span class="fa fa-search"></span>
-    </div>
-
+  <div class="main-wrapper algolia__initial-content js-algolia__initial-content">
     <div id="getting-started">
       {% assign items = site.articles | where: "getting_started", true %}
       <h2>Frequently Asked Questions</h2>
@@ -62,9 +57,14 @@ layout: default
 
   </div>
 
+  <div class="algolia__search-content js-algolia__search-content">
+    <h1 class="page-title">Search</h1>
+    <div class="articles algolia__results"></div>
+  </div>
+
   <div class="sidebar-wrapper">
     <div class="help-search">
-      <input type="search" placeholder="Search the help docs"/>
+      <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
       <span class="fa fa-search"></span>
     </div>
     <div class="white-block">
