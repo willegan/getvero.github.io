@@ -13,3 +13,10 @@ markdown: kramdown
 collections:
   articles:
     output: true
+
+algolia:
+  application_id: 'KFSVJ5X7PP'
+  index_name:     'articles'
+
+gems:
+  - algoliasearch-jekyll
