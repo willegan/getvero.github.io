@@ -5,6 +5,34 @@ $ ->
   hljs.initHighlightingOnLoad()
   # Toggle result page
 
+
+  clearIncidents = ->
+    $('#sp-incidents').innerHTML = ''
+
+  updateIncidents = (incidents) ->
+    if $(incidents).length
+      for incident in incidents
+        li = $('<li class="' + incident.status + '"></li>').html('<strong>' + incident.status + '</strong> ' + incident.name + '. <a target="_blank" href="' + incident.shortlink + '">View details</a>' )
+        $('#sp-incidents').append(li)
+    else
+      clearIncidents()
+
+  setStatus = (status) ->
+    p = $('<p></p>').addClass(status.indicator).text(status.description)
+    $('#sp-status').append(p)
+
+  updateStatusPageBlock = ->
+    sp.incidents
+      filter : 'unresolved',
+      success: (data) ->
+        updateIncidents(data.incidents)
+    sp.status
+      success: (data) ->
+        setStatus(data.status)
+
+  sp = new StatusPage.page({ page : 't4s7kx6qh253' })
+  updateStatusPageBlock()
+
   showResults = ->
     window.scroll 0, 0
     $initialContent.addClass 'algolia__initial-content--hidden'

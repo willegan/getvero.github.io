@@ -1,3 +1,9 @@
+---
+layout: articles
+title:  "Tracking contacts across subdomains"
+categories: Data
+---
+
 #Tracking contacts across subdomains
 
 By default, Vero will cookie a customer on the current unique domain. If a customer is on `blog.getvero.com`, they will be cookied solely on this domain.

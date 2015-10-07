@@ -1,3 +1,9 @@
+---
+layout: articles
+title:  "Organising and tagging email campaigns"
+categories: Configuration
+---
+
 # Organising and tagging email campaigns
 
 Vero's [Campaigns](https://app.getvero.com/campaigns) menu allows you to manage the campaigns you are sending to your customers.
@@ -17,7 +23,7 @@ ignore unsubscribe notifications.
 
 You can quickly filter between campaign types using the tabs at the top of the campaigns page:
 
-![Campaign types in Vero](https://www.getvero.com/wp-content/uploads/2015/07/add-tags.png)
+![{{ site.data.screenshots.vero.filter-tags['title'] }}]({{ site.data.screenshots.vero.filter-tags['image'] }})
 
 ##Organising campaigns with tags
 
@@ -25,11 +31,11 @@ You can group campaigns together using tags. A tag is essentially a 'category', 
 
 If you had a group of campaigns helping users get onboarded with your product, you might add a tag called 'onboarding' to each of these campaigns, as follows:
 
-![Add a tag in Vero](https://www.getvero.com/wp-content/uploads/2015/07/add-a-tag.png)
+![{{ site.data.screenshots.vero.add-a-tag['title'] }}]({{ site.data.screenshots.vero.add-a-tag['image'] }})
 
 You can then filter to only see these campaigns using the filter menu:
 
-![](https://www.getvero.com/wp-content/uploads/2015/07/filter-by-tag.png)
+![{{ site.data.screenshots.vero.filter-by-tag['title']}}]({{ site.data.screenshots.vero.filter-by-tag['image'] }})
 
 ##Filtering your campaigns
 
