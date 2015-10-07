@@ -73,8 +73,8 @@ For clarity, we ask you to observe a few rules:
 -   **Use *italics* for the names of objects in the UI**. Such as segment or campaign names i.e. *Paying_Customers*
 -   **Use bold styles when mentioning buttons or actions taken in the UI**. For example: Press the **Save** button.
 -   **Use screenshots wisely**. If the help doc is mentioning a button to press for example, take a small screenshot of the button rather than the whole screen. Try to only show the relevant elements in larger screenshots. Its better to show more zoomed in image than the whole screen. See the examples below:
-    ![Good image](/assets/readme/goodimage.png)
-    ![Bad image](/assets/readme/badimage.png)
+    ![Good image](/assets/readme/goodimage.png?raw=true)
+    ![Bad image](/assets/readme/badimage.png?raw=true)
 -   **Try to make sure the space around images is even**.
 
 We have also created a few custom snippets. The primary snippet is the `highlighted.html` snippet. You can insert a block of highlighted text like so:
