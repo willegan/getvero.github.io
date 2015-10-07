@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "What is a transactional campaign?"
-categories: Email design
+categories: email design
 ---
 
 #What is a transactional campaign?
