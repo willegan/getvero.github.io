@@ -51,7 +51,7 @@ This file needs a manifest at the top that follows the format below:
     categories: "getting-started 'some other category'"
     ---
 
-You should put the article in a primary category. Add the category `getting-started` where an article also relates to getting new users started. Add the category `common-issue` where an article is a question raised by customers regularly.
+You should put the article in a primary category. Add the category `getting-started` where an article also relates to getting new users started. Add the category `common-issue` where an article is a question raised by customers regularly. *Note: CATEGORIES ARE CASE SENSITIVE.*
 
 Handling images, links and code snippets are typically done using `yml` files, located in `/_data`. For example, when referencing the Vero homepage, you should use the merge tag `{{link.vero.home}}`. In this way we can easily change links across our entire help documentation.
 

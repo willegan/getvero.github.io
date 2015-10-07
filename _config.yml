@@ -17,6 +17,9 @@ collections:
 algolia:
   application_id: 'KFSVJ5X7PP'
   index_name:     'articles'
+  excluded_files:
+    - index.html
+    - styleguide.html
 
 gems:
   - algoliasearch-jekyll

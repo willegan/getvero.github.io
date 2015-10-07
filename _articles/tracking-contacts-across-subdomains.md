@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Tracking contacts across subdomains"
-categories: Data
+categories: data
 ---
 
 #Tracking contacts across subdomains
