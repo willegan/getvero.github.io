@@ -1,3 +1,9 @@
+---
+layout: articles
+title:  "What is a transactional campaign?"
+categories: Email design
+---
+
 #What is a transactional campaign?
 
 Transactional email campaigns are notifications that are are sent to customers when they trigger a specific event. These are usually emails such as password notifications, receipts or customer-to-customer updates.
