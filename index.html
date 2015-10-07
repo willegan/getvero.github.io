@@ -66,14 +66,19 @@ layout: default
     <div id="all">
       {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
       {% for group in groups %}
-        <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
-        <ul class="article-list unstyled-list">
-          {% for item in group.items %}
-            <li>
-              <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-            </li>
-          {%endfor%}
-        </ul>
+        {% unless group.name == "" %}
+          <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
+          <ul class="article-list unstyled-list">
+            {% for item in group.items %}
+              {{ item.hide }}
+              {% unless item.hide == true %}
+                <li>
+                  <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+                </li>
+              {% endunless %}
+            {%endfor%}
+          </ul>
+        {% endunless %}
       {%endfor%}
     </div>
 
