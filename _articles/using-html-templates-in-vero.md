@@ -7,8 +7,6 @@ getting_started: true
 
 # Using HTML templates in Vero
 
-## Template management in Vero
-
 Vero gives you the ability to bring your own template. Vero supports media queries and fully responsive HTML templates. 
 
 To use a HTML template in a Vero campaign, upload your template to your Vero template library. When creating a newsletter, behavioral or transactional campaign, you can select a template to use from those that you have previously uploaded to your template gallery.
@@ -25,10 +23,10 @@ To make a section of a HTML template `vero-editable` in the WYSIWYG editor, all 
 
 Elements that support `vero-editable` tags are below. We've included an example of how you add the class correctly:
 
-- div and td tags, `<div class="vero-editable">`
-- a (anchor) tags, `<a href="http://casterlyrock.com" class="vero-editable">`
-- img tags, `<img src="http://casterlyrock.com/tywin-lannister.png" class="vero-editable">`
-- img tags with surrounding a (anchor) tags. I.e. images that can be links `<a src="http://casterlyrock.com" class="vero-editable"><img src="http://casterlyrock.com/tywin-lannister.png"></a>`
+- **div** and **td** tags, `<div class="vero-editable">`
+- **a** (anchor) tags, `<a href="http://casterlyrock.com" class="vero-editable">`
+- **img** tags, `<img src="http://casterlyrock.com/tywin-lannister.png" class="vero-editable">`
+- **img** tags with surrounding **a** (anchor) tags. I.e. images that can be links `<a src="http://casterlyrock.com" class="vero-editable"><img src="http://casterlyrock.com/tywin-lannister.png"></a>`
 
 Each of these `vero-editable` blocks is handled intelligently by Vero. Images marked with `vero-editable` will be handled differently from text blocks, and so on. Here's an example of a `vero-editable` image.
 
@@ -64,12 +62,12 @@ In Vero, templates are **inherited** by each of the email campaigns that use the
 
 When on the *Templates* menu, you can tell whether a template is being used by any campaigns using our traffic lights. Templates that are currently used in a campaign are marked in green. Those that are not in use are marked with gray. Templates that have been updated, yet the changes have not been safely merged, are marked in yellow.
 
-You can re-upload or edit your templates at any time. To do so, just select their name or *Edit* from the menu next to the template you want to update.
+You can re-upload or edit your templates at any time. To do so, just select their name or select **Edit** from the menu next to the template you want to update.
 
 As an example, if you have a template with a header and a footer and a singule `vero-editable` block in the middle, Vero will store any changes you make to this `vero-editable` section, per campaign. If you update the header, Vero will automatically update all of the child campaigns, merging in the updates underneath your own changes to the `vero-editable` section.
 
 ![{{site.data.screenshots.vero.templates.unmerged-changes.title}}]({{site.data.screenshots.vero.templates.unmerged-changes.image}})
 
-If you add or remove a `vero-editable` region, Vero won't be able to correctly merge your previous campaign updates onto the new template, as it will recognize you've changed the structure of hte underlying campaign. In this scenario, the template will be marked with the yellow traffic light. Selecting *View related campaigns* from the dropdown next to the template will reveal the campaigns that have conflicts and need a manual review.
+If you add or remove a `vero-editable` region, Vero won't be able to correctly merge your previous campaign updates onto the new template, as it will recognize you've changed the structure of hte underlying campaign. In this scenario, the template will be marked with the yellow traffic light. Selecting **View related campaigns** from the dropdown next to the template will reveal the campaigns that have conflicts and need a manual review.
 
-By clicking on the name of each campaign, you can manually review Vero's attempt to merge in your content updates. Once happy you can select *Save and exit*. Until you re-save this campaign, it will use the old version of your template, to avoid ugly or incomplete emails going to your customers. Once saved, the new version will go live.
+By clicking on the name of each campaign, you can manually review Vero's attempt to merge in your content updates. Once happy you can select **Save and exit**. Until you re-save this campaign, it will use the old version of your template, to avoid ugly or incomplete emails going to your customers. Once saved, the new version will go live.

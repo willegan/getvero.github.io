@@ -1,10 +1,10 @@
 ---
 layout: articles
-title: How to view your past invoices?
+title: View your past invoices
 categories: billing
 ---
 
-# How to view your past invoices?
+# View your past invoices
 
 To view a copy of your monthly invoices, select **Account > Invoices**.
 

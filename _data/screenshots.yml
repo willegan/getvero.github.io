@@ -220,7 +220,7 @@ vero:
       image: /help/assets/screenshots/vero.templates.template-unmerged-changes.png
     errors:
       title: Vero Template editing errors
-      image: /help/assets/screenshots/vero.templates.template-errors.png
+      image: /help/assets/screenshots/vero.templates.template-errors.png 
   settings:
     project:
       title: Vero Project delivery settings
@@ -253,4 +253,4 @@ vero:
     title: Select email address in Campaign
   dynamic-email-addresses: 
     image: /help/assets/screenshots/vero.dynamic-email-addresses.png
-    title: Dynamic email addresses 
+    title: Dynamic email addresses

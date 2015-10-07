@@ -19,19 +19,19 @@ When importing a template you are required to add the class
 
 to any tag whose contents you want to be able to define when creating a new campaign. These include:
 
-- div and td tags:
+- **div** and **td** tags:
 
   `<div class="vero-editable">`
 
-- a (anchor) tags:
+- **a** (anchor) tags:
 
   `<a href="http://casterlyrock.com" class="vero-editable">`
 
-- img tags:
+- **img** tags:
 
   `<img src="http://casterlyrock.com/tywin-lannister.png" class="vero-editable">`
 
-- img tags with surrounding a (anchor) tags. I.e. images that are links:
+- **img** tags with surrounding **a** (anchor) tags. I.e. images that are links:
 
   `<a src="http://casterlyrock.com" class="vero-editable">
   <img src="http://casterlyrock.com/tywin-lannister.png">

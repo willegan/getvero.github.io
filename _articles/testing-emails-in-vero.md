@@ -19,9 +19,9 @@ We recommend you use the test project with the development or staging version of
 
 Each project can be setup in three different modes:
 
-1. Live. In this mode, emails are sent out to the user's that trigger them.
-2. Test. In this mode, emails are sent to a specified email address when triggered by an end-user. In this way, you can see an exact copy of the email each customer has triggered. This is good for testing initially or with small data sets.
-3. Offlince. In this mode, emails are not sent out, but are still evaluated as events come in. This is the safest mode to use when installing Vero.
+1. **Live** - In this mode, emails are sent out to the user's that trigger them.
+2. **Test** - In this mode, emails are sent to a specified email address when triggered by an end-user. In this way, you can see an exact copy of the email each customer has triggered. This is good for testing initially or with small data sets.
+3. **Offline** - In this mode, emails are not sent out, but are still evaluated as events come in. This is the safest mode to use when installing Vero.
 
 You can copy campaigns and templates between Vero projects. If you copy a campaign, Vero will look for or copy all of the templates and segments that campaign relies on. This ensures you have 
 

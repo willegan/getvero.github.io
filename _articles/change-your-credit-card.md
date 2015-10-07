@@ -1,10 +1,10 @@
 ---
 layout: articles
-title: How to change your credit card?
+title: Change your credit card?
 categories: billing
 ---
 
-# How to change your credit card?
+# Change your credit card?
 
 If you need to update the credit card on file for your Vero account, visit **Account > Billing**.
 

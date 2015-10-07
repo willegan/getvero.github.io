@@ -33,15 +33,15 @@ The second is tracking what `events` a user takes. Events are defined by you and
 
 ### Supported libraries
 
-You can use Vero's API with any coding language, but we currently have helper libraries for these languages:
+You can use [Vero's API](http://www.getvero.com/api/) with any coding language, but we currently have helper libraries for these languages:
 
-- Ruby
-- Python
-- PHP
-- Perl
-- iOS
+- [Ruby](http://www.getvero.com/api/ruby/)
+- [Python](http://www.getvero.com/api/python/)
+- [PHP](http://www.getvero.com/api/php/)
+- [Perl](http://www.getvero.com/api/perl/)
+- [iOS](http://www.getvero.com/api/ios/)
 
-You can also use our Javascript library.
+You can also use our [javascript](http://www.getvero.com/api/) library.
 
 ## Setting up your first campaign
 
@@ -49,8 +49,8 @@ To get the most value out of Vero you should setup a triggered campaign. These a
 
 There are three types of emails you can send in Vero:
 
-- Newsletters are emails that are sent at a specific time, to a specific group of users.
-- Behavioral emails are marketing emails that are sent when a user does or does not do a certain action.
-- Transactional emails are emails sent every time a user does something, such as `Resets their password`.
+- **Newsletters** are emails that are sent at a specific time, to a specific group of users.
+- **Behavioral** emails are marketing emails that are sent when a user does or does not do a certain action.
+- **Transactional** emails are sent every time a user does something, such as `Resets their password`.
 
 To get the most out of Vero, try setting up each of these campaign types.
