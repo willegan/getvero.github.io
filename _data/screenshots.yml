@@ -254,3 +254,15 @@ vero:
   dynamic-email-addresses: 
     image: /help/assets/screenshots/vero.dynamic-email-addresses.png
     title: Dynamic email addresses
+  add-a-tag: 
+    image: /help/assets/screenshots/vero.add-a-tag.png
+    title: Add a Tag
+  filter-tags: 
+    image: /help/assets/screenshots/vero.filter-tags.png
+    title: Filter Tags
+  filter-by-tag: 
+    image: /help/assets/screenshots/vero.filter-by-tag.png
+    title: Filter By Tag
+  webhook-setup:
+    image: /help/assets/screenshots/vero.webhook-setup.png
+    title: Webhook Setup

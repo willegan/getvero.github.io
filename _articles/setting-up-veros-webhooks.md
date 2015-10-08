@@ -1,4 +1,11 @@
-#Setting up Vero's webhooks
+---
+layout: articles
+title:  "Setting up Vero's Webhooks"
+categories: integrations
+common_issues: true
+---
+
+#Setting up Vero's Webhooks
 
 Vero provides webhooks for the following events within the Vero platform:
 
@@ -14,7 +21,7 @@ Vero provides webhooks for the following events within the Vero platform:
 
 All of Vero's webhooks are sent to a single notification address. To enable the webhooks, go to `Account > Webhooks` and enter the URL at which you wish to receive the webhooks.
 
-![Screen Shot 2015-02-19 at 2.42.17 PM](https://www.getvero.com/wp-content/uploads/2015/02/Screen-Shot-2015-02-19-at-2.42.17-PM.png)
+![{{ site.data.screenshots.vero.webhook-setup['title'] }}]({{ site.data.screenshots.vero.webhook-setup['image'] }})
 
 For testing, you should check out Request Bin - it's a fantastic way to see the webhooks Vero (or any service) sends.
 

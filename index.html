@@ -26,7 +26,29 @@ layout: default
     </div>
   </div>
 </div>
-<div class="home main-sidebar">
+<div class="home main-sidebar right-to-left">
+  <div class="sidebar-wrapper">
+    <div class="help-search">
+      <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+      <span class="fa fa-search"></span>
+    </div>
+    <div class="white-block" id="categories">
+      <h3 class="gray-block-title">Categories</h3>
+      <ul class="unstyled-list">
+        {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
+        {% for group in groups %}
+          <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+        {%endfor%}
+      </ul>
+    </div>
+    <div id="sp-status-block" class="white-block">
+      <h3 class="gray-block-title">Vero Status</h3>
+      <div id="sp-status">
+      </div>
+      <ul id="sp-incidents" class="unstyled-list">
+      </ul>
+    </div>
+  </div>
   <div class="main-wrapper algolia__initial-content js-algolia__initial-content">
     <div id="getting-started">
       {% assign items = site.articles | where: "getting_started", true %}
@@ -44,44 +66,26 @@ layout: default
     <div id="all">
       {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
       {% for group in groups %}
-        <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
-        <ul class="article-list unstyled-list">
-          {% for item in group.items %}
-            <li>
-              <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-            </li>
-          {%endfor%}
-        </ul>
+        {% unless group.name == "" %}
+          <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
+          <ul class="article-list unstyled-list">
+            {% for item in group.items %}
+              {{ item.hide }}
+              {% unless item.hide == true %}
+                <li>
+                  <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+                </li>
+              {% endunless %}
+            {%endfor%}
+          </ul>
+        {% endunless %}
       {%endfor%}
     </div>
 
   </div>
 
   <div class="algolia__search-content js-algolia__search-content">
-    <h1 class="page-title">Search</h1>
+    <h2 class="page-title">Search Results:</h2>
     <div class="articles algolia__results"></div>
-  </div>
-
-  <div class="sidebar-wrapper">
-    <div class="help-search">
-      <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
-      <span class="fa fa-search"></span>
-    </div>
-    <div class="white-block">
-      <h3 class="gray-block-title">Categories</h3>
-      <ul class="unstyled-list">
-        {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
-        {% for group in groups %}
-          <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
-        {%endfor%}
-      </ul>
-    </div>
-    <div id="sp-status-block" class="white-block">
-      <h3 class="gray-block-title">Vero Status</h3>
-      <div id="sp-status">
-      </div>
-      <ul id="sp-incidents" class="unstyled-list">
-      </ul>
-    </div>
   </div>
 </div>

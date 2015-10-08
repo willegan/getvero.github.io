@@ -1,8 +1,8 @@
 ---
 layout: articles
 title:  "Help Doc Styleguide"
-categories: 
 getting_started: false
+hide: true
 ---
 
 #Styleguide
