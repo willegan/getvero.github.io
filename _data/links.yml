@@ -16,7 +16,7 @@ terms-of-service: https://www.getvero.com/terms-of-service
 mailgun: https://www.mailgun.com
 pricing: https://www.getvero.com/pricing
 imports: https://app.getvero.com/imports
-import_customers: http://www.getvero.com/help/adding-data-to-vero/import-a-list-of-contacts-via-csv/
+import_customers: /articles/import-a-list-of-customers-via-csv.html
 articles:
   utm_tags: /articles/integrate-google-analytics-utm-tags.html
   event_tracking: /articles/what-are-events.html
