@@ -8,7 +8,7 @@ getting_started: true
 
 Welcome to Vero! We're thrilled you've chosen to send amazing marketing campaigns with us.
 
-This guide is your step by step guide to getting from 0 to email marketing hero.
+This guide is your step by step guide to getting from zero to email marketing hero.
 
 Use this guide for: 
 
