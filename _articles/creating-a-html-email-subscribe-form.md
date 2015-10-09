@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Creating a HTML email subscribe form"
-categories: data
+categories: configuration
 ---
 
 #Creating a HTML email subscribe form

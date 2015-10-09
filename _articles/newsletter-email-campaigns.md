@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "What is a newsletter campaign?"
-categories: email design
+categories: campaigns
 ---
 
 # What is a newsletter campaign?

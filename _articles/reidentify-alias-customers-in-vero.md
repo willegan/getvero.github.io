@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Reidentify (alias) customers in Vero"
-categories: data
+categories: customer data
 ---
 
 # Reidentify (alias) customers in Vero

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Migrate to Vero from Mailchimp, Campaign Monitor and other ESPs"
-categories: data
+categories: configuration
 getting_started: true
 ---
   

@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Track pageviews in Vero"
-categories: data
+categories: event data
 getting_started: true
 ---
 

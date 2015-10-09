@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Setup double opt-ins"
-categories: data
+categories: configuration
 ---
  
 # Setup double opt-ins (deprecated)

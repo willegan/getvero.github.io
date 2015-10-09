@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Tracking customers across subdomains"
-categories: data
+categories: customer data
 ---
 
 # Tracking customers across subdomains

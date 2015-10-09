@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Basic A/B variation test"
-categories: email design
+categories: campaigns
 common_issues: true
 ---
   

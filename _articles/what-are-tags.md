@@ -1,14 +1,14 @@
 ---
 layout: articles
 title:  "What are tags?"
-categories: data
+categories: customer data
 ---
 
 # What are tags?
 
 *Note: If you've used other email marketing tools, note that Vero's tags typically hold a different meaning.*
 
-Tags can be use in different situations.
+Tags can be used in different situations.
 
 ## With campaigns and templates
 
