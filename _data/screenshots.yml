@@ -2,6 +2,30 @@ unbounce:
   script:
     image: /help/assets/screenshots/unbounce.scripts.png
     title: Unbounce Script
+  webhook-post-url:
+    image: /help/assets/screenshots/unbounce.webhook-post-url.png
+    title: Unbounce webhook
+  vero-form-url:
+    image: /help/assets/screenshots/unbounce.vero-form-url.png
+    title: Unbounce Vero Form Url
+  pop-up:
+    image: /help/assets/screenshots/unbounce.pop-up.png
+    title: Unbounce Pop-Up
+  success:
+    image: /help/assets/screenshots/unbounce.success.png
+    title: Unbounce Success notification
+  field-mapping:
+    image: /help/assets/screenshots/unbounce.field-mapping.png
+    title: Unbounce Field Mapping
+  mapping-1:
+    image: /help/assets/screenshots/unbounce.mapping-1.png
+    title: Unbounce Mapping Step 1
+  mapping-2:
+    image: /help/assets/screenshots/unbounce.mapping-2.png
+    title: Unbounce Mapping Step 2
+  confirmation-dialog:
+    image: /help/assets/screenshots/unbounce.confirmation-dialog.png
+    title: Unbounce Confirmation Dialog
 gtm:
   configure:
     image: /help/assets/screenshots/gtm.configure.png
@@ -40,7 +64,7 @@ vero:
     title: Customer properties in Vero
   customer-properties-id:
     image: /help/assets/screenshots/vero.customer-properties-id.png
-    title: ID in customer properties 
+    title: ID in customer properties
   customer:
     unsubscribed:
       image: /help/assets/screenshots/vero.customer.unsubscribed.png
@@ -68,7 +92,7 @@ vero:
     title: Cloning an email
   esp-integrations:
     image: /help/assets/screenshots/vero.esp-integrations.png
-    title: Email Service Provider integrations 
+    title: Email Service Provider integrations
   esp-credentials:
     image: /help/assets/screenshots/vero.esp-credentials.png
     title: Mandril credentials
@@ -83,25 +107,25 @@ vero:
     title: Export Users in segments
   email-logs-bounce:
     image: /help/assets/screenshots/vero.email-logs-bounce.png
-    title: Bounced email logs 
+    title: Bounced email logs
   subscribe-form-properties:
     image: /help/assets/screenshots/vero.subscribe-form-properties.png
-    title: Subscribe form properties 
+    title: Subscribe form properties
   subscribe-form-event-trigger:
     image: /help/assets/screenshots/vero.subscribe-form-event-trigger.png
-    title: Subcribe form event trigger 
+    title: Subcribe form event trigger
   subscribe-form-code:
     image: /help/assets/screenshots/vero.subscribe-form-code.png
-    title: Subscribe form code 
+    title: Subscribe form code
   subscribe-form-success:
     image: /help/assets/screenshots/vero.subscribe-form-success.png
-    title: Subscribe form success 
-  double-opt-in-email: 
+    title: Subscribe form success
+  double-opt-in-email:
     image: /help/assets/screenshots/vero.double-opt-in-email.png
     title: Double opt-in email
   double-opt-in-frequency:
     image: /help/assets/screenshots/vero.double-opt-in-frequency.png
-    title: Double opt-in frequency 
+    title: Double opt-in frequency
   segments:
     paying-customers:
       image: /help/assets/screenshots/vero.segments.paying-customers.png
@@ -147,7 +171,7 @@ vero:
     title: Event Import Button
   sidebar:
     image: /help/assets/screenshots/vero.import_export_sidebar.png
-    title: Import Export 
+    title: Import Export
   event-greybox:
     image: /help/assets/screenshots/vero.track_trigger_csv.png
     title: Track Trigger
@@ -180,7 +204,7 @@ vero:
     image: /help/assets/screenshots/vero.recurring-options.png
     title: Recurring Options
   integrations:
-    google_analytics: 
+    google_analytics:
       overview:
         image: /help/assets/screenshots/vero.integrations.ga.png
         title: Vero Google Analytics Integration Overview
@@ -220,7 +244,7 @@ vero:
       image: /help/assets/screenshots/vero.templates.template-unmerged-changes.png
     errors:
       title: Vero Template editing errors
-      image: /help/assets/screenshots/vero.templates.template-errors.png 
+      image: /help/assets/screenshots/vero.templates.template-errors.png
   settings:
     project:
       title: Vero Project delivery settings
@@ -247,22 +271,29 @@ vero:
       title: Invite Team Member
   email-addresses:
     image: /help/assets/screenshots/vero.email-addresses.png
-    title: Email Addresses 
-  email-addresses-campaign: 
+    title: Email Addresses
+  email-addresses-campaign:
     image: /help/assets/screenshots/vero.email-addresses-campaign.png
     title: Select email address in Campaign
-  dynamic-email-addresses: 
+  dynamic-email-addresses:
     image: /help/assets/screenshots/vero.dynamic-email-addresses.png
     title: Dynamic email addresses
-  add-a-tag: 
+  add-a-tag:
     image: /help/assets/screenshots/vero.add-a-tag.png
     title: Add a Tag
-  filter-tags: 
+  filter-tags:
     image: /help/assets/screenshots/vero.filter-tags.png
     title: Filter Tags
-  filter-by-tag: 
+  filter-by-tag:
     image: /help/assets/screenshots/vero.filter-by-tag.png
     title: Filter By Tag
   webhook-setup:
     image: /help/assets/screenshots/vero.webhook-setup.png
     title: Webhook Setup
+  ab_test:
+    overview:
+      image: /help/assets/screenshots/vero.ab_test.overview.png
+      title: A/B Test Overview
+    variations:
+      image: /help/assets/screenshots/vero.ab_test.variations.png
+      title: A/B Test Variations

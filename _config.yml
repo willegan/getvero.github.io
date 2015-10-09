@@ -36,6 +36,7 @@ algolia:
     - articles/duplicates/setting-up-a-drip-email-campaign-autoresponder.md
     - articles/duplicates/unbounce-integration-the-fast-way.md
     - articles/duplicates/what-are-events-and-why-do-they-matter.md
+    - articles/shopify-integration.md
 
 gems:
   - algoliasearch-jekyll
