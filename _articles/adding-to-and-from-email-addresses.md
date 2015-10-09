@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Adding TO and FROM email addresses"
-categories: email design
+categories: configuration
 ---
   
 ##Adding "To" and "From" email addresses?

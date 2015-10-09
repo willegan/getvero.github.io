@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Import a list of the past events contacts' have triggered via CSV"
-categories: 'data'
+categories: event data
 getting_started: true
 ---
 

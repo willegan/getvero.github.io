@@ -1,7 +1,7 @@
 ---
 layout: articles
 title:  "Cloning an email"
-categories: email design
+categories: campaigns
 ---
 
 # Can I clone an email?
