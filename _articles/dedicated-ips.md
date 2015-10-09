@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Dedicated IPs"
+title:  Dedicated IPs
 categories: deliverability
 ---
 

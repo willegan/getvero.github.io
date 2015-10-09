@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Automtically unsubscribing emails that have bounced"
+title:  Automtically unsubscribing emails that have bounced
 categories: deliverability
 ---
 

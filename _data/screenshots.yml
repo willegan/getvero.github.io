@@ -137,6 +137,9 @@ vero:
     triggered-email-example:
       image: /assets/screenshots/vero.campaign.triggered-email-example.png
       title: Triggered email campaign setup
+    series:
+      image: /assets/screenshots/vero.campaign.series.png
+      title: Welcome Series
   user-profile:
     image: /assets/screenshots/vero.user-profile.png
     title: User profile

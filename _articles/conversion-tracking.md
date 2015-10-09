@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Conversion tracking"
+title:  Conversion tracking
 categories: reporting
 ---
 

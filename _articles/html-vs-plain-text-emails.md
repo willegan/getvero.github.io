@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "HTML vs. Plain Text emails"
+title:  HTML vs. Plain Text emails
 categories: email design
 ---
   

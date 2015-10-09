@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Setup double opt-ins"
+title:  Setup double opt-ins
 categories: configuration
 ---
  

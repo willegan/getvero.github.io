@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Changing the email or ID of a customer using 'alias'"
+title:  Changing the email or ID of a customer using 'alias'
 categories: customer data
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Recurring newsletters"
+title:  Recurring newsletters
 categories: campaigns
 ---
 

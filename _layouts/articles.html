@@ -27,20 +27,22 @@ layout: default
       </div>
       <div class="white-block">
         <h3 class="gray-block-title">Related Articles</h3>
-        {% assign groups = site.articles | where: "categories", page.categories | group_by: "categories" | sort: "name" %}
-        {% for group in groups %}
-          {% unless group.name == "" %}
-            <ul class="unstyled-list">
-              {% for item in group.items %}
-                {% unless item.hide == true or item.title == page.title %}
-                  <li>
-                    <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-                  </li>
-                {% endunless %}
-              {%endfor%}
-            </ul>
-          {% endunless %}
-        {%endfor%}
+        {% if page.getting_started == true %}
+          {% assign items = site.articles | where: "getting_started", true %}
+        {% elsif page.common_issues == true %}
+          {% assign items = site.articles | where: "common_issues", true %}
+        {% else %}
+          {% assign items = site.articles | where: "categories", page.categories | sort: "name" %}
+        {% endif %}
+        <ul class="unstyled-list">
+          {% for item in items %}
+            {% unless item.hide == true or item.title == page.title %}
+              <li>
+                <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "What is a newsletter campaign?"
+title: What is a newsletter campaign?
 categories: campaigns
 ---
 

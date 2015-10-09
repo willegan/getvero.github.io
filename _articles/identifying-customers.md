@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Identifying Customers"
+title: Identifying Customers
 categories: customer data
 ---
 	
