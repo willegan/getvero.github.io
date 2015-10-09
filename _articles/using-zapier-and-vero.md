@@ -26,9 +26,14 @@ The Vero Zapier plugin has the following actions available.
 
 Every action of the Vero Zapier plugin requires that you provide at least a unique customer ID. Some also allow you to provide an email.
 
-**Note:** the customer's ID must be unique and many Vero customers simply use the customer's email for the ID field. These are used to identify and update the customer's profile in Vero. The screenshot below shows how these fields map to a profile inside your Vero account:
+**Note:** the customer's ID must be unique and many Vero customers simply use the customer's email for the ID field. These are used to identify and update the customer's profile in Vero.
+
+Mapping email in Zapier:
 
 ![{{ site.data.screenshots.zapier.add-customer['title'] }}]({{ site.data.screenshots.zapier.add-customer['image'] }})
+
+Result in Vero:
+
 ![{{ site.data.screenshots.vero.customer-properties['title'] }}]({{ site.data.screenshots.vero.customer-properties['image'] }})
 
 ### Create a customer
@@ -43,12 +48,12 @@ This simple action allows you to unsubscribe a customer in Vero. Simply provide 
 
 ### Track an event
 
-Possibly the most powerful action available with the Vero Zapier extension, this action allows you to track an event in Vero. This signifies that a customer has done something. An example might be to trigger the event 
+This is possibly the most powerful action available with the Vero Zapier integration. This action allows you to track an event in Vero. This signifies that a customer has done something. An example might be to trigger the event 
 Help ticket received when a customer emails your help desk in Help Scout. To do this, you'd name the event you want to capture as so:
 
 ![{{ site.data.screenshots.zapier.event-name['title'] }}]({{ site.data.screenshots.zapier.event-name['image'] }})
 
-You can also capture **event properties** when you track an event. Event data can be inserted into emails or used for further segmentation. To do this, you can add the properties you want to track with the event using the Zapier form. Here's an example:
+You can also capture event properties when you track an event. Event properties can be inserted into emails or used for further segmentation. To do this, you can add the properties you want to track with the event using the Zapier form. Here's an example:
 
 ![{{ site.data.screenshots.zapier.event-properties['title'] }}]({{ site.data.screenshots.zapier.event-properties['image'] }})
 
@@ -58,7 +63,7 @@ This action allows you to add or remove tags from an individual customer profile
 
 To add or remove tags, simply use the Zapier form to record the tags you want. You can add and remove as many tags as you wish.
 
-**Note:** if a customer does not have a tag and you remove it, nothing will happen. This is totally fine!
+**Note**: If a customer does not have a tag and you remove it, nothing will happen. This is totally fine!
 
 ![{{ site.data.screenshots.zapier.tags['title'] }}]({{ site.data.screenshots.zapier.tags['image'] }})
 
