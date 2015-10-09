@@ -4,21 +4,21 @@ title:  Integrate Google Analytics' UTM tags
 categories: reporting
 ---
 
-#Integrate Google Analytics' UTM tags
+# Integrate Google Analytics' UTM tags
 
 You can automatically append UTM parameters to outbound links in your email campaigns. 
 
 Google Analytics, along with  most analytics tools, use this data to attribute conversions to their correct source.
 
-To enable appending of UTM tags, visit the *Settings > Integrations* menu. Select *View* next to the Google Analaytics Integration.
+To enable appending of UTM tags, visit the *Settings > Integrations* menu. Click **View** next to the Google Analaytics Integration.
 
 ![{{site.data.screenshots.vero.integrations.google_analytics.overview.title}}]({{site.data.screenshots.vero.integrations.google_analytics.overview.image}}) 
 
-Select *Add Google Analaytics Integration* to turn this feature on.
+Click **Add Google Analaytics Integration** to turn this feature on.
 
 ![{{site.data.screenshots.vero.integrations.google_analytics.detail.title}}]({{site.data.screenshots.vero.integrations.google_analytics.detail.image}}) 
 
-##Editing the UTM tags
+## Editing the UTM tags
 
 Vero will append UTM tags in the following manner:
 
@@ -29,12 +29,12 @@ Vero will append UTM tags in the following manner:
 
 You can edit the `utm_source` and `utm_medium` values appended by Vero on the *Settings > Integrations* menu page.
 
-##Customising tags in an individual email campaign
+## Customising tags in an individual email campaign
 
 If you add your own UTM tags to any link, these will take precedence and override the default UTM tags that Vero will append above. 
 
 For example, if you added a link as follows:
 
-`http://www.yoursite.com?utm_campaign=some_term`
+	http://www.yoursite.com?utm_campaign=some_campaign_name
 
 Then Vero would only append the `utm_source`, `utm_term` and `utm_medium` tags. It would not overwrite your custom `utm_campaign` value on this link.

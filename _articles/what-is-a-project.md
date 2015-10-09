@@ -15,4 +15,4 @@ Projects can be set to the following statuses:
 -   **Test:** Emails will be sent to a single email address for testing
 -   **Offline:** Emails will not be sent
 
-**Note:** You can copy campaigns from one project to another.
+**Note:** You can copy data from one project to another.

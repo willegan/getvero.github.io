@@ -26,14 +26,21 @@ layout: default
         <span class="fa fa-search"></span>
       </div>
       <div class="white-block">
-        <h3 class="gray-block-title">Related Help Articles</h3>
-        <ul class="unstyled-list">
-          <li><a href="#">Related topic</a></li>
-          <li><a href="#">Related topic</a></li>
-          <li><a href="#">Related topic</a></li>
-          <li><a href="#">Related topic</a></li>
-          <li><a href="#">Related topic</a></li>
-        </ul>
+        <h3 class="gray-block-title">Related Articles</h3>
+        {% assign groups = site.articles | where: "categories", page.categories | group_by: "categories" | sort: "name" %}
+        {% for group in groups %}
+          {% unless group.name == "" %}
+            <ul class="unstyled-list">
+              {% for item in group.items %}
+                {% unless item.hide == true or item.title == page.title %}
+                  <li>
+                    <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+                  </li>
+                {% endunless %}
+              {%endfor%}
+            </ul>
+          {% endunless %}
+        {%endfor%}
       </div>
     </div>
   </div>
