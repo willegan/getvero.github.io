@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Setup domain signing and remove 'via xyz.com' from your emails"
+title:  Setup domain signing and remove 'via xyz.com' from your emails
 categories: deliverability
 ---
 

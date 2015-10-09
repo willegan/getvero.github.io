@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Getting Started Guide"
+title:  Getting Started Guide
 getting_started: true
 ---
 

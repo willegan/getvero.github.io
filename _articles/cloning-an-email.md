@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Cloning an email"
+title:  Cloning an email
 categories: campaigns
 ---
 
