@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What are tags?</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">customer data</span></div>
+      <h1 id="what-are-tags">What are tags?</h1>
+
+<p>Each customer profile in Vero can have many tags.</p>
+
+<p>Tags are useful in situations where you want a customer profile to relate to many potential values. A good example would be customer preferences. For example, you might want customers to manually keep tabs on which customers are interseted in <code>shoes</code>, <code>skirts</code> and <code>trousers</code>. You could append tags to a customer’s profile and use these tags to create segments.</p>
+
+<p>Tags are a powerful way to enhance segmentation. They are useful for creating preference centres, emulating static lists or use Vero as a lightweight CRM, as tags can also be added inside Vero’s user interface.</p>
+
+<h2 id="adding-tags">Adding tags</h2>
+
+<p>Tags can be added in three ways:</p>
+
+<ol>
+  <li>
+    <p>Using Vero’s API. You can refer to our API documentation](https://www.getvero.com/api) for more information.</p>
+  </li>
+  <li>
+    <p>Using CSV imports. See the section titled <em>Creating static lists with tags</em> below.</p>
+  </li>
+  <li>
+    <p>Via the UI. When browsing a customer’s profile in Vero, browse to the <em>Tags</em> tab and select the <strong>New Tag</strong> button to add a tag <img class="inline-image" src="/help/assets/screenshots/vero.add-tag.png" title="Add a tag in Vero" />.</p>
+  </li>
+</ol>
+
+<h2 id="removing-tags">Removing tags</h2>
+
+<p>Tags can be removed in two ways:</p>
+
+<ol>
+  <li>
+    <p>Using Vero’s API. You can refer to our <a href="https://www.getvero.com/api">API documentation</a> for more information.</p>
+  </li>
+  <li>
+    <p>Via the UI. When browsing a customer’s profile in Vero, browse to the <em>Tags</em> tab and select the dropdown next to a tag and choose <strong>Delete</strong>.</p>
+  </li>
+</ol>
+
+<h2 id="creating-static-lists-with-tags">Creating static lists with tags</h2>
+
+<p>A common usage of tags is to import and segment a <strong>static group</strong> of customers.</p>
+
+<p>You can import a CSV with a <code>tags</code> column, tagging each of the users with a tag, or tags, you specify. You can then create a segment using this tag and send out a newsletter.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/changing-the-email-or-id-of-a-customer-using-alias.html">Changing the email or ID of a customer using 'alias'</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/creating-and-matching-vero-customer-ids.html">Creating and matching Vero customer IDs</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/how-do-i-know-if-a-customer-is-unsubscribed.html">How do I know if a customer is unsubscribed?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/how-to-export-customer-data.html">How to export customer data?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/how-vero-cookies-customers-on-your-website-using-javascript.html">How Vero cookies customers on your website using Javascript?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/identifying-customers.html">Identifying Customers</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/import-a-list-of-customers-via-csv.html">Import a list of customers via CSV</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/import-a-list-of-unsubscribed-customers-via-csv.html">Import a list of unsubscribed customers via CSV</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/migrate-to-vero-from-mailchimp-aweber-getresponse-etc.html">Migrating to Vero from a list based provider</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/reidentify-alias-customers-in-vero.html">Reidentify (alias) customers in Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/tracking-customers-across-subdomains.html">Tracking customers across subdomains</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/viewing-the-list-of-customers-in-a-segment.html">Viewing your list of customers in a segment</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/what-are-customer-properties.html">What are customer properties?</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

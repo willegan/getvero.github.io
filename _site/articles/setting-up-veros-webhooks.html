@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Setting up Vero's Webhooks</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">integrations</span></div>
+      <h1 id="setting-up-veros-webhooks">Setting up Vero’s Webhooks</h1>
+
+<h2 id="webhook-types">Webhook Types</h2>
+
+<p>Vero provides webhooks for the following events:</p>
+
+<ul>
+  <li>Sent (email has been sent by Vero)</li>
+  <li>Delivered (email has been delievered to the recipient email server)</li>
+  <li>Opened</li>
+  <li>Clicked</li>
+  <li>Bounced (hard and soft)</li>
+  <li>Unsubscribed</li>
+  <li>Customer updated</li>
+</ul>
+
+<h2 id="webhook-setup">Webhook Setup</h2>
+
+<p>All of Vero’s webhooks are sent to a single notification address. To enable the webhooks, go to <em>Account &gt; Webhooks</em> and enter the URL at which you wish to receive the webhooks.</p>
+
+<p><img src="/assets/screenshots/vero.webhook-setup.png" alt="Webhook Setup" /></p>
+
+<p>For testing, you should check out <a href="http://requestb.in/">Request Bin</a> - it’s a fantastic way to see the webhooks Vero (or any service) sends.</p>
+
+<p>You can click the <strong>Test URL</strong> button and Vero will send an example of a webhook to the URL you’ve entered. This ensures Vero has registered the URL correctly and data arrives.</p>
+
+<p>Once you have entered the URL you can choose which webhook events you want to track.</p>
+
+<h2 id="webhook-format">Webhook format</h2>
+
+<h3 id="webhooks-for-email-events">Webhooks for email events</h3>
+
+<p>Webhooks related to emails (sent, delivered, bounced, etc.) use the following format:</p>
+
+<pre><code>    {
+        "type": "sent",
+        "user": {
+            "id": 12345,
+            "email": "steve@getvero.com"
+        },
+        "campaign": {
+            "id": 1235666234572456,
+            "type": "behavioural",
+            "name": "Cart Abandonment Followup",
+            "subject": "You have items in your shopping bag",
+            "trigger-event": "Abandoned cart",
+            "permalink": "http://app.getvero.com/view/1/9c8c3ac6ac65736926a6da5aefbf852d"
+         },
+         "sent_at": 1435016238,
+         "user_agent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+    }
+</code></pre>
+
+<p>Key things to note:</p>
+
+<ul>
+  <li>
+    <p>The <code>sent_at</code>, <code>clicked_at</code>, <code>opened_at</code> field follows a very Ruby-esque pattern. The key will change based on the event sent (as outlined below).</p>
+  </li>
+  <li>
+    <p>The <code>trigger-event</code> value will be present for Transactional and Behavioral campaigns and represents the event that triggered the campaign.</p>
+  </li>
+</ul>
+
+<p>The follow table outlines each of the <code>type</code> values:</p>
+
+<ul>
+  <li><code>sent</code> – When an email has been sent by Vero</li>
+  <li><code>delivered</code> – When an email has been delivered to the ISP server</li>
+  <li><code>opened</code> – When a customer has opened an email</li>
+  <li><code>clicked</code> – When a customer has clicked an email</li>
+  <li><code>bounced</code> – When an email has not been delivered to the ISP server</li>
+  <li><code>unsubscribed</code> – When a customer has unsubscribed</li>
+</ul>
+
+<h3 id="webhook-for-customer-updates">Webhook for customer updates</h3>
+
+<p>The webhook sent when a customer is updated shows the details of the changes made to that customer’s properties or their tags. This allows you to update customer details in other systems, based on changes sent to Vero, keeping everything in sync.</p>
+
+<pre><code>{
+    "type":"user_updated",
+    "user": {
+        "id": 123456,
+        "email":"damien@getvero.com"
+    },
+    "changes": {
+        "_tags": {
+          "add": ["test"],
+          "remove": []
+        },
+        "first_name": "Chris"
+    }
+}
+</code></pre>
+
+<p>If you have any other questions regarding setting up webhooks, please write us an email. We’re here to help.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/import-a-list-of-customers-via-csv.html">Import a list of customers via CSV</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/inserting-merge-tags-using-liquid-in-my-emails.html">Inserting merge tags using Liquid in my emails</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/list-of-liquid-functions-dynamic-templating-variables.html">List of Liquid functions / dynamic templating variables</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-a-basic-a-b-test.html">Basic A/B variation test</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-and-installing-vero.html">Setting up and installing Vero</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

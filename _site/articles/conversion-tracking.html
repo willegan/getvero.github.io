@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Conversion tracking</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">reporting</span></div>
+      <h1 id="conversion-tracking">Conversion tracking</h1>
+
+<h2 id="defining-a-conversion-event">Defining a conversion event</h2>
+
+<p>Vero can track the conversions from an email campaign automatically.</p>
+
+<p>You can track conversions for newsletters, behavioral or transactional emails. To do so, you must define which <code>event</code> will be considered a conversion when creating your campaign.</p>
+
+<p>When creating a newsletter, you select the conversion <code>event</code> when editing the content of your newsletter as shown below:</p>
+
+<p><img src="/assets/screenshots/vero.conversions.newsletter.png" alt="Conversion tracking email newsletter" /></p>
+
+<p>When creating a behavioral or transactional email, this is setup on the <em>Campaign snapshot</em> screen as shown below:</p>
+
+<p><img src="/assets/screenshots/vero.conversions.behavioral.png" alt="Conversion tracking triggered email" /></p>
+
+<h2 id="conversion-types">Conversion types</h2>
+
+<p>Once you have defined a conversion <code>event</code> Vero will start tracking conversions automatically.</p>
+
+<p>Conversions are reported on the <em>Campaigns</em> screen and also on specific campaign reports. Vero tracks three different types of conversions.</p>
+
+<ol>
+  <li><strong>Direct conversion</strong> are tracked when a recipient clicks on a link in one of your emails, returns to your site and takes an action in the <strong>same session</strong>. Vero handles this using <code>conv_id</code> parameter attached to links in your emails.</li>
+  <li><strong>View through conversions</strong> are tracked when a user opens the email, does not click a link and returns to your site to complete the conversion event within a set time period. In this instance, we only track the conversion if it is within the conversion window and we assign it to the most recent campaign the user received <strong>and</strong> opened.</li>
+  <li><strong>Indirect conversions</strong> are tracked when a user receives a campaign, <strong>does not</strong> open or click the email and later completes the conversion event on your website. The conversion is only tracked if it is within the conversion window and the conversion is assigned to the campaign most recently received by the user. Indirect conversions are useful when running an A/B test with hold-out groups (negative variations), so Vero can track the actions of contacts that are part of a hold-out group and therefore do not even receive a particular campaign.</li>
+</ol>
+
+<p>You can customise the conversion window used to track view through and direct conversions by visiting <em>Settings &gt; Advanced</em>.</p>
+
+<p>By default, this window is set to <code>30 days</code>.</p>
+
+<h2 id="setting-up-direct-conversion-tracking-with-the-vero-api">Setting up direct conversion tracking with the Vero API</h2>
+
+<p>When using our Javascript library, Vero will automatically handle direct conversion tracking. Our Javascript library will recognise the <code>conv_id</code> parameter and assign it to any events tracked during that session, allowing Vero to track the conversion against the correct user and campaign.</p>
+
+<p>If you are using one of Vero’s backend libraries, you will need to manually store and refer to the <code>conv_id</code> parameter when tracking events.</p>
+
+<p>To do this, grab and store the <code>conv_id</code> parameter in a temporary session cookie (if the parameter is present with a request).</p>
+
+<p>You should then append this value with any event <code>track</code> request that you make to Vero whilst this cookie is set. To learn how to <code>track</code> an event, refer to our <a href="https://www.getvero.com/api">API reference</a>.</p>
+
+<p>When tracking an event you can append an array called <code>extras</code>. To track conversions correctly, insert the stored value from <code>conv_id</code> using the variable <code>vero_conv</code>.</p>
+
+<p>Here’s a basic example request:</p>
+
+<pre><code>curl -X POST 'https://api.getvero.com/api/v2/events/track'
+\ -d auth_token="your_auth_token"
+\ -d identity='{"id": 1234, "email": "tyrion@lannister.com"}'
+\ -d event_name="Viewed product"
+\ -d data='{"product_name": "Red T-shirt", "product_url": "http://www.yourdomain.com/products/red-t-shirt"}'
+\ -d extras='{"vero_conv": "1234"}'
+</code></pre>
+
+<p>Once setup, you’ll be successfully tracking conversions of all types.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/integrate-google-analytics-utm-tags.html">Integrate Google Analytics' UTM tags</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
