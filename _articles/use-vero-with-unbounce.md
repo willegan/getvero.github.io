@@ -1,6 +1,6 @@
 ---
 layout: articles
-title: 'Unbounce and Vero'
+title: Unbounce and Vero
 categories: integrations
 ---
 

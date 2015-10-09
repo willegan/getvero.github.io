@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Why has a specific email bounced?"
+title:  Why has a specific email bounced?
 categories: deliverability
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "What are customer properties?"
+title:  What are customer properties?
 categories: customer data
 getting_started: true
 ---

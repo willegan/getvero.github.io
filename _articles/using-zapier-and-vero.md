@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Using Zapier with Vero"
+title:  Using Zapier with Vero
 categories: integrations
 ---
 

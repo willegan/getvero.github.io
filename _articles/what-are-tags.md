@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "What are tags?"
+title:  What are tags?
 categories: customer data
 ---
 

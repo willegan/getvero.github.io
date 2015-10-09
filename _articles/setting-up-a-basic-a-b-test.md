@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Basic A/B variation test"
+title:  Basic A/B variation test
 categories: campaigns
 common_issues: true
 ---

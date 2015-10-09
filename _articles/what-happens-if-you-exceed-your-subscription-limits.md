@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "What happens if you exceed your subscription limits?"
+title:  What happens if you exceed your subscription limits?
 categories: billing
 ---
 

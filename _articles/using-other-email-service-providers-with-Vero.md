@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Using other Email Service Providers"
+title:  Using other Email Service Providers
 categories: deliverability
 ---
 
