@@ -21,3 +21,5 @@ articles:
   utm_tags: /articles/integrate-google-analytics-utm-tags.html
   event_tracking: /articles/what-are-events.html
   creating_and_matching_user_ids: /articles/create-and-matching-vero-user-ids.html
+  insert_merge_tags: /articles/inserting-merge-tags-using-liquid-in-my-emails.html
+  html_templates: /articles/using-html-templates-in-vero.html

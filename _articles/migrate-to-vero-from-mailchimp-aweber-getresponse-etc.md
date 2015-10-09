@@ -1,8 +1,7 @@
 ---
 layout: articles
-<<<<<<< HEAD
-title:  "Migrating to Vero from a list based provider"
-categories: data
+title: Migrating to Vero from a list based provider
+categories: customer data
 getting_started: true
 ---
 
@@ -46,19 +45,19 @@ Before importing, however, we recommend adding an extra column called `tags`. In
 
 In this column, we recommend creating a tag based on the **name of the list in your old provider**. For example, if we exported a CSV from a list called 'Blog subscribers', we might add a column with a tag called `blog-subscribers`:
 
-  email,gender,age,tags
-  cersei@lannister.com,M,34,blog-subscribers
-  tyrion@lanniser.com,M,30,blog-subscribers
+    email,gender,age,tags
+    cersei@lannister.com,M,34,blog-subscribers
+    tyrion@lanniser.com,M,30,blog-subscribers
   
 This means you'll **always** have a record of where that customer was in your old system, which can be handy for initial troubleshooting.
 
 Simply repeat this process for every list in your current email provider.
 
-**Note** that if your list is more than 50,000 people long, please [email our support](mailto:support@getvero.com?subject=Help me import my email list :\)) and we'll help you get it done directly in our backend.
+**Note** that if your list is more than 50,000 people long, please [email us]({{site.data.links.email_us}})) and we'll help you get it done directly in our backend.
 
 ##2. Migrating your templates
 
-Migrating your templates to Vero differs in detail from platform to platform, so in this guide we'll outline the fundamentals. We can also help answer any migration questions [via our support email](mailto:support@getvero.com).
+Migrating your templates to Vero differs in detail from platform to platform, so in this guide we'll outline the fundamentals. We can also help answer any migration questions [via email](site.data.links.email_us).
 
 Some tools, like Mailchimp or Campaign Monitor, allow you to design full-body HTML emails **from scratch**, as this is one of their primary use-cases.
 
@@ -66,11 +65,11 @@ At Vero, you don't create a full body HTML template from scratch but, instead, b
 
 To migrate a template from Mailchimp or other email provider, you should download a copy of your HTML template and take the following steps:
 
-1. Remove all dynamic merge tags and replace with Vero's merge tags. You can read more about using [Vero's merge tags here](http://www.getvero.com/help/designing-an-email/how-do-i-insert-merge-tags-using-liquid-in-my-emails/). For example, you'd replace Mailchimp's `*|FNAME|*` with Vero's `{{user.first_name}}` or similar.
+1. Remove all dynamic merge tags and replace with Vero's merge tags. You can read more about using [dynamic merge tags here]({{site.data.links.insert_merge_tags}}). For example, you'd replace Mailchimp's `*|FNAME|*` with Vero's `{{user.first_name}}` or similar.
 2. Ensure that you are no longer referencing images on your old provider's servers. Make sure you upload and host your own images or refer a local version that you can upload into Vero.
 3. Once uploaded in Vero, you can select a template from your Template Gallery to use in each campaign. We have a point-and-click WYSIWYG editor. The final step is to mark any headings, table cells, images or blocks of text taht you want to make point-and-click editable with the `vero-editable` CSS class. This is a one-time task.
 
-Get a complete run down of how templates work in Vero with our [help guide](http://www.getvero.com/help/designing-an-email/how-do-i-use-html-templates-in-vero/). If you follow the three steps above, you'll have a template setup for long-term use in Vero that looks and feels just as it always has in your old provider. 
+Get a complete run down of how templates work in Vero with our [help guide]({{site.data.links.html_templates}}). If you follow the three steps above, you'll have a template setup for long-term use in Vero that looks and feels just as it always has in your old provider. 
 
 **Note:** we do recommend a designer with HTML experience brings your templates across. This will mean you get them right from the word go and that they are optimised for use with Vero, saving you time later.
 
