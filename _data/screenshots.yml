@@ -59,6 +59,9 @@ zapier:
     image: /assets/screenshots/zapier.tags.png
     title: Tags in Zapier
 vero:
+  add-tag: 
+    image: /help/assets/screenshots/vero.add-tag.png
+    title: Add a tag in Vero
   customer-properties:
     image: /assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
@@ -124,12 +127,28 @@ vero:
     image: /assets/screenshots/vero.double-opt-in-email.png
     title: Double opt-in email
   double-opt-in-frequency:
-    image: /assets/screenshots/vero.double-opt-in-frequency.png
-    title: Double opt-in frequency
+    image: /help/assets/screenshots/vero.double-opt-in-frequency.png
+    title: Double opt-in frequency 
+  customers: 
+    bounced:
+      image: /help/assets/screenshots/vero.customers.bounced.png
+      title: Handling bounced emails Vero
   segments:
-    paying-customers:
-      image: /assets/screenshots/vero.segments.paying-customers.png
-      title: Paying customers segment
+    segments:
+      image: /help/assets/screenshots/vero.segments.segments.png
+      title: Segment customers by segments
+    events:
+      image: /help/assets/screenshots/vero.segments.events.png
+      title: Segment customers by event activity
+    emails:
+      image: /help/assets/screenshots/vero.segments.emails.png
+      title: Segment customers by opens and clicks
+    properties:
+      image: /help/assets/screenshots/vero.segments.properties.png
+      title: Segment customers by properties
+    tags:
+      image: /help/assets/screenshots/vero.segments.tags.png
+      title: Segment customers by tag
   campaign:
     use-segment:
       image: /assets/screenshots/vero.campaign.use-segment.png

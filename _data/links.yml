@@ -3,6 +3,7 @@ segment_vero_setup: https://segment.com/docs/integrations/vero/
 zapier: http://zapier.com/
 gtm: https://tagmanager.google.com/
 liquid_docs: https://docs.shopify.com/themes/liquid-documentation/basics
+liquid_for_designers: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 email_us: mailto:support@getvero.com
 vero_api: https://www.getvero.com/api
 developers: https://www.getvero.com/developers
@@ -14,8 +15,11 @@ support: https://support.getvero.com/
 terms-of-service: https://www.getvero.com/terms-of-service
 mailgun: https://www.mailgun.com
 pricing: https://www.getvero.com/pricing
+imports: https://app.getvero.com/imports
+import_customers: http://www.getvero.com/help/adding-data-to-vero/import-a-list-of-contacts-via-csv/
 articles:
   utm_tags: /articles/integrate-google-analytics-utm-tags.html
   event_tracking: /articles/what-are-events.html
   creating_and_matching_user_ids: /articles/create-and-matching-vero-user-ids.html
-
+  insert_merge_tags: /articles/inserting-merge-tags-using-liquid-in-my-emails.html
+  html_templates: /articles/using-html-templates-in-vero.html
