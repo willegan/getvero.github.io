@@ -37,7 +37,9 @@ layout: default
       <ul class="unstyled-list">
         {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
         {% for group in groups %}
-          <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+          {% if group.name != "" %}
+            <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+          {% endif %}
         {%endfor%}
       </ul>
     </div>

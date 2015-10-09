@@ -15,7 +15,7 @@ terms-of-service: https://www.getvero.com/terms-of-service
 mailgun: https://www.mailgun.com
 pricing: https://www.getvero.com/pricing
 articles:
-  utm_tags: /help/articles/integrate-google-analytics-utm-tags.html
-  event_tracking: /help/articles/what-are-events.html
-  creating_and_matching_user_ids: /help/articles/create-and-matching-vero-user-ids.html
+  utm_tags: /articles/integrate-google-analytics-utm-tags.html
+  event_tracking: /articles/what-are-events.html
+  creating_and_matching_user_ids: /articles/create-and-matching-vero-user-ids.html
 

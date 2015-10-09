@@ -101,7 +101,7 @@ $ ->
     'applicationId': 'KFSVJ5X7PP'
     'indexName': 'articles'
     'apiKey': 'f9991e202b3921d0cc363451afc76645'
-    'baseurl': '/help'
+    'baseurl': ''
 
   applicationId = config.applicationId
   apiKey = config.apiKey
@@ -114,6 +114,7 @@ $ ->
   # Input listening for queries
   $searchInput = $('.js-algolia__input')
   $searchInput.on 'keyup', onQueryChange
+  $searchInput.on 'search', onQueryChange
 
   # Content to hide/show when searching
   $initialContent = $('.js-algolia__initial-content')

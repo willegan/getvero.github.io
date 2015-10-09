@@ -2,8 +2,8 @@
 title: GetVero Help
 email: support@getvero.com
 description:
-baseurl: "/help" # the subpath of your site, e.g. /blog/
-url: "https://www.getvero.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://help.getvero.com" # the base hostname & protocol for your site
 twitter_username: getvero
 github_username:  getvero
 

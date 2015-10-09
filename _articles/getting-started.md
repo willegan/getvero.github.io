@@ -26,7 +26,7 @@ Use this guide for:
 
 <h2 id="1">Setting up your project</h2>
 
-By default your Vero account will have a Production and a Sandbox project. You can add as many projects as you’d like. Each project is it’s own, siloed environment with its own API Keys and user database. [Learn more about a project](https://www.getvero.com/help/getting-started/what-is-a-project/).
+By default your Vero account will have a Production and a Sandbox project. You can add as many projects as you’d like. Each project is it’s own, siloed environment with its own API Keys and user database. [Learn more about a project](/articles/what-is-a-project.html).
 
 Projects are useful for testing as you can set projects to different send modes:
 
@@ -36,7 +36,7 @@ Projects are useful for testing as you can set projects to different send modes:
 
 By default, your Sandbox project is set to **offline** as denoted by the gray color of the project in the sidebar. We recommend using the Sandbox project with a testing server or test environment, if you have one. We also recommend setting your Production project to **Test** (orange) when you initially start sending live data to Vero, just to be safe.
 
-*Note* that you can clone campaigns between projects by selecting **[Clone](https://www.getvero.com/help/designing-an-email/can-i-clone-an-email/)** in the dropdown next to a saved campaign, however user data is isolated to each project.
+*Note* that you can clone campaigns between projects by selecting **[Clone](/articles/cloning-an-email.html)** in the dropdown next to a saved campaign, however user data is isolated to each project.
 
 ###To Do:
 
@@ -75,7 +75,7 @@ By default, Vero works with [Mailgun](http://mailgun.com/) (a company owned by R
 
 You do however need to setup domain authentication. To do this, ensure you add a domain to your primary project (typically the default Production project) in Vero. Have an administrator head to *[Settings > Project details](https://app.getvero.com/settings/project)* and add the domain you will be sending from. From there, visit the *[Settings > Email Delivery](https://app.getvero.com/settings/providers)* menu and select **Request DNS Records**. You will then need to add the required DNS records to your sending domain.
 
-You can [read a detailed guide to domain authentication in Vero](https://www.getvero.com/help/deliverability/how-to-setup-my-domain-signing-and-remove-via-getveromail-com-from-your-emails/#sts=Request%20your%20DNS%20records%20by%20adding%20your%20Domain).
+You can [read a detailed guide to domain authentication in Vero](/articles/how-to-setup-my-domain-signing-and-remove-via-getveromail-com-from-your-emails.html).
 
 Note that you may also add your own Mailgun or Sendgrid account for email delivery. Vero will then send emails out through one of these accounts. This is generally done by customers that have a long history with one of these providers or a shared infrastructure or other reason for doing so.
 
@@ -103,7 +103,7 @@ Many customers also track extra user properties or events using our backend API 
 ###To Do:
 
 1. [Install the Vero Javascript library](https://www.getvero.com/api/javascript/) on your website, including making a Vero identify call whenever a customer signs up, fills out a form or otherwise gives you permission to email them.
-2. Determine whether you want to [automatically track pageviews](https://www.getvero.com/help/adding-data-to-vero/how-to-track-pageviews-with-veros-api/) for users that have been identified (by default, Vero does not).
+2. Determine whether you want to [automatically track pageviews](/articles/track-pageviews-with-veros-api.html) for users that have been identified (by default, Vero does not).
 3. Track specific events using our Javascript library. Focus on key lifecycle events such as `Signed_up`, `Viewed_product`, `Used_feature_X`. Events can be named **however you want** and are one of the keys to using Vero with power.
 4. Track any extra events via our API on your backend using one of our backend libraries.
 
@@ -131,7 +131,7 @@ We accept manual CSV imports (via the UI) up to 50,000 rows. To import larger da
 
 We know how much effort is required to create and maintain awesome email designs. We've made it easy to upload your existing Vero templates and now with editable tags you change the content without having to edit the html.
 
-Setting up templates correctly at the outset will enable you and your team to move quickly in Vero. The best place to start learning about how Vero handles templates is to read our extensive [Using HTML templates in Vero](https://www.getvero.com/help/designing-an-email/how-do-i-use-html-templates-in-vero/) help article. 
+Setting up templates correctly at the outset will enable you and your team to move quickly in Vero. The best place to start learning about how Vero handles templates is to read our extensive [Using HTML templates in Vero](/articles/using-html-templates-in-vero.html) help article. 
 
 As a helpful summary, here are the key points to understand about Vero’s templates:
 
@@ -147,7 +147,7 @@ If you have questions setting up your templates or want help importing them from
 ###To Do:
 
 1. Export your custom templates from another email platform or as created by your design team.
-2. Mark up any elements you want to be editable with the `vero-editable` CSS class, as outlined in our [help document on template management](https://www.getvero.com/help/designing-an-email/how-do-i-use-html-templates-in-vero/).
+2. Mark up any elements you want to be editable with the `vero-editable` CSS class, as outlined in our [help document on template management](/articles/using-html-templates-in-vero.html).
 3. [Upload](https://app.getvero.com/templates/upload) your templates into Vero.
 
 
