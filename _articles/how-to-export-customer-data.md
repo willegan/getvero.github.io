@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "How to export customer data?"
-categories: data
+title:  How to export customer data?
+categories: customer data
 ---
 
 # How to export customer data ?
@@ -16,8 +16,8 @@ You can export a list of customers and their properties that belong to any segme
 
 ## Export reports
 
-You can export the results of an email campaign. To do this, visit the **Reports** menu and filter down to the campaign data you want to export. Select **Export** in the top right of the screen.
+You can export the results of an email campaign. To do this, visit the *Reports* menu and filter down to the campaign data you want to export. Click **Export** in the top right of the screen.
 
 ![{{ site.data.screenshots.vero.export.reports.title }}]({{ site.data.screenshots.vero.export.reports.image }})
 
-In both cases, a CSV file will be generated that you can download from the menu **Import/Export** menu of the sidebar.
+In both cases, a CSV file will be generated that you can download from the menu *Import/Export* menu of the sidebar.

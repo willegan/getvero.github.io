@@ -10,9 +10,9 @@ layout: default
 <div id="help-boxes" class="full-width">
   <div class="wrapper">
     <div class="help-box">
-      <h2><a href="#">Getting Started</a></h2>
+      <h2><a href="articles/getting-started.html">Getting Started</a></h2>
       <p>Your go to guide for how to setup vero and start sending awesome email campaigns.</p>
-      <a href="#">Read the guide</a>
+      <a href="articles/getting-started.html">Read the guide</a>
     </div>
     <div class="help-box">
       <h2><a href="http://getvero.com/api">Developer API</a></h2>
@@ -37,7 +37,9 @@ layout: default
       <ul class="unstyled-list">
         {% assign groups = site.articles | group_by: "categories" | sort: "name" %}
         {% for group in groups %}
-          <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+          {% if group.name != "" %}
+            <li><a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a></li>
+          {% endif %}
         {%endfor%}
       </ul>
     </div>
@@ -51,9 +53,8 @@ layout: default
   </div>
   <div class="main-wrapper algolia__initial-content js-algolia__initial-content">
     <div id="getting-started">
-      {% assign items = site.articles | where: "getting_started", true %}
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to get going with vero.</p>
+      {% assign items = site.articles | where: "common_issues", true | sort: 'title' %}
+      <h2>Common Issues</h2>
       <ul class="article-list unstyled-list">
         {% for item in items %}
           <li>
@@ -69,17 +70,17 @@ layout: default
         {% unless group.name == "" %}
           <h2 id="{{ group.name | downcase }}">{{ group.name | capitalize }}</h2>
           <ul class="article-list unstyled-list">
-            {% for item in group.items %}
-              {{ item.hide }}
+            {% assign items = group.items | sort: 'title' %}
+            {% for item in items %}
               {% unless item.hide == true %}
                 <li>
                   <a class="article-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
                 </li>
               {% endunless %}
-            {%endfor%}
+            {% endfor %}
           </ul>
         {% endunless %}
-      {%endfor%}
+      {% endfor %}
     </div>
 
   </div>

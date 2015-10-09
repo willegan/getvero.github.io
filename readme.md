@@ -32,10 +32,10 @@ To get started, run `jekyll serve`, and you should see the following in your con
                         done.
      Auto-regeneration: enabled for '/projects/vero-docs'
     Configuration file: /projects/vero-docs/_config.yml
-        Server address: http://127.0.0.1:4000/help/
+        Server address: http://127.0.0.1:4000/
       Server running... press ctrl-c to stop.
 
-Open **http://127.0.0.1:4000/help/** in your favourite browser.
+Open **http://127.0.0.1:4000/** in your favourite browser.
 
 This command starts a web server as well as watching your files being edited, so there's no need to stop and restart jekyll.
 

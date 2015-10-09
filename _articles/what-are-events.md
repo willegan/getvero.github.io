@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "What are events?"
-categories: data
+title:  What are events?
+categories: event data
 getting_started: true
 ---
 

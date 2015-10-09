@@ -1,5 +1,6 @@
 ---
 layout: articles
+<<<<<<< HEAD
 title:  "Migrating to Vero from a list based provider"
 categories: data
 getting_started: true

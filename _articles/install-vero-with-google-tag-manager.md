@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Install Vero with Google Tag Manager"
+title: Install Vero with Google Tag Manager
 categories: integrations
 ---
 
@@ -14,11 +14,11 @@ Grab the following tag code below
 
 {% include snippets/library.html %}
 
-**Don't forget to change your API Key with the you can find in the app under [Settings > Project]({{ site.data.links.app_settings_projects }})**
+*Don't forget to change your API Key with the you can find in the app under Settings > Project*
 
 ### Step 2
 
-Head over to [Google Tag manager]({{ site.data.links.gtm }}) and click 'New Tag'. Configure your options so that it looks like this
+Head over to [Google Tag manager]({{ site.data.links.gtm }}) and click **New Tag**. Configure your options so that it looks like this
 ![{{ site.data.screenshots.gtm.configure['title'] }}]({{ site.data.screenshots.gtm.configure['image'] }})
 
 ## Step 3
@@ -27,7 +27,7 @@ Now that our library is setup you need to configure Vero to track your customers
 
 {% include snippets/identify.html %}
 
-When setting up this code you need to tell us the current logged-in customer's ID and email address. The most common way to do this is to use a 'Macro' in Google Tag Manager.
+When setting up this code you need to tell us the current logged-in customer's ID and email address. The most common way to do this is to use a Macro in Google Tag Manager.
 
 *You may need your developer's help if they have not already configured a Macro.*
 

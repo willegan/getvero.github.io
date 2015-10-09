@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "What are tags?"
-categories: data
+title:  What are tags?
+categories: customer data
 ---
 
 # What are tags?
@@ -10,7 +10,7 @@ Each customer profile in Vero can have many tags.
 
 Tags are useful in situations where you want a customer profile to relate to many potential values. A good example would be customer preferences. For example, you might want customers to manually keep tabs on which customers are interseted in `shoes`, `skirts` and `trousers`. You could append tags to a customer's profile and use these tags to create segments.
 
-Tags are a powerful way to enhance segmentation. They are useful for creating preference centres, emulate static lists or use Vero as a lightweight CRM, as tags can also be added inside Vero's user interface.
+Tags are a powerful way to enhance segmentation. They are useful for creating preference centres, emulating static lists or use Vero as a lightweight CRM, as tags can also be added inside Vero's user interface.
 
 ## Adding tags
 

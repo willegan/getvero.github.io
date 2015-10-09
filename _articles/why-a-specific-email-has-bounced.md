@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Why has a specific email bounced?"
+title:  Why has a specific email bounced?
 categories: deliverability
 ---
 
@@ -8,7 +8,7 @@ categories: deliverability
 
 When an email bounces, Vero records the details as part of the Logs, including the SMTP error returned by the recipients ISP/ESP, the number of times Vero attempted delivery and when this occurred.
 
-To see this data, select an email in the logs and choose `View email data` from the options dropdown. An example is below:
+To see this data, select an email in the logs and choose *View email data* from the options dropdown. An example is below:
 
 ![{{ site.data.screenshots.vero.email-logs-bounce['title'] }}]({{ site.data.screenshots.vero.email-logs-bounce['image'] }})
 

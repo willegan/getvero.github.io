@@ -1,6 +1,6 @@
 ---
 layout: articles
-title:  "Inserting merge tags using Liquid in my emails"
+title: Inserting merge tags using Liquid in my emails
 categories: email design
 common_issues: true
 ---

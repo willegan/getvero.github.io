@@ -18,8 +18,6 @@ pricing: https://www.getvero.com/pricing
 imports: https://app.getvero.com/imports
 import_customers: http://www.getvero.com/help/adding-data-to-vero/import-a-list-of-contacts-via-csv/
 articles:
-  utm_tags: /help/articles/integrate-google-analytics-utm-tags.html
-  event_tracking: /help/articles/what-are-events.html
-  creating_and_matching_user_ids: /help/articles/create-and-matching-vero-user-ids.html
-  list_of_liquid_functions: /help/articles/list-of-liquid-functions-dynamic-templating-variables.html
-  external_attributes: http://127.0.0.1:4000/help/articles/what-are-external-attributes.html
+  utm_tags: /articles/integrate-google-analytics-utm-tags.html
+  event_tracking: /articles/what-are-events.html
+  creating_and_matching_user_ids: /articles/create-and-matching-vero-user-ids.html

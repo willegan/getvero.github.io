@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "What are External Attributes?"
-categories: data
+title:  What are External Attributes?
+categories: email design
 ---
 
 # What are External Attributes?
@@ -22,19 +22,19 @@ You can pull data in two ways:
 
 To do this you use a custom filter we've built using the [Liquid templating language]({{ site.data.links['liquid_docs']}}).
 
-This method allows you to pass data stored in Vero back to your server so that you can manipulate it and send back some custom HTML. The custom HTML that is returned is **inserted into the body of your email exactly where you place the following tag:**
+This method allows you to pass data stored in Vero back to your server so that you can manipulate it and send back some custom HTML. The custom HTML that is returned is inserted into the body of your email exactly where you place the following tag:
 
 {% raw %}
-**{% fetch_html 'https://www.domain.com/endpoint' %}**
+	{% fetch_html 'https://www.domain.com/endpoint' %}
 {% endraw %}
 
-Here is an example. In this example we pass back both a customer-level attribute and an event-level attribute. This data can then be used by your server!
+In this example below, we pass back both a customer-level attribute and an event-level attribute. This data can then be used by your server!
+
+{% raw %}
+	{% fetch_html 'https://www.domain.com?param={{user.id}}&param2={{event.number_of_widgets}}' %}
+{% endraw %}
 
 You should of course replace the domain in this example with whatever URL you prefer. This URL should return raw HTML that will be dumped into the body of your HTML campaign **exactly** as it is returned.
-
-{% raw %}
-**{% fetch_html 'https://www.domain.com?param={{user.id}}&param2={{event.number_of_widgets}}' %}**
-{% endraw %}
 
 Here is how you might insert this code into the body of your email:
 
@@ -44,13 +44,19 @@ This would then be replaced with the correct HTML upon sending.
 
 ## Returning JSON
 
-Alternately, you can include an API end-point and pull JSON data from your web server to be used when creating a campaign via our {% raw %}**{{external}}**{% endraw %} merge tag.
+Alternately, you can include an API end-point and pull JSON data from your web server to be used when creating a campaign via the following merge tag:
+
+{% raw %}
+	{{external}}
+{% endraw %} 
 
 If you have External Attributes enabled for your account, you will find it in the drop down beneath the content section of your campaign builder:
 
 ![{{ site.data.screenshots.vero.external-attributes['title'] }}]({{ site.data.screenshots.vero.external-attributes['image'] }})
 
-Place the API endpoint into the External Attributes section. For example, if the endpoint was: http://jsonplaceholder.typicode.com/posts/1
+Place the API endpoint into the External Attributes section. For example, if the endpoint was:
+
+	http://jsonplaceholder.typicode.com/posts/1
 
 The contents of the endpoint would show:
 

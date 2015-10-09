@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "Creating a HTML email subscribe form"
-categories: data
+title:  Creating a HTML email subscribe form
+categories: configuration
 ---
 
 #Creating a HTML email subscribe form
@@ -18,7 +18,7 @@ You can then use this event to create a segment or automate a behavioral email: 
 
 ##Step 1. Create a form
 
-To generate a form, head to `Settings > Create a Subscribe Form` and you'll be shown Vero's point-and-click interface to create a form:
+To generate a form, head to *Froms* and you'll be shown Vero's point-and-click interface to create a form:
 
 ![{{ site.data.screenshots.vero.subscribe-form-properties['title'] }}]({{ site.data.screenshots.vero.subscribe-form-properties['image'] }})
 
@@ -36,7 +36,7 @@ Select 'Generate form' to generate the HTML for your new form:
 
 ![{{ site.data.screenshots.vero.subscribe-form-code['title'] }}]({{ site.data.screenshots.vero.subscribe-form-code['image'] }})
 
-Select 'copy to clipboard' and paste this code in your CMS or website and you are good to go!
+Select **copy to clipboard** and paste this code in your CMS or website and you are good to go!
 
 By default, we'll show them a confirmation screen that looks like this:
 

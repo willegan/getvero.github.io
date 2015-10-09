@@ -1,7 +1,7 @@
 ---
 layout: articles
-title:  "Using advanced scope conditions"
-categories: email design
+title:  Using advanced scope conditions
+categories: campaigns
 ---
 
 # Scope a behavioral email by event property (the advanced 'scope by' feature)

@@ -1,37 +1,39 @@
 ---
 layout: articles
-title:  "Setting up Vero's Webhooks"
+title:  Setting up Vero's Webhooks
 categories: integrations
 common_issues: true
 ---
 
-#Setting up Vero's Webhooks
+# Setting up Vero's Webhooks
 
-Vero provides webhooks for the following events within the Vero platform:
+## Webhook Types
 
-- Sent emails (an email is sent by Vero)
-- Delivered emails (an email is delievered and received by the recipient email server)
-- Opens
-- Clicks
-- Bounces (hard and soft)
-- Unsubscribes
-- User updates
+Vero provides webhooks for the following events:
 
-##Webhook Setup
+- Sent (email has been sent by Vero)
+- Delivered (email has been delievered to the recipient email server)
+- Opened
+- Clicked
+- Bounced (hard and soft)
+- Unsubscribed
+- Customer updated
 
-All of Vero's webhooks are sent to a single notification address. To enable the webhooks, go to `Account > Webhooks` and enter the URL at which you wish to receive the webhooks.
+## Webhook Setup
+
+All of Vero's webhooks are sent to a single notification address. To enable the webhooks, go to *Account > Webhooks* and enter the URL at which you wish to receive the webhooks.
 
 ![{{ site.data.screenshots.vero.webhook-setup['title'] }}]({{ site.data.screenshots.vero.webhook-setup['image'] }})
 
-For testing, you should check out Request Bin - it's a fantastic way to see the webhooks Vero (or any service) sends.
+For testing, you should check out [Request Bin](http://requestb.in/) - it's a fantastic way to see the webhooks Vero (or any service) sends.
 
-You can select Test and Vero will send an example of a webhook to the URL you've entered. This ensures Vero has registered the URL correctly and data arrives.
+You can click the **Test URL** button and Vero will send an example of a webhook to the URL you've entered. This ensures Vero has registered the URL correctly and data arrives.
 
 Once you have entered the URL you can choose which webhook events you want to track.
 
-##Webhook format
+## Webhook format
 
-###Webhooks for email events
+### Webhooks for email events
 
 Webhooks related to emails (sent, delivered, bounced, etc.) use the following format:
 
@@ -43,7 +45,7 @@ Webhooks related to emails (sent, delivered, bounced, etc.) use the following fo
             },
             "campaign": {
                 "id": 1235666234572456,
-                "type": "transactional",
+                "type": "behavioural",
                 "name": "Cart Abandonment Followup",
                 "subject": "You have items in your shopping bag",
                 "trigger-event": "Abandoned cart",
@@ -61,16 +63,16 @@ Key things to note:
 
 The follow table outlines each of the `type` values:
 
-- `sent` – When an email is sent from Vero to the customerâs email address.
-- `delivered` – When the receiving ISP confirms the email has been received successfully.
-- `opened` – When a recipient opens an email.
-- `clicked` – When a recipient clicks an email.
-- `bounced` – When an email is not received via the recipient's ISP.
-- `unsubscribed` – When a user unsubscribes.
+- `sent` – When an email has been sent by Vero
+- `delivered` – When an email has been delivered to the ISP server
+- `opened` – When a customer has opened an email
+- `clicked` – When a customer has clicked an email
+- `bounced` – When an email has not been delivered to the ISP server
+- `unsubscribed` – When a customer has unsubscribed
 
-###Webhook for user updates
+### Webhook for customer updates
 
-The webhook sent when a user is updated shows the details of the changes made to that user's properties or their tags. This allows you to update user details in other systems, based on changes sent to Vero, keeping everything in sync.
+The webhook sent when a customer is updated shows the details of the changes made to that customer's properties or their tags. This allows you to update customer details in other systems, based on changes sent to Vero, keeping everything in sync.
 
     {
         "type":"user_updated",
