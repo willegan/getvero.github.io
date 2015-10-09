@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Integrate Google Analytics' UTM tags</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">reporting</span></div>
+      <h1 id="integrate-google-analytics-utm-tags">Integrate Google Analytics’ UTM tags</h1>
+
+<p>You can automatically append UTM parameters to outbound links in your email campaigns.</p>
+
+<p>Google Analytics, along with  most analytics tools, use this data to attribute conversions to their correct source.</p>
+
+<p>To enable appending of UTM tags, visit the <em>Settings &gt; Integrations</em> menu. Click <strong>View</strong> next to the Google Analaytics Integration.</p>
+
+<p><img src="/assets/screenshots/vero.integrations.ga.png" alt="Vero Google Analytics Integration Overview" /></p>
+
+<p>Click <strong>Add Google Analaytics Integration</strong> to turn this feature on.</p>
+
+<p><img src="/assets/screenshots/vero.integrations.ga.detail.png" alt="Vero Google Analytics Integration Detail" /></p>
+
+<h2 id="editing-the-utm-tags">Editing the UTM tags</h2>
+
+<p>Vero will append UTM tags in the following manner:</p>
+
+<ul>
+  <li><code>utm_source</code> is, by default, set to <code>vero</code>.</li>
+  <li><code>utm_medium</code> is, by default, set to <code>email</code>.</li>
+  <li><code>utm_campaign</code> is populated with the name of the campaign being sent.</li>
+  <li><code>utm_term</code> is populated with either the variation being sent. If you do not have an A/B test running, this will be <code>control</code>, otherwise it’ll be the variation of your campaign (for example, <code>a</code> or <code>b</code>).</li>
+</ul>
+
+<p>You can edit the <code>utm_source</code> and <code>utm_medium</code> values appended by Vero on the <em>Settings &gt; Integrations</em> menu page.</p>
+
+<h2 id="customising-tags-in-an-individual-email-campaign">Customising tags in an individual email campaign</h2>
+
+<p>If you add your own UTM tags to any link, these will take precedence and override the default UTM tags that Vero will append above.</p>
+
+<p>For example, if you added a link as follows:</p>
+
+<pre><code>http://www.yoursite.com?utm_campaign=some_campaign_name
+</code></pre>
+
+<p>Then Vero would only append the <code>utm_source</code>, <code>utm_term</code> and <code>utm_medium</code> tags. It would not overwrite your custom <code>utm_campaign</code> value on this link.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/conversion-tracking.html">Conversion tracking</a>
+              </li>
+            
+          
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

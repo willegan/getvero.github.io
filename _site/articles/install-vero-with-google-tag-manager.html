@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Install Vero with Google Tag Manager</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">integrations</span></div>
+      <h1 id="install-vero-with-google-tag-manager">Install Vero with Google Tag Manager</h1>
+
+<p>Google Tag Manager is a fantastic product. It also makes it incredibly easy to get going with Vero.</p>
+
+<h2 id="step-1">Step 1</h2>
+
+<p>Grab the following tag code below</p>
+
+<pre><code class="language-javascript">  &lt;script type='text/javascript'&gt;
+    var _veroq = _veroq || [];
+    _veroq.push(['init', { api_key: 'YOUR_API_KEY'} ]);
+
+    (function() {var ve = document.createElement('script'); ve.type = 'text/javascript'; ve.async = true; ve.src = '//d3qxef4rp70elm.cloudfront.net/m.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ve, s);})();
+  &lt;/script&gt;
+</code></pre>
+
+<p><em>Don’t forget to change your API Key with the you can find in the app under Settings &gt; Project</em></p>
+
+<h3 id="step-2">Step 2</h3>
+
+<p>Head over to <a href="https://tagmanager.google.com/">Google Tag manager</a> and click <strong>New Tag</strong>. Configure your options so that it looks like this
+<img src="/assets/screenshots/gtm.configure.png" alt="GTM Configure" /></p>
+
+<h2 id="step-3">Step 3</h2>
+
+<p>Now that our library is setup you need to configure Vero to track your customers. In Google Tag Manager, create a new tag that loads on every page. Copy and paste this code:</p>
+
+<pre><code class="language-javascript">  &lt;script&gt;
+    _veroq.push(['user', {
+      id: 'CUSTOMER_ID',
+      email: 'CUSTOMER_EMAIL'
+      // Note that you can add more properties such as first_name, last_name, etc...
+    }]);
+  &lt;/script&gt;
+</code></pre>
+
+<p>When setting up this code you need to tell us the current logged-in customer’s ID and email address. The most common way to do this is to use a Macro in Google Tag Manager.</p>
+
+<p><em>You may need your developer’s help if they have not already configured a Macro.</em></p>
+
+<p>Here’s an example:</p>
+
+<p><img src="/assets/screenshots/gtm.macro.png" alt="GTM Macro" /></p>
+
+<p>Once that is configured you can ensure your tag looks like this:</p>
+
+<p><img src="/assets/screenshots/gtm.final-script.png" alt="GTM Review" /></p>
+
+<h2 id="step-4">Step 4</h2>
+
+<p>You’re virtually setup and good to go! The final step is tracking events that are important to your business. This may take a series of tags, depending what you want to achieve. Here is an example that an eCommerce site could use. This tag is loaded on the first page of the checkout and tracks when a customer begins the checkout process! You can grab the example tracking code from </p>
+
+<p><img src="/assets/screenshots/gtm.event.png" alt="GTM Event" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>And that’s it! Now Vero will track your customers, events and get you well on your way. To ensure everything is working, check your 
+<a href="https://app.getvero.com/logs">logs in the app</a> - you should be able to see data flowing.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-veros-webhooks.html">Setting up Vero's Webhooks</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/tracking-customer-activity-in-analytics-tools.html">Tracking email activity from Vero in KISSmetrics, Mixpanel, Amplitude and other analytics tools</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/use-vero-with-unbounce.html">Unbounce and Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/using-zapier-and-vero.html">Using Zapier with Vero</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

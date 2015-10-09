@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Testing emails in Vero</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">campaigns</span></div>
+      <h1 id="testing-emails-in-vero">Testing emails in Vero</h1>
+
+<p>Every Vero account comes setup with two <em>Projects</em>. The first project, named when you enter your Company’s name at signup is in <em>Live mode</em>. The second project, named “Test” is set in <em>Test mode</em>.</p>
+
+<p><em>Projects</em> are entirely separate Vero instances, with their own user databases, their own API keys, their own access rights and their own template libraries.</p>
+
+<p>We recommend you use the test project with the development or staging version of your web or mobile application. To do so, simply set Vero up as normal but ensure you use the API key from your “Test” project.</p>
+
+<h2 id="sending-modes">Sending modes</h2>
+
+<p><img src="" alt="" /></p>
+
+<p>Each project can be setup in three different modes:</p>
+
+<ol>
+  <li><strong>Live</strong> - In this mode, emails are sent out to the user’s that trigger them.</li>
+  <li><strong>Test</strong> - In this mode, emails are sent to a specified email address when triggered by an end-user. In this way, you can see an exact copy of the email each customer has triggered. This is good for testing initially or with small data sets.</li>
+  <li><strong>Offline</strong> - In this mode, emails are not sent out, but are still evaluated as events come in. This is the safest mode to use when installing Vero.</li>
+</ol>
+
+<p>You can copy campaigns and templates between Vero projects. If you copy a campaign, Vero will look for or copy all of the templates and segments that campaign relies on. This ensures you have</p>
+
+<h2 id="recommended-approach">Recommended approach</h2>
+
+<p>Customers typically test new campaign ideas in their “Test” project. They’ll usually keep this project in <em>Offline</em> or <em>Test</em> mode. Once happy, they’ll copy this new campaign idea to their live project.</p>
+
+<p>This enables you to safely test all of the related tracking and event history that a campaign needs to be sent correctly.</p>
+
+<p>Once a campaign is live, you can pause behavioral and transactional campaigns whilst making changes to a campaign. When unpausing, Vero will ask you if you’d like to queue all of the emails that were skipped whilst the email campaign was paused.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/add-team-members-to-vero.html">Add team members to Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/getting-started.html">Getting Started Guide</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/import-a-list-of-contacts-actions-via-csv.html">Import a list of the past events contacts' have triggered via CSV</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/migrate-to-vero-from-mailchimp-aweber-getresponse-etc.html">Migrating to Vero from a list based provider</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-and-installing-vero.html">Setting up and installing Vero</a>
+              </li>
+            
+          
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/track-pageviews-with-veros-api.html">Track pageviews in Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/update-a-html-template.html">Update a HTML Template</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/using-html-templates-in-vero.html">Using HTML templates in Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/what-are-customer-properties.html">What are customer properties?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/what-are-events.html">What are events?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/what-is-a-project.html">What is a project?</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/what-is-a-segment.html">What is a segment?</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

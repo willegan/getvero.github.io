@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Unbounce and Vero</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">integrations</span></div>
+      <h1 id="unbounce-and-vero">Unbounce and Vero</h1>
+
+<h2 id="what-is-unbounce">What is Unbounce?</h2>
+<p>From start to finish we’re big fans of <a href="http://try.unbounce.com/">Unbounce</a> at Vero. Designed to make it easy for marketers to quickly and easily create and deploy landing pages it is the perfect platform to capture leads. By integrating Vero with Unbounce, you can capture the email addresses and actions of leads that sign up via your Unbounce landing pages.</p>
+
+<p>There are two ways to install Vero with Unbounce:</p>
+
+<ol>
+  <li>Using Webhooks (fastest and cleanest method)</li>
+  <li>Via the Javascript API ( more complex, use only if you need to track leads across Unbounce landing pages and other sub-domains on your website..)</li>
+</ol>
+
+<h2 id="webhooks---unbounce-integration-the-fast-way">Webhooks - Unbounce integration the fast way</h2>
+
+<p>Thanks to the Vero form builder and Unbounce’s great UI, integration is straight forward.</p>
+
+<p>The <a href="http://try.unbounce.com/with-sendloop/">Unbounce</a> landing page platform has been designed with one thing in mind: <strong>conversions</strong>.</p>
+
+<p>Below, you will find required steps to integrate your Unbounce landing page with Vero.</p>
+
+<h3 id="step-1-create-a-form-in-your-vero-account">Step 1: Create a form in your Vero account</h3>
+
+<p>The first step is to create a new form within Vero. We’ll then use the details of this form to let Unbounce know where to send your leads!
+Visit the <a href="https://app.getvero.com/tools/forms/new">Vero form builder</a> and create a new form:</p>
+
+<p><img src="/assets/screenshots/vero.subscribe-form-properties.png" alt="Subscribe form properties" /></p>
+
+<p>You need to name the action for Vero to record when a customer fills out the Unbounce lead form. As Vero is <strong>event-driven</strong> this is an important step! Typical examples include Downloads eBook/Whitepaper/Checklist, Completes lead generation form XYZ, Expresses interest in demo, etc.</p>
+
+<p><img src="/assets/screenshots/vero.subscribe-form-event-trigger.png" alt="Subcribe form event trigger" /></p>
+
+<p>Once done, click <strong>Generate Code</strong>.</p>
+
+<h3 id="step-2-add-the-unbounce-webhook">Step 2: Add the Unbounce webhook</h3>
+
+<p>In a new window, login to your Unbounce account and, after logging in, click on the landing page you are planning to integrate with Vero.
+On the landing page dashboard, scroll down and on the right side you will see a section called <em>Leads &amp; Form Integrations</em>. Click <strong>WebHook: POST to URL</strong>.</p>
+
+<p><img src="/assets/screenshots/unbounce.webhook-post-url.png" alt="Unbounce webhook" /></p>
+
+<p>After clicking, a pop-up will be displayed to you asking for <strong>URl to Post</strong>.</p>
+
+<p>In this field you want to paste the URL that you generated when using the Vero form builder:</p>
+
+<p><img src="/assets/screenshots/unbounce.vero-form-url.png" alt="Unbounce Vero Form Url" /></p>
+
+<p><strong>Important</strong>: The URL provided to Unbounce must be a combination of the form URL with “/unbounce”. For example, if the Vero form URL is:</p>
+
+<pre><code>https://app.getvero.com/forms/abc123
+</code></pre>
+
+<p>then the URL you provide to Unbounce is:</p>
+
+<pre><code>https://app.getvero.com/forms/abc123/unbounce
+</code></pre>
+
+<p>Simply paste this URL into the pop-up on Unbounce:</p>
+
+<p><img src="/assets/screenshots/unbounce.pop-up.png" alt="Unbounce Pop-Up" /></p>
+
+<p>Once it’s entered, Unbounce will verify the URL and display you a success message:</p>
+
+<p><img src="/assets/screenshots/unbounce.success.png" alt="Unbounce Success notification" /></p>
+
+<p>Click <em>Configure Field Mapping</em> to configure the parameters recorded in Vero.</p>
+
+<h3 id="step-3-configure-your-field-mappings-important">Step 3: Configure your field mappings (Important)</h3>
+
+<p>In this step you can map the customer attributes from your Unbounce form (such as First Name, Last Name, etc.) against your customer profiles in Vero.</p>
+
+<p><img src="/assets/screenshots/unbounce.field-mapping.png" alt="Unbounce Field Mapping" /></p>
+
+<p>You <strong>must</strong> map the <code>Email Address</code> Unbounce Form Field to a customer WebHook Field called <code>email</code>, like so:</p>
+
+<p><img src="/assets/screenshots/unbounce.mapping-1.png" alt="Unbounce Mapping Step 1" /></p>
+
+<p><img src="/assets/screenshots/unbounce.mapping-2.png" alt="Unbounce Mapping Step 2" /></p>
+
+<p>Other Unbounce Form Fields can be mapped as required. When mapping to Vero’s WebHook form fields you need to use the <em>Add new field</em> option and name the variable using the syntax <code>user_variable_name</code>. I.e. put <code>user_</code> out front. You should also add <code>_</code> in the places of spaces in variable names. Vero strips these out anyway!</p>
+
+<p>For example, you would map Unbounce Form Field <code>First Name</code> to Webhook Field Name <code>user_First_Name</code> and so on. This allows you to store the data you collect from customers against their profiles in Vero:</p>
+
+<p><img src="/assets/screenshots/vero.profile_after_import.png" alt="Profile After Import" /></p>
+
+<p>Once you are happy, click <strong>Save settings</strong> and you are off and away.</p>
+
+<p>That’s it! Your Unbounce leads will now be sent to Vero in real-time :).</p>
+
+<h2 id="javascript-api-integration---the-complex-way">Javascript API Integration - The complex way</h2>
+
+<h3 id="why-use-javascript-and-unbounce">Why use Javascript and Unbounce?</h3>
+
+<p>This method of installation uses our Javascript API to track Unbounce leads. This is for advanced setups and you should have some basic Javascript knowledge before attempting this approach. If you haven’t seen the Webhooks instructions above, take a look! (it’s easier). If you want to track customers across your Unbounce pages and other sub-domains on your website then you should use the Javascript approach outlined below.</p>
+
+<p>Vero’s Javascript library drops a cookie to track your customers. If you have received their permission to market to them on an Unbounce landing page, using our Javascript integration will drop a cookie that allows you to track them across other sub-domains. This is useful in many situations, such as:</p>
+
+<ul>
+  <li>eCommerce stores using Unbounce to capture leads for particular products. Tracking customer checkout on the primary domain requires Javascript integration.</li>
+  <li>B2B SaaS businesses using Unbounce pages as inbound lead capture forms, wanting to trigger campaigns across Unbounce pages, the blog and inside the software.</li>
+  <li>Customers using a mixture of Unbounce and other survey or capture software.</li>
+</ul>
+
+<h3 id="step-1-install-the-javascript-library">Step 1: Install the Javascript library</h3>
+
+<p>Copy the first snippet from this page (the Vero library):</p>
+
+<pre><code class="language-javascript">  &lt;script type='text/javascript'&gt;
+    var _veroq = _veroq || [];
+    _veroq.push(['init', { api_key: 'YOUR_API_KEY'} ]);
+
+    (function() {var ve = document.createElement('script'); ve.type = 'text/javascript'; ve.async = true; ve.src = '//d3qxef4rp70elm.cloudfront.net/m.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ve, s);})();
+  &lt;/script&gt;
+</code></pre>
+
+<p>Go back to the Unbounce editor and select <em>Javascripts</em> at the bottom of the screen.</p>
+
+<p>Paste the code you copied into the editor and name the snippet <code>Vero Library</code>. Choose <strong>head</strong> in the placement drop down:</p>
+
+<p><img src="/assets/screenshots/unbounce.scripts.png" alt="Unbounce Script" /></p>
+
+<h3 id="step-2-track-conversions-on-the-unbounce-form">Step 2: Track conversions on the Unbounce form</h3>
+
+<p>In this step we’ll install the code to actually track when a customer converts on your Unbounce landing page. In the Unbounce editor, select the Form <strong>Confirmation Dialog editor</strong>.</p>
+
+<p><img src="/assets/screenshots/unbounce.confirmation-dialog.png" alt="Unbounce Confirmation Dialog" /></p>
+
+<p>Then, add a new Javascript and call it “Vero Conversion”.</p>
+
+<p>Firstly, copy and re-paste the initial Javascript from step 1 above (the main Vero library).</p>
+
+<p>Then, copy and paste the following code after it:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+  var _veroq = _veroq || [];
+  var getUrlParams = function () {
+    var params = {},
+    hash;
+    var hashes = decodeURI(window.location.href).replace(/\+/g," ").slice(window.location.href.indexOf('?') + 1).split('&amp;');
+    for (var i = 0; i &lt; hashes.length; i++) {
+      hash = hashes[i].split('=');
+      params[hash[0]] = unescape(hash[1]);
+    }
+    return params;
+  };
+  var urlParam = getUrlParams();
+  var email = urlParam['email'];
+  var first_name = urlParam['first_name'];
+  if (email != undefined) {
+    _veroq.push(['user', {
+      email: email,
+      first_name: first_name
+    }]);
+  }
+  _veroq.push(['track', 'Filled out unbounce capture form']);
+&lt;/script&gt;
+</code></pre>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/install-vero-with-google-tag-manager.html">Install Vero with Google Tag Manager</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-veros-webhooks.html">Setting up Vero's Webhooks</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/tracking-customer-activity-in-analytics-tools.html">Tracking email activity from Vero in KISSmetrics, Mixpanel, Amplitude and other analytics tools</a>
+              </li>
+            
+          
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/using-zapier-and-vero.html">Using Zapier with Vero</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

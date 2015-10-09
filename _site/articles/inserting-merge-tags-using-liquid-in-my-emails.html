@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Inserting merge tags using Liquid in my emails</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.8.1/algoliasearch.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/algoliasearch-helper-js/2.4.0/algoliasearch.helper.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js"></script>
+
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/bd23cf03-685d-4ec1-b306-4adae883ab02.js"></script>
+  <link rel="stylesheet" href="//d3qxef4rp70elm.cloudfront.net/app.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/tomorrow-night-bright.min.css">
+  <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+
+  <script id="algolia__template" type="text/template">
+  
+    <div class="algolia__result">
+      <a class="algolia__result-link" href="{{ full_url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+      <div class="algolia__result-text">{{{ _highlightResult.text.value }}}</div>
+    </div>
+  
+  </script>
+  <script id="algolia__template--no-results" type="text/template">
+    No results found.
+  </script>
+</head>
+
+  <body class="help">
+    <button class="menu-toggle" role="button" aria-pressed="false"></button>
+<nav class="nav-primary">
+  <div class="wrap">
+    <ul id="menu-marketing-navbar-left" class="menu">
+      <li id="logo" class="menu-item menu-item-type-custom menu-item-object-custom">
+        <a href="https://www.getvero.com">
+          <img src="https://www.getvero.com/wp-content/themes/vero/assets/images/logo-blue.png">Vero
+        </a>
+      </li>
+    </ul>
+    <ul id="menu-marketing-navbar-right" class="menu genesis-nav-menu menu-primary">
+      <li id="menu-item-2169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2169 ">
+        <a href="https://www.getvero.com/developers" itemprop="url">
+          <span itemprop="name" class="">Developers</span>
+        </a>
+      </li>
+      <li id="menu-item-2026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2026">
+        <a href="mailto:support@getvero.com" itemprop="url">
+          <span itemprop="name" class="">Email support</span>
+        </a>
+      </li>
+      <li id="menu-item-2120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2120">
+        <a href="https://www.getvero.com/" itemprop="url">
+          <span itemprop="name" class="">Return to GetVero</span>
+        </a>
+      </li>
+    </ul>
+    <div class="nav-menu-toggle">
+      <a href="#" class="">Menu</a>
+    </div>
+  </div>
+</nav>
+    <div class="help-semi-nav">
+  <div class="content-wrapper">
+   <a class="back-link" href="/"><span class="fa fa-long-arrow-left"></span> Back to Help</a>
+  </div>
+</div>
+<div class="article single">
+  <div class="main-sidebar">
+    <article class="main-wrapper  algolia__initial-content js-algolia__initial-content">
+      <div><span class="categories">email design</span></div>
+      <h1 id="inserting-dynamic-data-with-merge-tags-using-liquid">Inserting dynamic data with merge tags (using Liquid)</h1>
+
+<p>You can merge customer and event properties into outgoing emails in Vero.</p>
+
+<p>To provide you with powerful templating options Vero uses Liquid, an open-source templating language created by Shopify. You can use Liquid to load dynamic content in your emails based on the data you have stored in Vero.</p>
+
+<h2 id="merging-basic-data">Merging basic data</h2>
+
+<p>In Vero, we use a prefix within the standard Liquid <code>{{</code> template fields to denote where to load the data from. The two main prefixes for loading customer data:</p>
+
+<ol>
+  <li><code>{{user.property}}</code> replace attribute with the name of any customer property that you’ve captured using the Vero API or uploaded via CSV. For example, <code>{{user.first_name}}</code> would print <code>John</code> for a user profile that has the attribute <code>first_name</code> with value <code>John</code>.</li>
+  <li><code>{{event.property}}</code> replace attribute with the name of any event property you’ve captured with our API or uploaded via CSV. For example, <code>{{event.product_name}}</code> would print <code>Apple MacBook Pro</code> for an event that has the attribute <code>product_name</code> with value <code>Apple MacBook Pro</code>. <strong>Note</strong> that you can only access event attributes for the trigger event of a triggered email.</li>
+</ol>
+
+<p>The prefixes <code>user.</code> and <code>event.</code> indicate whether the <code>property</code> being loaded is stored against the customer’s profile as a customer property or against an event the user has triggered.</p>
+
+<p>Merge tags are replaced dynamically with the correct data when an email is prepared to be sent.</p>
+
+<h2 id="merging-event-properties-in-emails">Merging event properties in emails</h2>
+
+<p>For example, <strong>Reba viewed Red Shoes</strong> would be <code>{{user.first_name}} viewed {{event.product_viewed}}</code>.</p>
+
+<p>You can only insert event properties attached to the base event - that is, the event that triggers a Behavioral or Transactional campaign. You can view the list of properties you already track using our API by visiting the Logs page in Vero and selecting <strong>View Data</strong> under the drop down associated with a particular event line item.</p>
+
+<p>For example: the event <em>added product to cart</em> might have a number of properties including <code>product_name</code> and <code>image_url</code>.</p>
+
+<p>When creating campaigns in Vero – whether you’re using templates or standard rich text – you can insert dynamic variables using the Liquid Templating Language.</p>
+
+<p>With all of the following variables, you can use the fallback option, such as <code>{{user.first_name | fallback: 'there'}}</code> as the option to use if the value is blank.</p>
+
+<h2 id="vero-specific-merge-data">Vero specific merge data</h2>
+
+<p>There are some merge fields that support key Vero fucntions, including Vero’s one-click unsubscribe and <em>View in browser</em> (permalink) tools.</p>
+
+<p>The following is a list of the key variables and functions you can use:</p>
+
+<ul>
+  <li><code>{{url.unsubscribe_link}}</code> inserts a URL (e.g. <code>http://getvero.com/unsubscribe/xyz</code>) that unsubscribes your customers in one click.</li>
+  <li><code>{{url.unsubscribe}}</code> inserts an anchor <code>&lt;a&gt;</code> tag containing the string <code>Unsubscribe</code> and pointing to the link referenced by <code>{{url.unsubscribe_link}}</code> above.</li>
+  <li><code>{{url.permalink_link}}</code> inserts a URL (e.g. <code>http://getvero.com/view-online/xyz</code>) that points to an online, hosted version of each individual email that is sent through Vero.</li>
+  <li><code>{{url.permalink}}</code> inserts an anchor <code>&lt;a&gt;</code> tag containing the string <code>View in browser</code> and pointing to the link referenced by <code>{{url.permalink_link}}</code> above.</li>
+</ul>
+
+<h2 id="using-liquid-functions">Using Liquid functions</h2>
+
+<p>Vero is a complex and powerful templating language. Vero supports most of the functions outlined in the <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid for Designers</a> documentation.</p>
+
+<p>We have extended the default functionality with a series of custom Liquid functions designed to help build better emails whilst making your life easier. We outline each of our custom functions in more detail in our article <a href="">Custom Liquid Functions</a>.</p>
+
+<ul>
+  <li><code>{{ user.email | encode }}</code> allows you to URL encode the provided value. If <code>user.email</code> was equal to <code>damien+test@getvero.com</code> it would be rendered as <code>damien%2Btest%40getvero.com</code> after encoding.</li>
+  <li><code>{{event.invoice_ref | format: '%05d'}}</code> allows you to reformat numerical variables (integers, floats, octal numbers, strings, unsigned decimals and hexadecimals). You can use any formatting from the print format cheat sheet.</li>
+  <li><code>{{event.price | precision: 2}}</code> allows you to change the precision of integers. As an example, <code>2.0554</code> would become <code>2.06</code> with a precision of two.</li>
+  <li><code>{{event.price | delimiter: ',' }}</code> allows you to format numbers so that they include commas. For example, you could do <code>{{ 4000 | delimiter: ',' }}</code> and we’d render <code>4,000</code>.</li>
+  <li><code>{{ event.purchase_date | time_zone: 'Sydney' | date: '%d/%m/%Y %H:%M:%S %Z' }}</code> allows you to change the timezone and format of an attribute. The attribute must be a number. You can use any of the timezone values from the TZ column of this guide to timezones. This time formatting tool can help you build the formatting string for output.</li>
+  <li><code>{{ extra.time.now | date: '%Y' }}</code> gives you the current year. This is commonly used in copyright footers.</li>
+</ul>
+
+<h2 id="inserting-even-more-powerful-data-in-your-emails">Inserting even more powerful data in your emails</h2>
+
+<p>There are times when you’ll want to go beyond the data you can push into Vero using our API.</p>
+
+<p>Imagine the scenario where you have triggered a behavioral email three days after a user has taken a specific action, yet want to include the <strong>latest</strong> products available in your store.</p>
+
+<p>Imagine the scenario you want to send an email every Tuesday and pull in the latest articles from your blog.</p>
+
+<p>Vero’s most powerful dynamic templating functionality is called <em>External Attributes</em> and allows you to pull in data from JSON and HTML API feeds <strong>just before an individual email is sent</strong>.</p>
+
+<p>This allows you to pull in the most real time data possible. You can learn more by reading our full help article on <a href="">External Attributes</a>.</p>
+
+      <div class="support-block white-block">
+        <h3>Didn't find what you were looking for?</h3>
+        <p>Get in touch, we're always happy to help. Email us at: <a href="#">support@getvero.com</a></p>
+      </div>
+      <div class="open-block white-block">
+        <h3>Improve our docs</h3>
+        <p>Our help docs are open to everyone, help us make them better by contributing on <span class="fa fa-github"><a href="github.com/getvero/getvero.github.io"> Github</a></p>
+      </div>
+    </article>
+    <div class="algolia__search-content js-algolia__search-content">
+      <h1 class="page-title">Search</h1>
+      <div class="articles algolia__results"></div>
+    </div>
+    <div class="sidebar-wrapper">
+      <div class="help-search">
+        <input type="search" class="js-algolia__input" placeholder="Search the help docs"/>
+        <span class="fa fa-search"></span>
+      </div>
+      <div class="white-block">
+        <h3 class="gray-block-title">Related Articles</h3>
+        
+          
+        
+        <ul class="unstyled-list">
+          
+            
+              <li>
+                <a class="article-link" href="/articles/import-a-list-of-customers-via-csv.html">Import a list of customers via CSV</a>
+              </li>
+            
+          
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/list-of-liquid-functions-dynamic-templating-variables.html">List of Liquid functions / dynamic templating variables</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-a-basic-a-b-test.html">Basic A/B variation test</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-and-installing-vero.html">Setting up and installing Vero</a>
+              </li>
+            
+          
+            
+              <li>
+                <a class="article-link" href="/articles/setting-up-veros-webhooks.html">Setting up Vero's Webhooks</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrap">
+    <div class="main-footer">
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Return to getvero.com</a></li>
+      </ul>
+      <ul class="col">
+        <li>&nbsp;</li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/pricing">Developers</a></li>
+        <li><a href="http://www.getvero.com/api">API Reference</a></li>
+      </ul>
+      <ul class="col">
+        <li><a href="http://www.getvero.com/terms-of-service">Terms of Service</a></li>
+        <li><a href="http://www.getvero.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
