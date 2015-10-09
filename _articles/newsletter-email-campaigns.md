@@ -1,15 +1,19 @@
-#What is a newsletter campaign?A 
-Newsletter is a one-off email. You  might also call a Newsletter a blast, manual or promotional email.
+---
+layout: articles
+title: What is a newsletter campaign?
+categories: campaigns
+---
 
-Newsletters are different to triggered emails because they are manually scheduled for a specific time.
+# What is a newsletter campaign?
 
-They are considered one-to-many emails, as you are emailing a number of people at once.
+You might know a *Newsletter* by some other names. They've been called a one-off email, a blast email, an ad-hoc email or a promotional email. They are considered one-to-many emails, as you are emailing a number of people at once.
 
-In Vero, you define who receives your newsletter using the customer 
-Segmentsyou create.
+Newsletters are emails that are sent to a group of customers, sent right now or manually scheduled for a specific time in the future. 
 
-You could, for example, send a weekly email newsletter to everyone in the segment **“Blog Subscribers”** but not in the segment **“Paying Customers”** or send a coupon to everyone that is not in the segment **“Current Customers”**.
+In Vero, *Segments* are used to target your email. 
 
-![Screen Shot 2015-02-16 at 4.02.57 PM](http://www.getvero.com/wp-content/uploads/2014/07/Screen-Shot-2015-02-16-at-4.02.57-PM.png)
+![{{site.data.screenshots.vero.newsletter-email-campaigns.title}}]({{site.data.screenshots.vero.newsletter-email-campaigns.image}})
 
-Segments are very powerful and allow you to get very targeted. Thanks to this, it's easy to send highly personalized Newsletters that really resonate with your recipients.
+You could, for example, send a weekly email newsletter to everyone in the segment **Blog Subscribers** *and* who are not in the segment **Paying Customers**. These segments represent dynamic lists of customers and Vero keeps these segments up to date. This means that we calculate, in real time, who should receive your email just before it is sent.
+
+You can use both *and* or *or* conditions to add as many segments as you want for targeting – allowing you to get extremely targeted with your emails.

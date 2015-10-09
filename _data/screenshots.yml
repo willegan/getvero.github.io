@@ -1,96 +1,321 @@
 unbounce:
   script:
-    image: /help/assets/screenshots/unbounce.scripts.png
+    image: /assets/screenshots/unbounce.scripts.png
     title: Unbounce Script
+  webhook-post-url:
+    image: /assets/screenshots/unbounce.webhook-post-url.png
+    title: Unbounce webhook
+  vero-form-url:
+    image: /assets/screenshots/unbounce.vero-form-url.png
+    title: Unbounce Vero Form Url
+  pop-up:
+    image: /assets/screenshots/unbounce.pop-up.png
+    title: Unbounce Pop-Up
+  success:
+    image: /assets/screenshots/unbounce.success.png
+    title: Unbounce Success notification
+  field-mapping:
+    image: /assets/screenshots/unbounce.field-mapping.png
+    title: Unbounce Field Mapping
+  mapping-1:
+    image: /assets/screenshots/unbounce.mapping-1.png
+    title: Unbounce Mapping Step 1
+  mapping-2:
+    image: /assets/screenshots/unbounce.mapping-2.png
+    title: Unbounce Mapping Step 2
+  confirmation-dialog:
+    image: /assets/screenshots/unbounce.confirmation-dialog.png
+    title: Unbounce Confirmation Dialog
 gtm:
   configure:
-    image: /help/assets/screenshots/gtm.configure.png
+    image: /assets/screenshots/gtm.configure.png
     title: GTM Configure
   macro:
-    image: /help/assets/screenshots/gtm.macro.png
+    image: /assets/screenshots/gtm.macro.png
     title: GTM Macro
   final-script:
-    image: /help/assets/screenshots/gtm.final-script.png
+    image: /assets/screenshots/gtm.final-script.png
     title: GTM Review
   event:
-    image: /help/assets/screenshots/gtm.event.png
+    image: /assets/screenshots/gtm.event.png
     title: GTM Event
 zapier:
   trigger-action:
-    image: /help/assets/screenshots/zapier.trigger-action.png
+    image: /assets/screenshots/zapier.trigger-action.png
     title: Pipedrive to Vero
   add-customer:
-    image: /help/assets/screenshots/zapier.add-customer.png
+    image: /assets/screenshots/zapier.add-customer.png
     title: Add a customer
   customer-properties:
-    image: /help/assets/screenshots/zapier.customer-properties.png
+    image: /assets/screenshots/zapier.customer-properties.png
     title: Customer properties in Zapier
   event-name:
-    image: /help/assets/screenshots/zapier.event-name.png
+    image: /assets/screenshots/zapier.event-name.png
     title: Event name in Zapier
   event-properties:
-    image: /help/assets/screenshots/zapier.event-properties.png
+    image: /assets/screenshots/zapier.event-properties.png
     title: Event properties in Zapier
   tags:
-    image: /help/assets/screenshots/zapier.tags.png
+    image: /assets/screenshots/zapier.tags.png
     title: Tags in Zapier
 vero:
+  add-tag: 
+    image: /help/assets/screenshots/vero.add-tag.png
+    title: Add a tag in Vero
   customer-properties:
-    image: /help/assets/screenshots/vero.customer-properties.png
+    image: /assets/screenshots/vero.customer-properties.png
     title: Customer properties in Vero
+  customer-properties-id:
+    image: /assets/screenshots/vero.customer-properties-id.png
+    title: ID in customer properties
   customer:
     unsubscribed:
-      image: /help/assets/screenshots/vero.customer.unsubscribed.png
+      image: /assets/screenshots/vero.customer.unsubscribed.png
       title: Unsubscribed customer
   fetch-html:
-    image: /help/assets/screenshots/vero.fetch-html.png
+    image: /assets/screenshots/vero.fetch-html.png
     title: Fetch HTML in Vero
   external-attributes:
-    image: /help/assets/screenshots/vero.external-attributes.png
+    image: /assets/screenshots/vero.external-attributes.png
     title: External attributes in Vero
   json-data:
-    image: /help/assets/screenshots/vero.json-data.png
+    image: /assets/screenshots/vero.json-data.png
     title: JSON response
   external-attributes-preview:
-    image: /help/assets/screenshots/vero.external-attributes-preview.png
+    image: /assets/screenshots/vero.external-attributes-preview.png
     title: External attributes preview
   triggered-abandonment-campaign:
-    image: /help/assets/screenshots/vero.triggered-abandonment-campaign.png
+    image: /assets/screenshots/vero.triggered-abandonment-campaign.png
     title: Triggered abandonment campaign
   advanced-scope-by-triggered-email:
-    image: /help/assets/screenshots/vero.advanced-scope-by-triggered-email.png
+    image: /assets/screenshots/vero.advanced-scope-by-triggered-email.png
     title: Scoped conditions triggered abandonment campaign
+  clone-email:
+    image: /assets/screenshots/vero.clone-email.png
+    title: Cloning an email
+  esp-integrations:
+    image: /assets/screenshots/vero.esp-integrations.png
+    title: Email Service Provider integrations
+  esp-credentials:
+    image: /assets/screenshots/vero.esp-credentials.png
+    title: Mandril credentials
+  segments-mainpage-edit:
+    image: /assets/screenshots/vero.segments-mainpage-edit.png
+    title: Editing segments
+  segments-view-users:
+    image: /assets/screenshots/vero.segments-view-users.png
+    title: View Users in segments
+  segments-export-users:
+    image: /assets/screenshots/vero.segments-export-users.png
+    title: Export Users in segments
+  email-logs-bounce:
+    image: /assets/screenshots/vero.email-logs-bounce.png
+    title: Bounced email logs
+  subscribe-form-properties:
+    image: /assets/screenshots/vero.subscribe-form-properties.png
+    title: Subscribe form properties
+  subscribe-form-event-trigger:
+    image: /assets/screenshots/vero.subscribe-form-event-trigger.png
+    title: Subcribe form event trigger
+  subscribe-form-code:
+    image: /assets/screenshots/vero.subscribe-form-code.png
+    title: Subscribe form code
+  subscribe-form-success:
+    image: /assets/screenshots/vero.subscribe-form-success.png
+    title: Subscribe form success
+  double-opt-in-email:
+    image: /assets/screenshots/vero.double-opt-in-email.png
+    title: Double opt-in email
+  double-opt-in-frequency:
+    image: /help/assets/screenshots/vero.double-opt-in-frequency.png
+    title: Double opt-in frequency 
+  customers: 
+    bounced:
+      image: /help/assets/screenshots/vero.customers.bounced.png
+      title: Handling bounced emails Vero
   segments:
-    paying-customers:
-      image: /help/assets/screenshots/vero.segments.paying-customers.png
-      title: Paying customers segment
+    segments:
+      image: /help/assets/screenshots/vero.segments.segments.png
+      title: Segment customers by segments
+    events:
+      image: /help/assets/screenshots/vero.segments.events.png
+      title: Segment customers by event activity
+    emails:
+      image: /help/assets/screenshots/vero.segments.emails.png
+      title: Segment customers by opens and clicks
+    properties:
+      image: /help/assets/screenshots/vero.segments.properties.png
+      title: Segment customers by properties
+    tags:
+      image: /help/assets/screenshots/vero.segments.tags.png
+      title: Segment customers by tag
   campaign:
     use-segment:
-      image: /help/assets/screenshots/vero.campaign.use-segment.png
+      image: /assets/screenshots/vero.campaign.use-segment.png
       title: Campaign using paying customers
+    triggered-email-example:
+      image: /assets/screenshots/vero.campaign.triggered-email-example.png
+      title: Triggered email campaign setup
+    series:
+      image: /assets/screenshots/vero.campaign.series.png
+      title: Welcome Series
   user-profile:
-    image: /help/assets/screenshots/vero.user-profile.png
+    image: /assets/screenshots/vero.user-profile.png
     title: User profile
   conditions:
     options:
-      image: /help/assets/screenshots/vero.conditions.options.png
+      image: /assets/screenshots/vero.conditions.options.png
       title: Condition options
     triggered_event:
-      image: /help/assets/screenshots/vero.conditions.triggered_event.png
+      image: /assets/screenshots/vero.conditions.triggered_event.png
       title: Condition triggered_event
     has_triggered_event_with_property:
-      image: /help/assets/screenshots/vero.conditions.has_triggered_event_with_property.png
+      image: /assets/screenshots/vero.conditions.has_triggered_event_with_property.png
       title: Condition has_triggered_event_with_property
     has_tag:
-      image: /help/assets/screenshots/vero.conditions.has_tag.png
+      image: /assets/screenshots/vero.conditions.has_tag.png
       title: Condition has_tag
     has_property:
-      image: /help/assets/screenshots/vero.conditions.has_property.png
+      image: /assets/screenshots/vero.conditions.has_property.png
       title: Condition has_property
   export:
     segment:
-      image: /help/assets/screenshots/vero.export.segment.png
+      image: /assets/screenshots/vero.export.segment.png
       title: Export customer properties
     reports:
-      image: /help/assets/screenshots/vero.export.reports.png
+      image: /assets/screenshots/vero.export.reports.png
       title: Export reports
+  html-vs-plain:
+    image: /assets/screenshots/vero.html_vs_plain_text.png
+    title: HTML vs Plain Text
+  event-import-button:
+    image: /assets/screenshots/vero.event_import_button.png
+    title: Event Import Button
+  sidebar:
+    image: /assets/screenshots/vero.import_export_sidebar.png
+    title: Import Export
+  event-greybox:
+    image: /assets/screenshots/vero.track_trigger_csv.png
+    title: Track Trigger
+  profile:
+    image: /assets/screenshots/vero.profile_after_import.png
+    title: Profile After Import
+  csv-match:
+    image: /assets/screenshots/vero.csv_match_fields.png
+    title: CSV Match Fields
+  csv-import:
+    image: /assets/screenshots/vero.contacts_csv_import.png
+    title: Import CSV
+  csv-paste:
+    image: /assets/screenshots/vero.contacts_csv_paste.png
+    title: Import Paste
+  newsletter-email-campaigns:
+    image: /assets/screenshots/vero.segment_conditions.png
+    title: Segment Conditions
+  conversions:
+    newsletter:
+      title: Conversion tracking email newsletter
+      image: /assets/screenshots/vero.conversions.newsletter.png
+    behavioral:
+      title: Conversion tracking triggered email
+      image: /assets/screenshots/vero.conversions.behavioral.png
+  launch-newsletter:
+    image: /assets/screenshots/vero.launch-newsletter.png
+    title: Launch Newsletter
+  recurring-options:
+    image: /assets/screenshots/vero.recurring-options.png
+    title: Recurring Options
+  integrations:
+    google_analytics:
+      overview:
+        image: /assets/screenshots/vero.integrations.ga.png
+        title: Vero Google Analytics Integration Overview
+      detail:
+        image: /assets/screenshots/vero.integrations.ga.detail.png
+        title: Vero Google Analytics Integration Detail
+    webhooks:
+      overview:
+        image: /assets/screenshots/vero.integrations.webhooks.png
+        title: Vero Webhooks Overview
+      detail:
+        image: /assets/screenshots/vero.integrations.webhooks.detail.png
+        title: Vero Webhooks Detail
+  logs:
+    events:
+      view-event-data:
+        title: View event data Vero logs
+        image: /assets/screenshots/vero.logs.events.view-event-data.png
+      event-data-example:
+        title: Example event data Vero logs
+        image: /assets/screenshots/vero.logs.events.event-data-example.png
+      viewed-page:
+        title: Tracking pageviews Vero
+        image: /assets/screenshots/vero.logs.events.viewed-page.png
+  templates:
+    wysiwyg-editor:
+      title: Vero WYSIWYG Editor
+      image: /assets/screenshots/vero.templates.wysiwyg-editor.png
+    vero-editable-image:
+      title: Vero Editable Image
+      image: /assets/screenshots/vero.templates.vero-editable-image.png
+    template-library:
+      title: Vero Templates library
+      image: /assets/screenshots/vero.templates.template-library.png
+    unmerged-changes:
+      title: Vero Template Unmerged Changes
+      image: /assets/screenshots/vero.templates.template-unmerged-changes.png
+    errors:
+      title: Vero Template editing errors
+      image: /assets/screenshots/vero.templates.template-errors.png
+  settings:
+    project:
+      title: Vero Project delivery settings
+      image: /assets/screenshots/vero.settings.project-settings.png
+    opt-in:
+      title: Vero double opt in
+      image: /assets/screenshots/vero.settings.opt-in.png
+    email-delivery:
+      unverified:
+        title: Custom DNS Vero unverified
+        image: /assets/screenshots/vero.settings.email-delivery.unverified.png
+      verified:
+        title: Custom DNS Vero verified
+        image: /assets/screenshots/vero.settings.email-delivery.verified.png
+  add-team-members:
+    remove-team-member:
+      image: /assets/screenshots/vero.remove-team-member.png
+      title: Remove Team Member Button
+    account:
+      image: /assets/screenshots/vero.account.png
+      title: Account
+    invite-team-member:
+      image: /assets/screenshots/vero.invite-team-member.png
+      title: Invite Team Member
+  email-addresses:
+    image: /assets/screenshots/vero.email-addresses.png
+    title: Email Addresses
+  email-addresses-campaign:
+    image: /assets/screenshots/vero.email-addresses-campaign.png
+    title: Select email address in Campaign
+  dynamic-email-addresses:
+    image: /assets/screenshots/vero.dynamic-email-addresses.png
+    title: Dynamic email addresses
+  add-a-tag:
+    image: /assets/screenshots/vero.add-a-tag.png
+    title: Add a Tag
+  filter-tags:
+    image: /assets/screenshots/vero.filter-tags.png
+    title: Filter Tags
+  filter-by-tag:
+    image: /assets/screenshots/vero.filter-by-tag.png
+    title: Filter By Tag
+  webhook-setup:
+    image: /assets/screenshots/vero.webhook-setup.png
+    title: Webhook Setup
+  ab_test:
+    overview:
+      image: /assets/screenshots/vero.ab_test.overview.png
+      title: A/B Test Overview
+    variations:
+      image: /assets/screenshots/vero.ab_test.variations.png
+      title: A/B Test Variations

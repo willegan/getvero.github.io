@@ -2,8 +2,8 @@
 title: GetVero Help
 email: support@getvero.com
 description:
-baseurl: "/help" # the subpath of your site, e.g. /blog/
-url: "https://www.getvero.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://help.getvero.com" # the base hostname & protocol for your site
 twitter_username: getvero
 github_username:  getvero
 
@@ -13,3 +13,30 @@ markdown: kramdown
 collections:
   articles:
     output: true
+
+algolia:
+  application_id: 'KFSVJ5X7PP'
+  index_name: 'articles'
+  excluded_files:
+    - index.html
+    - articles/styleguide.md
+    - articles/duplicates/conditional-campaigns.md
+    - articles/duplicates/creating-a-chained-series-of-emails.md
+    - articles/duplicates/fallback-for-liquid-templating-variables.md
+    - articles/duplicates/fetch-external-remote-data-before-sending-email.md
+    - articles/duplicates/how-do-i-export-my-subscribers.md
+    - articles/duplicates/how-do-i-track-utm-codes-on-landing-pages-automatically.md
+    - articles/duplicates/how-do-i-upload-a-html-template.md
+    - articles/duplicates/how-to-create-a-segment-beta.md
+    - articles/duplicates/how-to-send-a-one-off-email-newsletter-to-my-customers-.md
+    - articles/duplicates/integrate-vero-with-kissmetrics-or-mixpanel.md
+    - articles/duplicates/is-the-vero-cookie-assigned-at-the-root-level-or-to-a-subdomain.md
+    - articles/duplicates/managing-unsubscribes.md
+    - articles/duplicates/segmenting-and-filtering-using-dates.md
+    - articles/duplicates/setting-up-a-drip-email-campaign-autoresponder.md
+    - articles/duplicates/unbounce-integration-the-fast-way.md
+    - articles/duplicates/what-are-events-and-why-do-they-matter.md
+    - articles/shopify-integration.md
+
+gems:
+  - algoliasearch-jekyll
