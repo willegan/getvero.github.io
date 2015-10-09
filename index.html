@@ -10,9 +10,9 @@ layout: default
 <div id="help-boxes" class="full-width">
   <div class="wrapper">
     <div class="help-box">
-      <h2><a href="#">Getting Started</a></h2>
+      <h2><a href="articles/getting-started.html">Getting Started</a></h2>
       <p>Your go to guide for how to setup vero and start sending awesome email campaigns.</p>
-      <a href="#">Read the guide</a>
+      <a href="articles/getting-started.html">Read the guide</a>
     </div>
     <div class="help-box">
       <h2><a href="http://getvero.com/api">Developer API</a></h2>
@@ -52,8 +52,7 @@ layout: default
   <div class="main-wrapper algolia__initial-content js-algolia__initial-content">
     <div id="getting-started">
       {% assign items = site.articles | where: "getting_started", true %}
-      <h2>Frequently Asked Questions</h2>
-      <p>Everything you need to get going with vero.</p>
+      <h2>Common Issues</h2>
       <ul class="article-list unstyled-list">
         {% for item in items %}
           <li>
