@@ -14,13 +14,16 @@ Tags are a powerful way to enhance segmentation. They are useful for creating pr
 
 ## Adding tags
 
+{% capture image1 %}{{site.data.screenshots.vero.add-tag.image}}{% endcapture %}
+{% capture title1 %}{{site.data.screenshots.vero.add-tag.title}}{% endcapture %}
+
 Tags can be added in three ways:
 
 1. Using Vero's API. You can refer to our API documentation]({{site.data.links.vero_api}}) for more information.
 
 2. Using CSV imports. See the section titled *Creating static lists with tags* below.
 
-3. Via the UI. When browsing a customer's profile in Vero, browse to the *Tags* tab and select the **New Tag** button to add a tag {% include inline-image.html key="site.data.screenshots.vero.add-tag" %}.
+3. Via the UI. When browsing a customer's profile in Vero, browse to the *Tags* tab and select the **New Tag** button to add a tag {% include inline-image.html image=image1 title=title1 %}.
 
 ## Removing tags
 

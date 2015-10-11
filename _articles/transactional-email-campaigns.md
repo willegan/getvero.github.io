@@ -10,7 +10,7 @@ Transactional campaigns are notifications that are are sent to customers when th
 
 A transactional email is a type of triggered email that customers cannot unsubscribe from. For this reason, they should be used very carefully. Receipts, invoices and account statements are examples of transactional email. They are required, so customers cannot opt out.
 
-Creating a transactional campaign is identical to a [behavioral campaign](http://www.getvero.com/help/getting-started/behavioral-email-campaigns/), except for the way unsubscribes are handled by Vero.
+Creating a transactional campaign is identical to a [behavioral campaign](/articles/what-is-a-behavioral-campaign.html), except for the way unsubscribes are handled by Vero.
 
 A transactional email is **not** a marketing email. It is an email sent in relation to a specific action that affects your customer. It is an email they need to receive in order to conduct business with you.
 

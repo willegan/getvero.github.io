@@ -75,7 +75,10 @@ Images make the help docs better but we should be mindful of the type of images 
 
 For images of buttons, icons or small elements, use the inline image snippet. For example.
 
-Click the **Remove** {% include inline-image.html key="site.data.screenshots.vero.add-team-members.remove-team-member" %} button.
+{% capture image1 %}{{site.data.screenshots.vero.add-team-members.remove-team-member.image}}{% endcapture %}
+{% capture title1 %}{{site.data.screenshots.vero.add-team-members.remove-team-member.title}}{% endcapture %}
+
+Click the **Remove** {% include inline-image.html image=image1 title=title1 %} button.
 
 ##Code
 
