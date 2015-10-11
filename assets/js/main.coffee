@@ -46,8 +46,8 @@ $ ->
 
   # Handle typing query
 
-  onQueryChange = ->
-    lastQuery = $searchInput.val()
+  onQueryChange = (e) ->
+    lastQuery = $(e.target).val()
     if lastQuery.length == 0
       hideResults()
       return false
@@ -58,12 +58,10 @@ $ ->
     # Avoid race conditions, discard results that do not match the latest query
     if (data.query != lastQuery)
       false
-    console.log data.nbHits
     content = if data.nbHits then renderResults(data) else templateNoResults
     $searchContentResults.html content
 
   renderResults = (data) ->
-    console.log data
     $.map(data.hits, (hit) ->
       hit.css_selector = encodeURI(hit.css_selector)
       hit.full_url = config.baseurl + hit.url
@@ -112,9 +110,8 @@ $ ->
   helper.on 'result', onResult
 
   # Input listening for queries
-  $searchInput = $('.js-algolia__input')
+  $searchInput = $('.js-algolia__input, .js-algolia__input_mobile')
   $searchInput.on 'keyup', onQueryChange
-  $searchInput.on 'search', onQueryChange
 
   # Content to hide/show when searching
   $initialContent = $('.js-algolia__initial-content')
