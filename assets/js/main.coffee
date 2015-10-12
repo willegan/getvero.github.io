@@ -129,3 +129,21 @@ $ ->
     if selector
       scrollPageToSelector selector
   ), 100
+
+  #Responsive Header
+  $(document).ready ->
+    $('.nav-menu-toggle').on 'click', ->
+      textcont = $('.nav-menu-toggle').text()
+      if textcont == 'Menu'
+        $('#menu-marketing-navbar-right').slideDown()
+        $('.nav-menu-toggle a').text 'Close'
+      else if textcont == 'Close'
+        $('#menu-marketing-navbar-right').slideUp()
+        $('.nav-menu-toggle a').text 'Menu'
+        $('#menu-marketing-navbar-right').addClass 'slid'
+      return
+    return
+  $(window).resize ->
+    if $('.nav-menu-toggle a').text() == 'Menu'
+      $('#menu-marketing-navbar-right').removeAttr 'style'
+    return
