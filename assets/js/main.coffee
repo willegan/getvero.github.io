@@ -131,9 +131,9 @@ $ ->
   ), 100
 
   #Responsive Header
-  $('.nav-menu-toggle').on 'click', ->
-    console.log("yo")
-    textcont = $('.nav-menu-toggle').text()
+  $('.nav-menu-toggle').on 'click', (e) ->
+    e.preventDefault()
+    textcont = $('.nav-menu-toggle').text().trim()
     if textcont == 'Menu'
       $('#menu-marketing-navbar-right').slideDown()
       $('.nav-menu-toggle a').text 'Close'
@@ -145,4 +145,3 @@ $ ->
   $(window).resize ->
     if $('.nav-menu-toggle a').text() == 'Menu'
       $('#menu-marketing-navbar-right').removeAttr 'style'
-
