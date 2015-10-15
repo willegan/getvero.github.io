@@ -21,7 +21,7 @@ Vero provides webhooks for the following events:
 
 ## Webhook Setup
 
-All of Vero's webhooks are sent to a single notification address. To enable the webhooks, go to *Account > Webhooks* and enter the URL at which you wish to receive the webhooks.
+All of Vero's webhooks are sent to a single notification address. To enable the webhooks, go to *Settings > Integrations > Webhooks* and enter the URL at which you wish to receive the webhooks.
 
 ![{{ site.data.screenshots.vero.webhook-setup['title'] }}]({{ site.data.screenshots.vero.webhook-setup['image'] }})
 
