@@ -49,7 +49,8 @@ Webhooks related to emails (sent, delivered, bounced, etc.) use the following fo
                 "name": "Cart Abandonment Followup",
                 "subject": "You have items in your shopping bag",
                 "trigger-event": "Abandoned cart",
-                "permalink": "http://app.getvero.com/view/1/9c8c3ac6ac65736926a6da5aefbf852d"
+                "permalink": "http://app.getvero.com/view/1/9c8c3ac6ac65736926a6da5aefbf852d",
+                "variation": "Variation A"
              },
              "sent_at": 1435016238,
              "user_agent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
