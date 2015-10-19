@@ -8,14 +8,17 @@ All submissions are welcome. To submit a change, fork this repo, commit your cha
 
 Ruby 1.9.3 or above is required to build the site.
 
-
-  sh
-  $ gem install jekyll
+```
+sh
+$ gem install jekyll
+```
 
 Clone this project and start the jekyll server
 
-  sh
-  $ jekyll serve
+```
+sh
+$ jekyll serve
+```
 
 Jekyll has [some nice documentation](http://jekyllrb.com/docs/usage/) to get you started.
 
