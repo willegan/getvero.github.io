@@ -33,36 +33,9 @@ Once you have entered the URL you can choose which webhook events you want to tr
 
 ## Webhook format
 
-### Webhooks for email events
+### Webhooks structure for email events
 
-Webhooks related to emails (sent, delivered, bounced, etc.) use the following format:
-
-        {
-            "type": "sent",
-            "user": {
-                "id": 12345,
-                "email": "steve@getvero.com"
-            },
-            "campaign": {
-                "id": 1235666234572456,
-                "type": "behavioural",
-                "name": "Cart Abandonment Followup",
-                "subject": "You have items in your shopping bag",
-                "trigger-event": "Abandoned cart",
-                "permalink": "http://app.getvero.com/view/1/9c8c3ac6ac65736926a6da5aefbf852d",
-                "variation": "Variation A"
-             },
-             "sent_at": 1435016238,
-             "user_agent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
-        }
-
-Key things to note:
-
-- The `sent_at`, `clicked_at`, `opened_at` field follows a very Ruby-esque pattern. The key will change based on the event sent (as outlined below).
-
-- The `trigger-event` value will be present for Transactional and Behavioral campaigns and represents the event that triggered the campaign.
-
-The follow table outlines each of the `type` values:
+The follow list outlines each of the `type` values:
 
 - `sent` – When an email has been sent by Vero
 - `delivered` – When an email has been delivered to the ISP server
@@ -71,23 +44,155 @@ The follow table outlines each of the `type` values:
 - `bounced` – When an email has not been delivered to the ISP server
 - `unsubscribed` – When a customer has unsubscribed
 
-### Webhook for customer updates
+**Sent:**
 
-The webhook sent when a customer is updated shows the details of the changes made to that customer's properties or their tags. This allows you to update customer details in other systems, based on changes sent to Vero, keeping everything in sync.
-
-    {
-        "type":"user_updated",
-        "user": {
-            "id": 123456,
-            "email":"damien@getvero.com"
-        },
-        "changes": {
-            "_tags": {
-              "add": ["test"],
-              "remove": []
+        {
+            "sent_at":1435016238,
+            "type":"sent",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
             },
-            "first_name": "Chris"
+            "campaign": {
+                "id":987,
+                "type":"transactional",
+                "name":"Order confirmation",
+                "subject":"Your order is being processed!",
+                "trigger-event":"purchased item",
+                "permalink":"http://app.getvero.com/view/1/341d64944577ac1f70f560e37db54a25",
+                "variation":"Variation A"
+            }
         }
-    }
+
+**Delivered:**
+
+        {
+            "delivered_at":1435016238,
+            "type":"delivered",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            },
+            "campaign": {
+                "id":987,
+                "type":"transactional",
+                "name":"Order confirmation",
+                "subject":"Your order is being processed!",
+                "trigger-event":"purchased item",
+                "permalink":"http://app.getvero.com/view/1/341d64944577ac1f70f560e37db54a25",
+                "variation":"Variation A"
+            }
+        }
+
+**Opened:**
+
+        {
+            "opened_at":1435016238,
+            "user_agent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
+            "type":"opened",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            },
+            "campaign": {
+                "id":987,
+                "type":"transactional",
+                "name":"Order confirmation",
+                "subject":"Your order is being processed!",
+                "trigger-event":"purchased item",
+                "permalink":"http://app.getvero.com/view/1/341d64944577ac1f70f560e37db54a25",
+                "variation":"Variation A"
+            }
+        }
+
+**Clicked:**
+        
+        {
+            "clicked_at":1435016238,
+            "user_agent":"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)",
+            "type":"clicked",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            },
+            "campaign": {
+                "id":987,
+                "type":"transactional",
+                "name":"Order confirmation",
+                "subject":"Your order is being processed!",
+                "trigger-event":"purchased item",
+                "permalink":"http://app.getvero.com/view/1/341d64944577ac1f70f560e37db54a25",
+                "variation":"Variation A"
+            }
+        }
+
+**Bounced:**
+        
+        {
+            "bounced_at":1435016238,
+            "bounce_type":"hard",
+            "type":"bounced",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            },
+            "campaign": {
+                "id":987,
+                "type":"transactional",
+                "name":"Order confirmation",
+                "subject":"Your order is being processed!",
+                "trigger-event":"purchased item",
+                "permalink":"http://app.getvero.com/view/1/341d64944577ac1f70f560e37db54a25",
+                "variation":"Variation A"
+            }
+        }
+
+**Unsubscribed:**
+
+        {
+            "unsubscribed_at":1435016238,
+            "type":"unsubscribed",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            }
+        }
+
+Key things to note:
+
+- The `trigger-event` value will be present for Transactional and Behavioral campaigns and represents the event that triggered the campaign.
+
+### Webhook structure for customer updates
+
+The webhook sent when a customer is created or updated shows the details of that customer or the changes made to that customer's properties or their tags. This allows you to update customer details in other systems, based on changes sent to Vero, keeping everything in sync.
+
+**User created:**
+
+        {
+            "type":"user_created",
+            "user": {
+                "firstname":"Steve",
+                "company":"Vero",
+                "role":"Bot",
+                "id":123,
+                "email":"steve@getvero.com"
+            }
+        }
+
+**User updated:**
+
+        {
+            "type":"user_updated",
+            "user": {
+                "id":123,
+                "email":"steve@getvero.com"
+            },
+            "changes": {
+                "_tags": {
+                    "add": ["active-customer"],
+                    "remove":["unactive-180-days"]
+                }
+            }
+        }
 
 If you have any other questions regarding setting up webhooks, please write us an email. We're here to help.
