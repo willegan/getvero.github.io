@@ -68,5 +68,9 @@ Then, when you place {{external.title}} inside of your content (or template as w
 
 This is a basic case, but additional ones like the ones mentioned above, or even full html creative sections could be pulled in as you'd like.
 
+## Authentication
+
+At this time External Attributes only supports basic HTTP Authentication. You can include basic HTTP Authentication details using the format `http://username:password@yoururl.com/data-feed.json`. This is supported by both the `fetch_html` and JSON fetch methods.
+
 External Attributes is an advanced feature. Please get in touch with our 
 [support team via email](mailto:support@getvero.com) so we can show you it in action.
