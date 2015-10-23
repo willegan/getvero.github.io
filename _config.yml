@@ -8,6 +8,7 @@ twitter_username: getvero
 github_username:  getvero
 
 # Build settings
+exclude: [vendor]
 markdown: kramdown
 
 collections:
