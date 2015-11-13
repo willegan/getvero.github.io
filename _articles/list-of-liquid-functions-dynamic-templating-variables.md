@@ -63,6 +63,16 @@ Here are some examples:
 
 	purchase_date = "Thu Nov 29 2001 14:33:20 UTC"
 	{{ purchase_date | time_zone: 'Sydney' | date: '%d/%m/%Y %H:%M:%S %Z' }} => 30/11/2001 01:33:20 EST
+	
+	purchase_date = "2015-12-01 10:00"
+	{{ purchase_date | time_zone: -7 | date: '%d-%m-%Y %H:%M' }} => 1-12-2015 03:00
 	{% endraw %}
 
+We provide a custom Liquid variable which lets you access the current time (at the time a newsletter is compiled). To do so, use the code `extra.time.now`. This will return the current datetime as a Unix integer value. You can transform this value using the `date` filter in Liquid. Here is a complex example. This example would result if it was run at 11:37pm 12 November (UTC).
+
+	{% raw %}
+	{{ extra.time.now | date: "%Y-%m-%d %H:%M" | time_zone: -7 | date: "%Y %h %d %H:%M" }}`
+ => 2015 Nov 12 16:37
+	{% endraw %}
+	
 All possible timezones can be found [here](http://apidock.com/rails/TimeZone).
