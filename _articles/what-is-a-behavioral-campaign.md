@@ -37,7 +37,6 @@ There are 4 main sections to a behavioral campaign.
 ![{{ site.data.screenshots.vero.behavioral.campaign_conditions['title'] }}]({{ site.data.screenshots.vero.behavioral.campaign_conditions['image'] }}) 
 
 *Note: By default if no segment is selectected, the "All Segment" is used by default.*
-
 [More on Targeting/Segments/Conditions](/articles/create-a-segment.html)
 
 4. What message do you want to send?
@@ -61,10 +60,10 @@ Additional steps can be added to a series by selecting the campaign once the ini
 ![{{ site.data.screenshots.vero.campaign.series['title'] }}]({{ site.data.screenshots.vero.campaign.series['image'] }})
 
 1. *"Welcome to Vero"* -
-This message is the first message of this series.  It is set to deploy immediately.  
+This message is the first message of this series.  It is set in this example to deploy immediately.  
 
 2. *"Need a Hand installing our trac..."* -
 This message will deploy 1 day after the last message (step 1 - *"Welcome to Vero"*) to the segment that is selected in step 1 if they also qualify for the conditions listed within this step.
 
 3. *"How You can Use Lifecycle Email..."* -
-This message will deploy 2 days after the last message (step 2 - *"Need a Hand installing our trac..."*) to the segment that qualifies for the previous step, and also meets any additional conditions listed within this segment.
+This message will deploy 2 days after the last message (step 2 - *"Need a Hand installing our trac..."*) to the segment that qualifies for the previous step, and also meets any additional conditions listed within this segment or campaign.
