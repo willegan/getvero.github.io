@@ -8,21 +8,21 @@ categories: campaigns
 
 Behavioral email campaigns are marketing emails that are automatically sent to customers when they take certain actions on your site or in your mobile application. You can send an email immediately or set a wait period, such as a few days.
 
-In Vero, behavioral emails are used to send highly personalized emails based on current and past customer behaviour.
+In Vero, behavioral emails are used to send highly personalized emails based on current and past customer behavior.
 
 Here are a few examples:
 
 - Send new customers a series of welcome emails.
 - Send a coupon code when a customer views a product page three times in one week but doesn’t make a purchase.
 - Remind your customers about app features they haven’t tried yet.
-- Behavioural emails can also be used to power drip campaigns and autoresponders (i.e a series of automated emails) as an action on your website can trigger both a single email or a series.
+- Behavioral emails can also be used to power drip campaigns and autoresponders (i.e a series of automated emails) as an action on your website can trigger both a single email or a series.
 
-Vero’s behavioural emails replace exporting customer data, creating new segments in Excel and uploading new lists. They’re the fastest, easiest way to send highly personalized, timely emails.
+Vero’s behavioral emails replace exporting customer data, creating new segments in Excel and uploading new lists. They’re the fastest, easiest way to send highly personalized, timely emails.
 
 
-**Setting Up a behavioural message**
+**Setting Up a behavioral message**
 
-There are 4 main sections to a behavioural campaign.
+There are 4 main sections to a behavioral campaign.
 
 
 1. What event do you want to associate/trigger with this campaign?
@@ -31,14 +31,18 @@ There are 4 main sections to a behavioural campaign.
 
 2. When do you want this campaign to deploy?
 ![{{ site.data.screenshots.vero.behavioral.set_timing['title'] }}]({{ site.data.screenshots.vero.behavioral.set_timing['image'] }}) 
+[More on scheduling time](/articles/scheduling-timing.html)
 
 3. Who do you want to qualify for this message?
 ![{{ site.data.screenshots.vero.behavioral.campaign_conditions['title'] }}]({{ site.data.screenshots.vero.behavioral.campaign_conditions['image'] }}) 
+
+*Note: By default if no segment is selectected, the "All Segment" is used by default.*
+
 [More on Targeting/Segments/Conditions](/articles/create-a-segment.html)
 
 4. What message do you want to send?
 
-You can configure the email addresses (both from and to), use merge tags, generate a plain text version, or edit with the HTML with either the rich text editor or use a base template from this section.
+You can [configure the email addresses](/articles/adding-to-and-from-email-addresses.html) (both from and to), use [merge tags](/articles/inserting-merge-tags-using-liquid-in-my-emails.html), generate a plain text version, or edit with the HTML with either the rich text editor or use a base template from this section.
 
 *HTML with the rich text editor:*
 ![{{ site.data.screenshots.vero.behavioral.content_editor_rich['title'] }}]({{ site.data.screenshots.vero.behavioral.content_editor_rich['image'] }}) 
