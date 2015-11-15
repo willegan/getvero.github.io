@@ -240,6 +240,22 @@ vero:
       detail:
         image: /assets/screenshots/vero.integrations.webhooks.detail.png
         title: Vero Webhooks Detail
+  behavioral:
+    trigger_event:  
+      image: /assets/screenshots/vero.triggers_the_event.png
+      title: Set Trigger Event
+    set_timing:  
+      image: /assets/screenshots/vero.set_campaign_timing.png
+      title: Set Campaign Timing
+    campaign_conditions:
+      image: /assets/screenshots/vero.campaign_conditions.png
+      title: Set Conditions
+    content_editor_rich:
+      image: /assets/screenshots/vero.content_editor_rich.png
+      title: Campaign Content Using Rich
+    content_editor_use_template:
+      image: /assets/screenshots/vero.content_editor_use_template.png
+      title: Campaign Content Using Templates
   logs:
     events:
       view-event-data:
