@@ -114,22 +114,20 @@
   <li>
     <p>When do you want this campaign to deploy?
 <img src="/assets/screenshots/vero.set_campaign_timing.png" alt="Set Campaign Timing" /> 
-<a href="/articles/scheduling-timing.html">More on scheduling time</a></p>
+<a href="/articles/scheduling-timing.html">More on Scheduling and Timing</a></p>
   </li>
   <li>
     <p>Who do you want to qualify for this message?
-<img src="/assets/screenshots/vero.campaign_conditions.png" alt="Set Conditions" /></p>
+<img src="/assets/screenshots/vero.campaign_conditions.png" alt="Set Conditions" /> 
+<em>Note: By default if no segment is selectected, the “All Segment” which is all your records qualify for is used by default.</em>
+<a href="/articles/create-a-segment.html">More on Targeting/Segments/Conditions</a></p>
+  </li>
+  <li>
+    <p>What message do you want to send?
+<br /> 
+You can <a href="/articles/adding-to-and-from-email-addresses.html">configure the email addresses</a> (both from and to), use <a href="/articles/inserting-merge-tags-using-liquid-in-my-emails.html">merge tags</a>, generate a plain text version, or edit with the HTML with either the rich text editor or use a base template from this section.</p>
   </li>
 </ol>
-
-<p><em>Note: By default if no segment is selectected, the “All Segment” is used by default.</em>
-<a href="/articles/create-a-segment.html">More on Targeting/Segments/Conditions</a></p>
-
-<ol>
-  <li>What message do you want to send?</li>
-</ol>
-
-<p>You can <a href="/articles/adding-to-and-from-email-addresses.html">configure the email addresses</a> (both from and to), use <a href="/articles/inserting-merge-tags-using-liquid-in-my-emails.html">merge tags</a>, generate a plain text version, or edit with the HTML with either the rich text editor or use a base template from this section.</p>
 
 <p><em>HTML with the rich text editor:</em>
 <img src="/assets/screenshots/vero.content_editor_rich.png" alt="Campaign Content Using Rich" /></p>
@@ -147,15 +145,18 @@
 
 <ol>
   <li>
-    <p><em>“Welcome to Vero”</em> -
+    <p><strong><em>“Welcome to Vero”</em></strong>
+<br /> 
 This message is the first message of this series.  It is set in this example to deploy immediately.</p>
   </li>
   <li>
-    <p><em>“Need a Hand installing our trac…”</em> -
+    <p><strong><em>“Need a Hand installing our trac…“</em></strong>
+<br /> 
 This message will deploy 1 day after the last message (step 1 - <em>“Welcome to Vero”</em>) to the segment that is selected in step 1 if they also qualify for the conditions listed within this step.</p>
   </li>
   <li>
-    <p><em>“How You can Use Lifecycle Email…”</em> -
+    <p><strong><em>“How You can Use Lifecycle Email…“</em></strong>
+<br /> 
 This message will deploy 2 days after the last message (step 2 - <em>“Need a Hand installing our trac…“</em>) to the segment that qualifies for the previous step, and also meets any additional conditions listed within this segment or campaign.</p>
   </li>
 </ol>

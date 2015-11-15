@@ -31,16 +31,15 @@ There are 4 main sections to a behavioral campaign.
 
 2. When do you want this campaign to deploy?
 ![{{ site.data.screenshots.vero.behavioral.set_timing['title'] }}]({{ site.data.screenshots.vero.behavioral.set_timing['image'] }}) 
-[More on scheduling time](/articles/scheduling-timing.html)
+[More on Scheduling and Timing](/articles/scheduling-timing.html)
 
 3. Who do you want to qualify for this message?
 ![{{ site.data.screenshots.vero.behavioral.campaign_conditions['title'] }}]({{ site.data.screenshots.vero.behavioral.campaign_conditions['image'] }}) 
-
 *Note: By default if no segment is selectected, the "All Segment" which is all your records qualify for is used by default.*
 [More on Targeting/Segments/Conditions](/articles/create-a-segment.html)
 
 4. What message do you want to send?
-
+<br /> 
 You can [configure the email addresses](/articles/adding-to-and-from-email-addresses.html) (both from and to), use [merge tags](/articles/inserting-merge-tags-using-liquid-in-my-emails.html), generate a plain text version, or edit with the HTML with either the rich text editor or use a base template from this section.
 
 *HTML with the rich text editor:*
@@ -59,11 +58,14 @@ Additional steps can be added to a series by selecting the campaign once the ini
 
 ![{{ site.data.screenshots.vero.campaign.series['title'] }}]({{ site.data.screenshots.vero.campaign.series['image'] }})
 
-1. *"Welcome to Vero"* -
+1. ***"Welcome to Vero"***
+<br /> 
 This message is the first message of this series.  It is set in this example to deploy immediately.  
 
-2. *"Need a Hand installing our trac..."* -
+2. ***"Need a Hand installing our trac..."***
+<br /> 
 This message will deploy 1 day after the last message (step 1 - *"Welcome to Vero"*) to the segment that is selected in step 1 if they also qualify for the conditions listed within this step.
 
-3. *"How You can Use Lifecycle Email..."* -
+3. ***"How You can Use Lifecycle Email..."***
+<br /> 
 This message will deploy 2 days after the last message (step 2 - *"Need a Hand installing our trac..."*) to the segment that qualifies for the previous step, and also meets any additional conditions listed within this segment or campaign.
