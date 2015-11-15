@@ -15,7 +15,7 @@ This will queue a message to go out as soon as the trigger event is sent to Vero
 
 This will wait X amount of time (to clarify - when selecting "wait 1 day(s)" this is one calendar day, not 24 hrs). If you have selected a prefered time AND your account is tracking the user's timezone, then you will be able to target at a local time. **Automatic** is dependent on when the message is scheduled. 
 
-If the time has not passed locally, then the user will receive the message at the expected time. If the time has already passed locally, the message will deploy with an expected delay based on when he was supposed to receive the message.
+To use this feature, you'll most likely be dealing with multiple timezones around the world, which means certain timezone could already pass by the time you schedule. If the time *has not* passed locally, the user will receive the message at the expected time. If the time *has* already passed local to the receipient, the message will deploy with a delay based on when they were supposed to receive the message.
 
 For Example:
 
