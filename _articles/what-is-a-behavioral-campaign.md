@@ -36,7 +36,7 @@ There are 4 main sections to a behavioral campaign.
 3. Who do you want to qualify for this message?
 ![{{ site.data.screenshots.vero.behavioral.campaign_conditions['title'] }}]({{ site.data.screenshots.vero.behavioral.campaign_conditions['image'] }}) 
 
-*Note: By default if no segment is selectected, the "All Segment" is used by default.*
+*Note: By default if no segment is selectected, the "All Segment" which is all your records qualify for is used by default.*
 [More on Targeting/Segments/Conditions](/articles/create-a-segment.html)
 
 4. What message do you want to send?
