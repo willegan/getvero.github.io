@@ -17,6 +17,22 @@ Here is an example:
 	{{item.price | precision: 2}}
 	{% endraw %}
  
+## Utilities
+
+There are a number of convenience functions you can use in Vero. 
+	
+	{% raw %}
+	{%random 20%} => 15 (inserts a random number between 0 and the number specified)
+	{%capture a_variable%}{%random 20%}{%endcapture%}
+	{{a_variable}} => 15
+
+	user.email = "support+test@getvero.com"
+	{{user.email | md5}} => 20e815c8877d46cd29d162754b0f2773
+
+	user.email = "support+test@getvero.com"
+	{{user.email | sha1}} => 1e71615687de8192e23949040adc380ade233f3c
+	{% endraw %}
+
 ## Formatting
 
 This works with any Liquid variable which are character, decimal (integer) number (base 10), exponential floating-point number, floating-point number, integer (base 10), octal number (base 8), a string of characters, unsigned decimal (integer) number, number in hexadecimal (base 16)
@@ -37,6 +53,13 @@ Here is an example:
 	{{event.invoice_ref | format: '%5d'}} => '    1'
 	{% endraw %}
  
+You can also humanize integers using the 'humanize' method:
+
+	{% raw %}
+	event.price = 10
+	{{event.price | humanize}} => ten
+	{% endraw %}
+	
 ## Encoding
 
 This is primarily useful when you want to pass variables such as email address to URL params.
