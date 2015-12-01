@@ -4,15 +4,15 @@ title:  Using other Email Service Providers
 categories: deliverability
 ---
 
-#Can I use other Email Service Providers (ESP's) for delivery?
+# Can I use other Email Service Providers (ESP's) for delivery?
 
 By default, Vero will handle your delivery for you, optimized to ensure your emails reach your users.
 
-Vero also allows you to send your emails via some of your favourite transactional email providers, such as Sendgrid and Mandrill.
+Vero also allows you to send your emails via some of your favourite transactional email providers, such as Sendgrid,  Mandrill, Dyn or Mailjet.
 
 To use an alternate provider (and not Vero's default setup), visit *Settings > Email Delivery* and enter the appropriate credentials.
 
-Here you can currently select five options: Vero's delivery infrastructure, Mailgun, Sendgrid, Mandrill and DynDNS.
+Here you can currently select six options: Vero's delivery infrastructure, Mailgun, Sendgrid, Mandrill, Dyn and Mailjet.
 
 ![{{ site.data.screenshots.vero.esp-integrations['title'] }}]({{ site.data.screenshots.vero.esp-integrations['image'] }})
 

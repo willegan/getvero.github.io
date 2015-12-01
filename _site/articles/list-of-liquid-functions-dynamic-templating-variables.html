@@ -95,6 +95,21 @@
 <pre><code>{{item.price | precision: 2}}
 </code></pre>
 
+<h2 id="utilities">Utilities</h2>
+
+<p>There are a number of convenience functions you can use in Vero.</p>
+
+<pre><code>{%random 20%} =&gt; 15 (inserts a random number between 0 and the number specified)
+{%capture a_variable%}{%random 20%}{%endcapture%}
+{{a_variable}} =&gt; 15
+
+user.email = "support+test@getvero.com"
+{{user.email | md5}} =&gt; 20e815c8877d46cd29d162754b0f2773
+
+user.email = "support+test@getvero.com"
+{{user.email | sha1}} =&gt; 1e71615687de8192e23949040adc380ade233f3c
+</code></pre>
+
 <h2 id="formatting">Formatting</h2>
 
 <p>This works with any Liquid variable which are character, decimal (integer) number (base 10), exponential floating-point number, floating-point number, integer (base 10), octal number (base 8), a string of characters, unsigned decimal (integer) number, number in hexadecimal (base 16)</p>
@@ -112,6 +127,12 @@ event.invoice_ref = 123
 
 event.invoice_ref = 1
 {{event.invoice_ref | format: '%5d'}} =&gt; '    1'
+</code></pre>
+
+<p>You can also humanize integers using the ‘humanize’ method:</p>
+
+<pre><code>event.price = 10
+{{event.price | humanize}} =&gt; ten
 </code></pre>
 
 <h2 id="encoding">Encoding</h2>
