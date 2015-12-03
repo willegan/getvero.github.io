@@ -9,6 +9,15 @@ common_issues: true
     
 One of the core benefits of Vero is being able to quickly and easily test and refine hypotheses. 
 
+You can A/B test:
+
+-Subject lines<br>
+-From addresses<br>
+-Body content<br>
+-Templates<br>
+
+You are also able to select the split rate for each variation.
+
 Configuring your first A/B test is a simple process. The following steps should guide you through each step.
 
 ## 1. Adding a variation
@@ -38,5 +47,17 @@ This allows you to rapidly test new ideas and determine a winner.*
 ## 4. Reporting on a variation
 
 Results are reported individually for each variation. You to see the effectiveness of a variation in terms of its open, click and conversion rates. You can also determine any negativity surrounding a variation by monitoring unsubscribes attributed to it specifically.
+
+<br>
+
+-----
+
+##Notes:##
+
+*When running an A/B test on a Behavioral or Transactional email campaign that has more than one email (a series campaign), A/B tests run across the entire series. The split is decided with the first email in the series and the remaining emails follow suit.*
+<br><br>
+
+*For example, if a customer receives Variation B for the first email, they will receive Variation B throughout. This allows you to test entirely different templates or from addresses without your customers getting conflicting and inconsistent messages.*
+
 
 That's it! Those are the four basic steps to getting up and running with A/B testing.
